@@ -14,7 +14,7 @@ const Hero = () => {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsCnwysjdShci8rD4liesynTi62_aF-TXBIw&s"
+          src="https://images.pexels.com/photos/6994982/pexels-photo-6994982.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop"
           alt="Community helping hands"
           className="w-full h-full object-cover"
         />
