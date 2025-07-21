@@ -22,23 +22,23 @@ const Header = () => {
   };
 
   return (
-    <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-cream shadow-lg' : 'bg-transparent'
+    <header className={`fixed top-0 w-full z-50 transition-all duration-500 ${
+      isScrolled ? 'bg-cream/95 backdrop-blur-md shadow-xl border-b border-white/20' : 'bg-transparent'
     }`}>
-      <div className="container mx-auto px-4 py-4 flex items-center justify-between">
+      <div className="container mx-auto px-6 py-5 flex items-center justify-between">
         <div className="flex items-center space-x-2">
           <img 
             src="/simeis (1).png" 
             alt="Simeis Synergy Logo" 
             className="h-14 w-14"
           />
-          <span className={`text-xl font-heading ${isScrolled ? 'text-gray-800' : 'text-white'}`}>
+          <span className={`text-2xl font-heading ${isScrolled ? 'text-gray-800' : 'text-white drop-shadow-lg'}`}>
             Simeis Synergy
           </span>
         </div>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex space-x-8">
+        <nav className="hidden md:flex space-x-10">
           {[
             { name: 'Home', id: 'home' },
             { name: 'About', id: 'about' },
@@ -49,18 +49,19 @@ const Header = () => {
             <button
               key={item.id}
               onClick={() => scrollToSection(item.id)}
-              className={`font-body font-medium transition-colors duration-200 hover:text-orange ${
-                isScrolled ? 'text-gray-700' : 'text-white'
+              className={`font-body font-medium transition-all duration-300 hover:text-orange relative group ${
+                isScrolled ? 'text-gray-700' : 'text-white/90'
               }`}
             >
               {item.name}
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-orange transition-all duration-300 group-hover:w-full"></span>
             </button>
           ))}
         </nav>
 
         <button
           onClick={() => scrollToSection('donate')}
-          className="hidden md:block bg-orange text-white px-6 py-2 rounded-full hover:bg-orange/90 transition-colors duration-200 font-body font-medium"
+          className="hidden md:block bg-orange text-white px-8 py-3 rounded-2xl hover:bg-orange/90 transition-all duration-300 font-body font-semibold transform hover:scale-105 shadow-lg"
         >
           Donate Now
         </button>
@@ -68,7 +69,7 @@ const Header = () => {
         {/* Mobile Menu Button */}
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className={`md:hidden ${isScrolled ? 'text-gray-800' : 'text-white'}`}
+          className={`md:hidden p-2 rounded-lg transition-all duration-300 ${isScrolled ? 'text-gray-800 hover:bg-gray-100' : 'text-white hover:bg-white/10'}`}
         >
           {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
         </button>
@@ -76,8 +77,8 @@ const Header = () => {
 
       {/* Mobile Navigation */}
       {isMenuOpen && (
-        <div className="md:hidden bg-cream shadow-lg">
-          <nav className="flex flex-col py-4">
+        <div className="md:hidden bg-cream/95 backdrop-blur-md shadow-xl border-t border-white/20">
+          <nav className="flex flex-col py-6">
             {[
               { name: 'Home', id: 'home' },
               { name: 'About', id: 'about' },
@@ -88,7 +89,7 @@ const Header = () => {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="text-left px-4 py-3 font-body text-gray-700 hover:bg-gray-50 hover:text-orange transition-colors duration-200"
+                className="text-left px-6 py-4 font-body text-gray-700 hover:bg-white/50 hover:text-orange transition-all duration-300 font-medium"
               >
                 {item.name}
               </button>

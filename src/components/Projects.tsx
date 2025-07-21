@@ -60,61 +60,61 @@ const Projects = () => {
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-heading text-gray-800 mb-6">
+          <h2 className="text-5xl md:text-6xl font-heading text-gray-800 mb-8 tracking-tight">
             Our <span className="text-orange">Impact</span> Stories
           </h2>
-          <p className="text-xl font-body text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl font-body text-gray-600 max-w-4xl mx-auto font-light leading-relaxed">
             Discover the meaningful projects we've undertaken to create positive change 
             in our communities and transform lives.
           </p>
         </div>
 
         {/* Projects Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 mb-20">
           {projects.map((project, index) => (
             <div 
               key={project.id}
-              className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
+              className="bg-white rounded-3xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 border border-gray-100"
               style={{ animationDelay: `${index * 100}ms` }}
             >
               <div className="relative">
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-48 object-cover"
+                  className="w-full h-56 object-cover"
                 />
                 <div className="absolute top-4 right-4">
-                  <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
+                  <span className={`px-4 py-2 rounded-full text-xs font-semibold backdrop-blur-sm ${
                     project.status === 'Completed' 
-                      ? 'bg-lime/20 text-lime' 
-                      : 'bg-orange/20 text-orange'
+                      ? 'bg-lime/90 text-white' 
+                      : 'bg-orange/90 text-white'
                   }`}>
                     {project.status}
                   </span>
                 </div>
                 <div className="absolute bottom-4 left-4">
-                  <div className="bg-white/90 backdrop-blur-sm rounded-full p-2">
+                  <div className="bg-white/90 backdrop-blur-md rounded-2xl p-3">
                     <project.icon className="h-6 w-6 text-lime" />
                   </div>
                 </div>
               </div>
               
-              <div className="p-6">
+              <div className="p-8">
                 <div className="flex items-center text-sm font-body text-gray-500 mb-3">
                   <Calendar className="h-4 w-4 mr-2" />
                   {project.date}
                 </div>
                 
-                <h3 className="text-xl font-heading text-gray-800 mb-3">
+                <h3 className="text-2xl font-heading text-gray-800 mb-4">
                   {project.title}
                 </h3>
                 
-                <p className="font-body text-gray-600 mb-4 leading-relaxed">
+                <p className="font-body text-gray-600 mb-6 leading-relaxed font-light">
                   {project.description}
                 </p>
                 
                 <div className="flex items-center justify-between">
-                  <span className="bg-gradient-to-r from-lime to-orange bg-clip-text text-transparent font-body font-semibold">
+                  <span className="bg-gradient-to-r from-lime to-orange bg-clip-text text-transparent font-body font-bold text-lg">
                     {project.impact}
                   </span>
                 </div>
@@ -125,11 +125,11 @@ const Projects = () => {
 
         {/* Call to Action */}
         <div className="text-center">
-          <div className="bg-cream rounded-2xl p-8 md:p-12">
-            <h3 className="text-3xl md:text-4xl font-heading text-gray-800 mb-6">
+          <div className="bg-cream rounded-3xl p-12 md:p-16 shadow-xl">
+            <h3 className="text-4xl md:text-5xl font-heading text-gray-800 mb-8 tracking-tight">
               Want to Be Part of Our Next Project?
             </h3>
-            <p className="text-lg font-body text-gray-600 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl font-body text-gray-600 mb-10 max-w-3xl mx-auto font-light leading-relaxed">
               Your support helps us reach more communities and create lasting positive impact. 
               Join us in our mission to empower lives and build stronger communities.
             </p>
@@ -138,7 +138,7 @@ const Projects = () => {
                 const element = document.getElementById('donate');
                 if (element) element.scrollIntoView({ behavior: 'smooth' });
               }}
-              className="bg-gradient-to-r from-lime to-orange text-white px-8 py-4 rounded-full font-body font-semibold text-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105"
+              className="bg-gradient-to-r from-lime to-orange text-white px-12 py-5 rounded-2xl font-body font-semibold text-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
             >
               Support Our Mission
             </button>
