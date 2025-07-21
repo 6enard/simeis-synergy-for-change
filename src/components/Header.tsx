@@ -26,7 +26,10 @@ const Header = () => {
       isScrolled ? 'bg-cream/95 backdrop-blur-md shadow-xl border-b border-white/20' : 'bg-transparent'
     }`}>
       <div className="container mx-auto px-6 py-5 flex items-center justify-between">
-        <div className="flex items-center space-x-2">
+        <button 
+          onClick={() => scrollToSection('home')}
+          className="flex items-center space-x-2 hover:scale-105 transition-transform duration-300"
+        >
           <img 
             src="/simeis (1).png" 
             alt="Simeis Synergy Logo" 
@@ -35,7 +38,7 @@ const Header = () => {
           <span className={`text-lg sm:text-xl md:text-2xl font-heading ${isScrolled ? 'text-gray-800' : 'text-white drop-shadow-lg'}`}>
             Simeis Synergy
           </span>
-        </div>
+        </button>
 
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex space-x-6 xl:space-x-10">

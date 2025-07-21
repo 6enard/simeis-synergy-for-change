@@ -129,11 +129,11 @@ const Projects = () => {
     <section id="projects" className="py-12 sm:py-16 md:py-20 bg-white">
       <div className="container mx-auto px-4 sm:px-6">
         {/* Section Header */}
-        <div className="text-center mb-12 sm:mb-16">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-heading text-gray-800 mb-4 sm:mb-6 md:mb-8 tracking-tight">
+        <div className="text-center mb-12 sm:mb-16 animate-fade-in-up">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-heading text-gray-800 mb-4 sm:mb-6 md:mb-8 tracking-tight animate-slide-in-left">
             Our <span className="text-orange">Impact</span> Stories
           </h2>
-          <p className="text-base sm:text-lg md:text-xl font-body text-gray-600 max-w-4xl mx-auto font-light leading-relaxed px-2">
+          <p className="text-base sm:text-lg md:text-xl font-body text-gray-600 max-w-4xl mx-auto font-light leading-relaxed px-2 animate-slide-in-right animate-delay-300">
             Discover the meaningful projects we've undertaken to create positive change 
             in our communities and transform lives across Kenya.
           </p>
@@ -144,7 +144,7 @@ const Projects = () => {
           {projects.map((project, index) => (
             <div 
               key={project.id}
-              className="bg-white rounded-2xl sm:rounded-3xl shadow-lg sm:shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 sm:hover:-translate-y-3 border border-gray-100 cursor-pointer group"
+              className="bg-white rounded-2xl sm:rounded-3xl shadow-lg sm:shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 sm:hover:-translate-y-3 border border-gray-100 cursor-pointer group animate-fade-in-up"
               style={{ animationDelay: `${index * 100}ms` }}
               onClick={() => handleProjectClick(project.id)}
             >
@@ -161,12 +161,12 @@ const Projects = () => {
                       : project.status === 'Upcoming'
                       ? 'bg-blue-500/90 text-white'
                       : 'bg-orange/90 text-white'
-                  }`}>
+                  } animate-pulse-slow`}>
                     {project.status}
                   </span>
                 </div>
                 <div className="absolute bottom-2 sm:bottom-4 left-2 sm:left-4">
-                  <div className="bg-white/90 backdrop-blur-md rounded-xl sm:rounded-2xl p-2 sm:p-3">
+                  <div className="bg-white/90 backdrop-blur-md rounded-xl sm:rounded-2xl p-2 sm:p-3 animate-float">
                     <project.icon className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 text-lime" />
                   </div>
                 </div>
@@ -183,16 +183,16 @@ const Projects = () => {
                   {project.date}
                 </div>
                 
-                <h3 className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-heading text-gray-800 mb-2 sm:mb-3 md:mb-4 line-clamp-2">
+                <h3 className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-heading text-gray-800 mb-2 sm:mb-3 md:mb-4 line-clamp-2 animate-typewriter">
                   {project.title}
                 </h3>
                 
-                <p className="font-body text-gray-600 mb-3 sm:mb-4 md:mb-6 leading-relaxed font-light text-xs sm:text-sm md:text-base line-clamp-3">
+                <p className="font-body text-gray-600 mb-3 sm:mb-4 md:mb-6 leading-relaxed font-light text-xs sm:text-sm md:text-base line-clamp-3 animate-fade-in-up animate-delay-200">
                   {project.description}
                 </p>
                 
                 <div className="flex items-center justify-between">
-                  <span className="bg-gradient-to-r from-lime to-orange bg-clip-text text-transparent font-body font-bold text-xs sm:text-sm md:text-base lg:text-lg">
+                  <span className="bg-gradient-to-r from-lime to-orange bg-clip-text text-transparent font-body font-bold text-xs sm:text-sm md:text-base lg:text-lg animate-shimmer">
                     {project.impact}
                   </span>
                 </div>
@@ -210,11 +210,11 @@ const Projects = () => {
 
         {/* Call to Action */}
         <div className="text-center">
-          <div className="bg-cream rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-12 lg:p-16 shadow-xl">
-            <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-heading text-gray-800 mb-4 sm:mb-6 md:mb-8 tracking-tight">
+          <div className="bg-cream rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-12 lg:p-16 shadow-xl animate-fade-in-up animate-delay-1000">
+            <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-heading text-gray-800 mb-4 sm:mb-6 md:mb-8 tracking-tight animate-pulse-slow">
               Want to Be Part of Our Next Project?
             </h3>
-            <p className="text-sm sm:text-base md:text-lg lg:text-xl font-body text-gray-600 mb-6 sm:mb-8 md:mb-10 max-w-3xl mx-auto font-light leading-relaxed px-2">
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl font-body text-gray-600 mb-6 sm:mb-8 md:mb-10 max-w-3xl mx-auto font-light leading-relaxed px-2 animate-fade-in-up animate-delay-200">
               Your support helps us reach more communities and create lasting positive impact. 
               Join us in our mission to empower lives and build stronger communities across Kenya.
             </p>
@@ -223,7 +223,7 @@ const Projects = () => {
                 const element = document.getElementById('donate');
                 if (element) element.scrollIntoView({ behavior: 'smooth' });
               }}
-              className="bg-gradient-to-r from-lime to-orange text-white px-6 sm:px-8 md:px-12 py-3 sm:py-4 md:py-5 rounded-xl sm:rounded-2xl font-body font-semibold text-sm sm:text-base md:text-lg lg:text-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+              className="bg-gradient-to-r from-lime to-orange text-white px-6 sm:px-8 md:px-12 py-3 sm:py-4 md:py-5 rounded-xl sm:rounded-2xl font-body font-semibold text-sm sm:text-base md:text-lg lg:text-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 animate-shimmer animate-delay-500"
             >
               Support Our Mission
             </button>

@@ -71,11 +71,11 @@ const Leadership = () => {
     <section id="leadership" className="py-20 bg-gradient-to-br from-cream to-white">
       <div className="container mx-auto px-4 sm:px-6">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading text-gray-800 mb-6 sm:mb-8 tracking-tight">
+        <div className="text-center mb-16 animate-fade-in-up">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading text-gray-800 mb-6 sm:mb-8 tracking-tight animate-slide-in-left">
             Meet Our <span className="text-orange">Leadership</span>
           </h2>
-          <p className="text-lg sm:text-xl font-body text-gray-600 max-w-4xl mx-auto font-light leading-relaxed px-2">
+          <p className="text-lg sm:text-xl font-body text-gray-600 max-w-4xl mx-auto font-light leading-relaxed px-2 animate-slide-in-right animate-delay-300">
             Passionate individuals dedicated to creating lasting change and empowering communities 
             through compassionate leadership and unwavering commitment to our mission.
           </p>
@@ -86,7 +86,7 @@ const Leadership = () => {
           {leaders.map((leader, index) => (
             <div 
               key={leader.id}
-              className="bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 overflow-hidden"
+              className="bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 overflow-hidden animate-fade-in-up"
               style={{ animationDelay: `${index * 100}ms` }}
             >
               {/* Leader Photo */}
@@ -94,17 +94,17 @@ const Leadership = () => {
                 <img
                   src={leader.image}
                   alt={leader.name}
-                  className="w-full h-64 sm:h-72 object-cover"
+                  className="w-full h-64 sm:h-72 object-cover hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
                 <div className="absolute bottom-4 left-4 right-4">
-                  <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-3 sm:p-4">
-                    <h3 className="text-lg sm:text-xl font-heading text-gray-800 mb-1">{leader.name}</h3>
-                    <p className="text-sm sm:text-base font-body text-orange font-semibold">{leader.position}</p>
+                  <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-3 sm:p-4 animate-slide-in-up animate-delay-300">
+                    <h3 className="text-lg sm:text-xl font-heading text-gray-800 mb-1 animate-typewriter">{leader.name}</h3>
+                    <p className="text-sm sm:text-base font-body text-orange font-semibold animate-fade-in-up animate-delay-500">{leader.position}</p>
                   </div>
                 </div>
                 {leader.id === 1 && (
-                  <div className="absolute top-4 right-4">
+                  <div className="absolute top-4 right-4 animate-pulse-slow">
                     <div className="bg-gradient-to-r from-lime to-orange rounded-full p-2 border-2 border-white/50">
                       <Star className="h-5 w-5 text-white" />
                     </div>
@@ -115,9 +115,9 @@ const Leadership = () => {
               {/* Leader Statement */}
               <div className="p-6 sm:p-8">
                 <div className="flex items-start mb-4">
-                  <Quote className="h-6 w-6 text-lime mr-3 mt-1 flex-shrink-0" />
+                  <Quote className="h-6 w-6 text-lime mr-3 mt-1 flex-shrink-0 animate-float" />
                   <div className="flex-1">
-                    <p className="font-body text-gray-700 leading-relaxed text-sm sm:text-base">
+                    <p className="font-body text-gray-700 leading-relaxed text-sm sm:text-base animate-fade-in-up animate-delay-200">
                       {expandedLeader === leader.id ? leader.fullStatement : leader.shortStatement}
                     </p>
                   </div>
@@ -125,7 +125,7 @@ const Leadership = () => {
 
                 <button
                   onClick={() => toggleExpanded(leader.id)}
-                  className="flex items-center justify-center w-full mt-6 bg-gradient-to-r from-lime/10 to-orange/10 hover:from-lime/20 hover:to-orange/20 text-gray-700 px-4 py-3 rounded-xl font-body font-semibold transition-all duration-300 transform hover:scale-105 border border-gray-200 hover:border-orange/30"
+                  className="flex items-center justify-center w-full mt-6 bg-gradient-to-r from-lime/10 to-orange/10 hover:from-lime/20 hover:to-orange/20 text-gray-700 px-4 py-3 rounded-xl font-body font-semibold transition-all duration-300 transform hover:scale-105 border border-gray-200 hover:border-orange/30 animate-shimmer animate-delay-700"
                 >
                   <span className="mr-2">
                     {expandedLeader === leader.id ? 'Read Less' : 'Read More'}
@@ -143,12 +143,12 @@ const Leadership = () => {
 
         {/* Team Unity Message */}
         <div className="mt-16 sm:mt-20">
-          <div className="bg-gradient-to-r from-lime via-orange to-lime rounded-3xl p-8 sm:p-12 md:p-16 text-white text-center shadow-2xl border border-white/20">
-            <Users className="h-16 w-16 sm:h-20 sm:w-20 text-white mx-auto mb-6 sm:mb-8" />
-            <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-heading mb-6 sm:mb-8 tracking-tight">
+          <div className="bg-gradient-to-r from-lime via-orange to-lime rounded-3xl p-8 sm:p-12 md:p-16 text-white text-center shadow-2xl border border-white/20 animate-fade-in-up animate-delay-1000">
+            <Users className="h-16 w-16 sm:h-20 sm:w-20 text-white mx-auto mb-6 sm:mb-8 animate-float" />
+            <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-heading mb-6 sm:mb-8 tracking-tight animate-pulse-slow">
               United in Purpose
             </h3>
-            <p className="text-lg sm:text-xl md:text-2xl font-body max-w-5xl mx-auto leading-relaxed font-light px-2">
+            <p className="text-lg sm:text-xl md:text-2xl font-body max-w-5xl mx-auto leading-relaxed font-light px-2 animate-fade-in-up animate-delay-200">
               Our diverse leadership team brings together unique perspectives, skills, and experiences, 
               all united by a shared commitment to creating positive change. Together, we ensure that 
               every decision reflects our values of compassion, transparency, and sustainable impact.
@@ -159,7 +159,7 @@ const Leadership = () => {
                   const element = document.getElementById('contact');
                   if (element) element.scrollIntoView({ behavior: 'smooth' });
                 }}
-                className="bg-white/20 backdrop-blur-sm border-2 border-white/30 text-white hover:bg-white hover:text-gray-800 px-8 py-3 rounded-2xl font-body font-semibold transition-all duration-300 transform hover:scale-105"
+                className="bg-white/20 backdrop-blur-sm border-2 border-white/30 text-white hover:bg-white hover:text-gray-800 px-8 py-3 rounded-2xl font-body font-semibold transition-all duration-300 transform hover:scale-105 animate-shimmer animate-delay-500"
               >
                 Connect With Us
               </button>
