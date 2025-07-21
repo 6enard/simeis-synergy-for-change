@@ -18,7 +18,7 @@ const Hero = () => {
           alt="Community helping hands"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-green-900/80 to-orange-900/60"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-lime/80 to-orange/60"></div>
       </div>
 
       {/* Content */}
@@ -26,14 +26,14 @@ const Hero = () => {
         <div className="mb-8 animate-fade-in">
           <div className="flex justify-center mb-6">
             <div className="bg-white/20 backdrop-blur-sm rounded-full p-4">
-              <Heart className="h-12 w-12 text-orange-400" />
+              <Heart className="h-12 w-12 text-orange" />
             </div>
           </div>
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+          <h1 className="text-5xl md:text-7xl font-heading mb-6 leading-tight">
             Simeis Synergy
-            <span className="block text-orange-400">For Change</span>
+            <span className="block text-orange">For Change</span>
           </h1>
-          <p className="text-xl md:text-2xl mb-8 text-gray-200 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl md:text-2xl mb-8 font-body text-gray-200 max-w-3xl mx-auto leading-relaxed">
             Empowering lives through essential assistance and sustainable support, 
             creating brighter futures for the less fortunate in our community.
           </p>
@@ -43,24 +43,24 @@ const Hero = () => {
         <div className="grid grid-cols-3 gap-8 mb-12 max-w-2xl mx-auto">
           <div className="text-center">
             <div className="flex justify-center mb-2">
-              <Users className="h-8 w-8 text-orange-400" />
+              <Users className="h-8 w-8 text-orange" />
             </div>
-            <div className="text-3xl font-bold text-orange-400">150+</div>
-            <div className="text-sm text-gray-300">Families Helped</div>
+            <div className="text-3xl font-heading text-orange">150+</div>
+            <div className="text-sm font-body text-gray-300">Families Helped</div>
           </div>
           <div className="text-center">
             <div className="flex justify-center mb-2">
-              <Heart className="h-8 w-8 text-green-400" />
+              <Heart className="h-8 w-8 text-lime" />
             </div>
-            <div className="text-3xl font-bold text-green-400">5</div>
-            <div className="text-sm text-gray-300">Active Projects</div>
+            <div className="text-3xl font-heading text-lime">5</div>
+            <div className="text-sm font-body text-gray-300">Active Projects</div>
           </div>
           <div className="text-center">
             <div className="flex justify-center mb-2">
               <Star className="h-8 w-8 text-yellow-400" />
             </div>
-            <div className="text-3xl font-bold text-yellow-400">Youth</div>
-            <div className="text-sm text-gray-300">Driven</div>
+            <div className="text-3xl font-heading text-yellow-400">Youth</div>
+            <div className="text-sm font-body text-gray-300">Driven</div>
           </div>
         </div>
 
@@ -68,13 +68,13 @@ const Hero = () => {
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
           <button
             onClick={() => scrollToSection('donate')}
-            className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
+            className="bg-orange hover:bg-orange/90 text-white px-8 py-4 rounded-full font-body font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
           >
             Make a Donation
           </button>
           <button
             onClick={() => scrollToSection('about')}
-            className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-gray-800 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105"
+            className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-gray-800 px-8 py-4 rounded-full font-body font-semibold text-lg transition-all duration-300 transform hover:scale-105"
           >
             Learn More
           </button>

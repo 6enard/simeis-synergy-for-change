@@ -60,10 +60,10 @@ const Projects = () => {
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
-            Our <span className="text-orange-600">Impact</span> Stories
+          <h2 className="text-4xl md:text-5xl font-heading text-gray-800 mb-6">
+            Our <span className="text-orange">Impact</span> Stories
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl font-body text-gray-600 max-w-3xl mx-auto">
             Discover the meaningful projects we've undertaken to create positive change 
             in our communities and transform lives.
           </p>
@@ -86,35 +86,35 @@ const Projects = () => {
                 <div className="absolute top-4 right-4">
                   <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
                     project.status === 'Completed' 
-                      ? 'bg-green-100 text-green-800' 
-                      : 'bg-orange-100 text-orange-800'
+                      ? 'bg-lime/20 text-lime' 
+                      : 'bg-orange/20 text-orange'
                   }`}>
                     {project.status}
                   </span>
                 </div>
                 <div className="absolute bottom-4 left-4">
                   <div className="bg-white/90 backdrop-blur-sm rounded-full p-2">
-                    <project.icon className="h-6 w-6 text-green-600" />
+                    <project.icon className="h-6 w-6 text-lime" />
                   </div>
                 </div>
               </div>
               
               <div className="p-6">
-                <div className="flex items-center text-sm text-gray-500 mb-3">
+                <div className="flex items-center text-sm font-body text-gray-500 mb-3">
                   <Calendar className="h-4 w-4 mr-2" />
                   {project.date}
                 </div>
                 
-                <h3 className="text-xl font-bold text-gray-800 mb-3">
+                <h3 className="text-xl font-heading text-gray-800 mb-3">
                   {project.title}
                 </h3>
                 
-                <p className="text-gray-600 mb-4 leading-relaxed">
+                <p className="font-body text-gray-600 mb-4 leading-relaxed">
                   {project.description}
                 </p>
                 
                 <div className="flex items-center justify-between">
-                  <span className="bg-gradient-to-r from-green-500 to-orange-500 bg-clip-text text-transparent font-semibold">
+                  <span className="bg-gradient-to-r from-lime to-orange bg-clip-text text-transparent font-body font-semibold">
                     {project.impact}
                   </span>
                 </div>
@@ -125,11 +125,11 @@ const Projects = () => {
 
         {/* Call to Action */}
         <div className="text-center">
-          <div className="bg-gray-50 rounded-2xl p-8 md:p-12">
-            <h3 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+          <div className="bg-cream rounded-2xl p-8 md:p-12">
+            <h3 className="text-3xl md:text-4xl font-heading text-gray-800 mb-6">
               Want to Be Part of Our Next Project?
             </h3>
-            <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+            <p className="text-lg font-body text-gray-600 mb-8 max-w-2xl mx-auto">
               Your support helps us reach more communities and create lasting positive impact. 
               Join us in our mission to empower lives and build stronger communities.
             </p>
@@ -138,7 +138,7 @@ const Projects = () => {
                 const element = document.getElementById('donate');
                 if (element) element.scrollIntoView({ behavior: 'smooth' });
               }}
-              className="bg-gradient-to-r from-green-600 to-orange-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105"
+              className="bg-gradient-to-r from-lime to-orange text-white px-8 py-4 rounded-full font-body font-semibold text-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105"
             >
               Support Our Mission
             </button>

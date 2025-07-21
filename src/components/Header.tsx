@@ -23,12 +23,12 @@ const Header = () => {
 
   return (
     <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-white shadow-lg' : 'bg-transparent'
+      isScrolled ? 'bg-cream shadow-lg' : 'bg-transparent'
     }`}>
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         <div className="flex items-center space-x-2">
-          <Heart className={`h-8 w-8 ${isScrolled ? 'text-green-600' : 'text-white'}`} />
-          <span className={`text-xl font-bold ${isScrolled ? 'text-gray-800' : 'text-white'}`}>
+          <Heart className={`h-8 w-8 ${isScrolled ? 'text-lime' : 'text-white'}`} />
+          <span className={`text-xl font-heading ${isScrolled ? 'text-gray-800' : 'text-white'}`}>
             Simeis Synergy
           </span>
         </div>
@@ -45,7 +45,7 @@ const Header = () => {
             <button
               key={item.id}
               onClick={() => scrollToSection(item.id)}
-              className={`font-medium transition-colors duration-200 hover:text-orange-500 ${
+              className={`font-body font-medium transition-colors duration-200 hover:text-orange ${
                 isScrolled ? 'text-gray-700' : 'text-white'
               }`}
             >
@@ -56,7 +56,7 @@ const Header = () => {
 
         <button
           onClick={() => scrollToSection('donate')}
-          className="hidden md:block bg-orange-500 text-white px-6 py-2 rounded-full hover:bg-orange-600 transition-colors duration-200 font-medium"
+          className="hidden md:block bg-orange text-white px-6 py-2 rounded-full hover:bg-orange/90 transition-colors duration-200 font-body font-medium"
         >
           Donate Now
         </button>
@@ -72,7 +72,7 @@ const Header = () => {
 
       {/* Mobile Navigation */}
       {isMenuOpen && (
-        <div className="md:hidden bg-white shadow-lg">
+        <div className="md:hidden bg-cream shadow-lg">
           <nav className="flex flex-col py-4">
             {[
               { name: 'Home', id: 'home' },
@@ -84,7 +84,7 @@ const Header = () => {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="text-left px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-orange-500 transition-colors duration-200"
+                className="text-left px-4 py-3 font-body text-gray-700 hover:bg-gray-50 hover:text-orange transition-colors duration-200"
               >
                 {item.name}
               </button>

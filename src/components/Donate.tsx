@@ -38,14 +38,14 @@ const Donate = () => {
   ];
 
   return (
-    <section id="donate" className="py-20 bg-gradient-to-br from-green-50 to-orange-50">
+    <section id="donate" className="py-20 bg-gradient-to-br from-lime/10 to-orange/10">
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
-            Make a <span className="text-green-600">Difference</span> Today
+          <h2 className="text-4xl md:text-5xl font-heading text-gray-800 mb-6">
+            Make a <span className="text-lime">Difference</span> Today
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl font-body text-gray-600 max-w-3xl mx-auto">
             Your generous contribution helps us continue our mission of empowering lives 
             and creating sustainable positive change in communities across Kenya.
           </p>
@@ -54,17 +54,17 @@ const Donate = () => {
         <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
           {/* Donation Methods */}
           <div>
-            <h3 className="text-2xl font-bold text-gray-800 mb-8">How to Contribute</h3>
+            <h3 className="text-2xl font-heading text-gray-800 mb-8">How to Contribute</h3>
             
             {/* M-Pesa Donation */}
             <div className="bg-white rounded-2xl shadow-lg p-8 mb-8">
               <div className="flex items-center mb-6">
-                <div className="bg-green-100 rounded-full p-3 mr-4">
-                  <Smartphone className="h-8 w-8 text-green-600" />
+                <div className="bg-lime/20 rounded-full p-3 mr-4">
+                  <Smartphone className="h-8 w-8 text-lime" />
                 </div>
                 <div>
-                  <h4 className="text-xl font-bold text-gray-800">M-Pesa Donation</h4>
-                  <p className="text-gray-600">Quick and secure mobile payment</p>
+                  <h4 className="text-xl font-heading text-gray-800">M-Pesa Donation</h4>
+                  <p className="font-body text-gray-600">Quick and secure mobile payment</p>
                 </div>
               </div>
 
@@ -72,12 +72,12 @@ const Donate = () => {
                 <div className="bg-gray-50 rounded-lg p-4">
                   <div className="flex items-center justify-between">
                     <div>
-                      <p className="text-sm text-gray-600 mb-1">Paybill Number</p>
-                      <p className="text-2xl font-bold text-gray-800">522522</p>
+                      <p className="text-sm font-body text-gray-600 mb-1">Paybill Number</p>
+                      <p className="text-2xl font-heading text-gray-800">522522</p>
                     </div>
                     <button
                       onClick={() => copyToClipboard('522522', 'paybill')}
-                      className="bg-green-100 hover:bg-green-200 text-green-700 p-2 rounded-lg transition-colors duration-200"
+                      className="bg-lime/20 hover:bg-lime/30 text-lime p-2 rounded-lg transition-colors duration-200"
                     >
                       {copiedField === 'paybill' ? <Check className="h-5 w-5" /> : <Copy className="h-5 w-5" />}
                     </button>
@@ -87,12 +87,12 @@ const Donate = () => {
                 <div className="bg-gray-50 rounded-lg p-4">
                   <div className="flex items-center justify-between">
                     <div>
-                      <p className="text-sm text-gray-600 mb-1">Account Number</p>
-                      <p className="text-2xl font-bold text-gray-800">1111485429</p>
+                      <p className="text-sm font-body text-gray-600 mb-1">Account Number</p>
+                      <p className="text-2xl font-heading text-gray-800">1111485429</p>
                     </div>
                     <button
                       onClick={() => copyToClipboard('1111485429', 'account')}
-                      className="bg-green-100 hover:bg-green-200 text-green-700 p-2 rounded-lg transition-colors duration-200"
+                      className="bg-lime/20 hover:bg-lime/30 text-lime p-2 rounded-lg transition-colors duration-200"
                     >
                       {copiedField === 'account' ? <Check className="h-5 w-5" /> : <Copy className="h-5 w-5" />}
                     </button>
@@ -100,9 +100,9 @@ const Donate = () => {
                 </div>
               </div>
 
-              <div className="mt-6 p-4 bg-gradient-to-r from-green-100 to-orange-100 rounded-lg">
-                <h5 className="font-semibold text-gray-800 mb-2">How to Donate via M-Pesa:</h5>
-                <ol className="text-sm text-gray-700 space-y-1">
+              <div className="mt-6 p-4 bg-gradient-to-r from-lime/20 to-orange/20 rounded-lg">
+                <h5 className="font-body font-semibold text-gray-800 mb-2">How to Donate via M-Pesa:</h5>
+                <ol className="text-sm font-body text-gray-700 space-y-1">
                   <li>1. Go to M-Pesa on your phone</li>
                   <li>2. Select "Lipa na M-Pesa"</li>
                   <li>3. Select "Pay Bill"</li>
@@ -116,27 +116,27 @@ const Donate = () => {
 
             {/* Alternative Methods */}
             <div className="bg-white rounded-2xl shadow-lg p-8">
-              <h4 className="text-xl font-bold text-gray-800 mb-4">Other Ways to Help</h4>
+              <h4 className="text-xl font-heading text-gray-800 mb-4">Other Ways to Help</h4>
               <div className="space-y-4">
                 <div className="flex items-center p-4 bg-gray-50 rounded-lg">
-                  <CreditCard className="h-6 w-6 text-orange-600 mr-3" />
+                  <CreditCard className="h-6 w-6 text-orange mr-3" />
                   <div>
-                    <p className="font-semibold text-gray-800">Bank Transfer</p>
-                    <p className="text-sm text-gray-600">Contact us for bank details</p>
+                    <p className="font-body font-semibold text-gray-800">Bank Transfer</p>
+                    <p className="text-sm font-body text-gray-600">Contact us for bank details</p>
                   </div>
                 </div>
                 <div className="flex items-center p-4 bg-gray-50 rounded-lg">
-                  <Heart className="h-6 w-6 text-red-600 mr-3" />
+                  <Heart className="h-6 w-6 text-orange mr-3" />
                   <div>
-                    <p className="font-semibold text-gray-800">In-Kind Donations</p>
-                    <p className="text-sm text-gray-600">Food, clothing, educational materials</p>
+                    <p className="font-body font-semibold text-gray-800">In-Kind Donations</p>
+                    <p className="text-sm font-body text-gray-600">Food, clothing, educational materials</p>
                   </div>
                 </div>
                 <div className="flex items-center p-4 bg-gray-50 rounded-lg">
-                  <Users className="h-6 w-6 text-blue-600 mr-3" />
+                  <Users className="h-6 w-6 text-lime mr-3" />
                   <div>
-                    <p className="font-semibold text-gray-800">Volunteer Time</p>
-                    <p className="text-sm text-gray-600">Join our community outreach programs</p>
+                    <p className="font-body font-semibold text-gray-800">Volunteer Time</p>
+                    <p className="text-sm font-body text-gray-600">Join our community outreach programs</p>
                   </div>
                 </div>
               </div>
@@ -145,7 +145,7 @@ const Donate = () => {
 
           {/* Impact Areas */}
           <div>
-            <h3 className="text-2xl font-bold text-gray-800 mb-8">Your Impact</h3>
+            <h3 className="text-2xl font-heading text-gray-800 mb-8">Your Impact</h3>
             
             <div className="grid gap-6 mb-8">
               {impactAreas.map((area, index) => (
@@ -158,8 +158,8 @@ const Donate = () => {
                       <area.icon className="h-6 w-6 text-white" />
                     </div>
                     <div>
-                      <h4 className="text-lg font-bold text-gray-800 mb-2">{area.title}</h4>
-                      <p className="text-gray-600 text-sm leading-relaxed">{area.description}</p>
+                      <h4 className="text-lg font-heading text-gray-800 mb-2">{area.title}</h4>
+                      <p className="font-body text-gray-600 text-sm leading-relaxed">{area.description}</p>
                     </div>
                   </div>
                 </div>
@@ -168,23 +168,23 @@ const Donate = () => {
 
             {/* Donation Impact Examples */}
             <div className="bg-white rounded-2xl shadow-lg p-8">
-              <h4 className="text-xl font-bold text-gray-800 mb-6">What Your Donation Can Do</h4>
+              <h4 className="text-xl font-heading text-gray-800 mb-6">What Your Donation Can Do</h4>
               <div className="space-y-4">
-                <div className="flex justify-between items-center p-3 bg-gradient-to-r from-green-50 to-green-100 rounded-lg">
-                  <span className="text-gray-700">KSh 500</span>
-                  <span className="text-sm text-gray-600">Feed a family for a week</span>
+                <div className="flex justify-between items-center p-3 bg-gradient-to-r from-lime/10 to-lime/20 rounded-lg">
+                  <span className="font-body text-gray-700">KSh 500</span>
+                  <span className="text-sm font-body text-gray-600">Feed a family for a week</span>
                 </div>
-                <div className="flex justify-between items-center p-3 bg-gradient-to-r from-orange-50 to-orange-100 rounded-lg">
-                  <span className="text-gray-700">KSh 1,000</span>
-                  <span className="text-sm text-gray-600">School supplies for 5 children</span>
+                <div className="flex justify-between items-center p-3 bg-gradient-to-r from-orange/10 to-orange/20 rounded-lg">
+                  <span className="font-body text-gray-700">KSh 1,000</span>
+                  <span className="text-sm font-body text-gray-600">School supplies for 5 children</span>
                 </div>
-                <div className="flex justify-between items-center p-3 bg-gradient-to-r from-blue-50 to-blue-100 rounded-lg">
-                  <span className="text-gray-700">KSh 2,000</span>
-                  <span className="text-sm text-gray-600">Medical supplies for a health camp</span>
+                <div className="flex justify-between items-center p-3 bg-gradient-to-r from-gray-50 to-gray-100 rounded-lg">
+                  <span className="font-body text-gray-700">KSh 2,000</span>
+                  <span className="text-sm font-body text-gray-600">Medical supplies for a health camp</span>
                 </div>
-                <div className="flex justify-between items-center p-3 bg-gradient-to-r from-purple-50 to-purple-100 rounded-lg">
-                  <span className="text-gray-700">KSh 5,000</span>
-                  <span className="text-sm text-gray-600">Support an entire community project</span>
+                <div className="flex justify-between items-center p-3 bg-gradient-to-r from-lime/20 to-orange/20 rounded-lg">
+                  <span className="font-body text-gray-700">KSh 5,000</span>
+                  <span className="text-sm font-body text-gray-600">Support an entire community project</span>
                 </div>
               </div>
             </div>
@@ -194,11 +194,11 @@ const Donate = () => {
         {/* Thank You Message */}
         <div className="text-center mt-16">
           <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12 max-w-4xl mx-auto">
-            <Heart className="h-16 w-16 text-red-500 mx-auto mb-6" />
-            <h3 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+            <Heart className="h-16 w-16 text-orange mx-auto mb-6" />
+            <h3 className="text-3xl md:text-4xl font-heading text-gray-800 mb-6">
               Thank You for Your Generosity
             </h3>
-            <p className="text-lg text-gray-600 leading-relaxed">
+            <p className="text-lg font-body text-gray-600 leading-relaxed">
               Every contribution, no matter the size, makes a meaningful difference in someone's life. 
               Your support enables us to continue our mission of empowering communities and creating 
               sustainable positive change across Kenya.
