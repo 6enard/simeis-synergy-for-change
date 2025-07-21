@@ -57,7 +57,7 @@ const Leadership = () => {
       id: 7,
       name: "Aisha Kavosi",
       position: "Creative and Outreach",
-      image: "https://images.pexels.com/photos/1181519/pexels-photo-1181519.jpeg?auto=compress&cs=tinysrgb&w=400",
+      image: "/src/assets/asha.jpg",
       shortStatement: "Behind every caption, every comment, and every campaign is a deep love for communication, connection, and community...",
       fullStatement: "Behind every caption, every comment, and every campaign is a deep love for communication, connection, and community. And I'm proud of the heart I pour into every post. I don't just push content—I tell stories."
     }
