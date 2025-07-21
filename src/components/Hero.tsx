@@ -44,33 +44,33 @@ const Hero = () => {
         </div>
 
         {/* Stats */}
-        <div className="grid grid-cols-3 gap-4 sm:gap-6 md:gap-8 mb-12 sm:mb-16 max-w-3xl mx-auto">
+        <div className="grid grid-cols-3 gap-4 sm:gap-6 md:gap-8 mb-12 sm:mb-16 max-w-4xl mx-auto">
           <div className="text-center">
             <div className="flex justify-center mb-3">
-              <div className="bg-orange/20 backdrop-blur-sm rounded-full p-2 sm:p-3">
+              <div className="bg-orange/20 backdrop-blur-sm rounded-full p-2 sm:p-3 border border-orange/30">
                 <Users className="h-5 w-5 sm:h-6 sm:w-6 md:h-8 md:w-8 text-orange" />
               </div>
             </div>
-            <div className="text-2xl sm:text-3xl md:text-4xl font-heading text-orange drop-shadow-lg">100</div>
-            <div className="text-xs sm:text-sm font-body text-white/80 font-medium">Families Helped</div>
+            <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-heading text-orange drop-shadow-lg">100+</div>
+            <div className="text-xs sm:text-sm md:text-base font-body text-white/90 font-medium">Families Helped</div>
           </div>
           <div className="text-center">
             <div className="flex justify-center mb-3">
-              <div className="bg-lime/20 backdrop-blur-sm rounded-full p-2 sm:p-3">
+              <div className="bg-lime/20 backdrop-blur-sm rounded-full p-2 sm:p-3 border border-lime/30">
                 <Heart className="h-5 w-5 sm:h-6 sm:w-6 md:h-8 md:w-8 text-lime" />
               </div>
             </div>
-            <div className="text-2xl sm:text-3xl md:text-4xl font-heading text-lime drop-shadow-lg">150</div>
-            <div className="text-xs sm:text-sm font-body text-white/80 font-medium">Households</div>
+            <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-heading text-lime drop-shadow-lg">150+</div>
+            <div className="text-xs sm:text-sm md:text-base font-body text-white/90 font-medium">Households</div>
           </div>
           <div className="text-center">
             <div className="flex justify-center mb-3">
-              <div className="bg-yellow-400/20 backdrop-blur-sm rounded-full p-2 sm:p-3">
+              <div className="bg-yellow-400/20 backdrop-blur-sm rounded-full p-2 sm:p-3 border border-yellow-400/30">
                 <Star className="h-5 w-5 sm:h-6 sm:w-6 md:h-8 md:w-8 text-yellow-400" />
               </div>
             </div>
-            <div className="text-2xl sm:text-3xl md:text-4xl font-heading text-yellow-400 drop-shadow-lg">1000</div>
-            <div className="text-xs sm:text-sm font-body text-white/80 font-medium">Kids</div>
+            <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-heading text-yellow-400 drop-shadow-lg">1000+</div>
+            <div className="text-xs sm:text-sm md:text-base font-body text-white/90 font-medium">Kids</div>
           </div>
         </div>
 

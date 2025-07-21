@@ -57,9 +57,9 @@ const Donate = () => {
             <h3 className="text-xl sm:text-2xl font-heading text-gray-800 mb-6 sm:mb-8">How to Contribute</h3>
             
             {/* M-Pesa Donation */}
-            <div className="bg-white rounded-2xl shadow-lg p-6 sm:p-8 mb-6 sm:mb-8">
+            <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 p-6 sm:p-8 mb-6 sm:mb-8 border border-gray-100">
               <div className="flex items-center mb-6">
-                <div className="bg-lime/20 rounded-full p-2 sm:p-3 mr-3 sm:mr-4">
+                <div className="bg-gradient-to-br from-lime/20 to-lime/30 rounded-full p-2 sm:p-3 mr-3 sm:mr-4 border border-lime/20">
                   <Smartphone className="h-6 w-6 sm:h-8 sm:w-8 text-lime" />
                 </div>
                 <div>
@@ -69,7 +69,7 @@ const Donate = () => {
               </div>
 
               <div className="space-y-4">
-                <div className="bg-gray-50 rounded-lg p-4">
+                <div className="bg-gradient-to-r from-gray-50 to-lime/5 rounded-lg p-4 border border-gray-200">
                   <div className="flex items-center justify-between">
                     <div>
                       <p className="text-xs sm:text-sm font-body text-gray-600 mb-1">Paybill Number</p>
@@ -77,14 +77,14 @@ const Donate = () => {
                     </div>
                     <button
                       onClick={() => copyToClipboard('522522', 'paybill')}
-                      className="bg-lime/20 hover:bg-lime/30 text-lime p-2 rounded-lg transition-colors duration-200"
+                      className="bg-lime/20 hover:bg-lime/30 text-lime p-2 rounded-lg transition-all duration-200 hover:scale-105 border border-lime/20"
                     >
                       {copiedField === 'paybill' ? <Check className="h-5 w-5" /> : <Copy className="h-5 w-5" />}
                     </button>
                   </div>
                 </div>
 
-                <div className="bg-gray-50 rounded-lg p-4">
+                <div className="bg-gradient-to-r from-gray-50 to-orange/5 rounded-lg p-4 border border-gray-200">
                   <div className="flex items-center justify-between">
                     <div>
                       <p className="text-xs sm:text-sm font-body text-gray-600 mb-1">Account Number</p>
@@ -92,7 +92,7 @@ const Donate = () => {
                     </div>
                     <button
                       onClick={() => copyToClipboard('1111485429', 'account')}
-                      className="bg-lime/20 hover:bg-lime/30 text-lime p-2 rounded-lg transition-colors duration-200"
+                      className="bg-orange/20 hover:bg-orange/30 text-orange p-2 rounded-lg transition-all duration-200 hover:scale-105 border border-orange/20"
                     >
                       {copiedField === 'account' ? <Check className="h-5 w-5" /> : <Copy className="h-5 w-5" />}
                     </button>
@@ -100,7 +100,7 @@ const Donate = () => {
                 </div>
               </div>
 
-              <div className="mt-6 p-4 bg-gradient-to-r from-lime/20 to-orange/20 rounded-lg">
+              <div className="mt-6 p-4 bg-gradient-to-r from-lime/20 to-orange/20 rounded-lg border border-orange/20">
                 <h5 className="font-body font-semibold text-gray-800 mb-2">How to Donate via M-Pesa:</h5>
                 <ol className="text-xs sm:text-sm font-body text-gray-700 space-y-1">
                   <li>1. Go to M-Pesa on your phone</li>
@@ -115,24 +115,24 @@ const Donate = () => {
             </div>
 
             {/* Alternative Methods */}
-            <div className="bg-white rounded-2xl shadow-lg p-6 sm:p-8">
+            <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 p-6 sm:p-8 border border-gray-100">
               <h4 className="text-lg sm:text-xl font-heading text-gray-800 mb-4">Other Ways to Help</h4>
               <div className="space-y-4">
-                <div className="flex items-center p-4 bg-gray-50 rounded-lg">
+                <div className="flex items-center p-4 bg-gradient-to-r from-gray-50 to-orange/5 rounded-lg border border-gray-200 hover:shadow-md transition-shadow duration-200">
                   <CreditCard className="h-6 w-6 text-orange mr-3" />
                   <div>
                     <p className="font-body font-semibold text-gray-800 text-sm sm:text-base">Bank Transfer</p>
                     <p className="text-xs sm:text-sm font-body text-gray-600">Contact us for bank details</p>
                   </div>
                 </div>
-                <div className="flex items-center p-4 bg-gray-50 rounded-lg">
+                <div className="flex items-center p-4 bg-gradient-to-r from-gray-50 to-red-50 rounded-lg border border-gray-200 hover:shadow-md transition-shadow duration-200">
                   <Heart className="h-6 w-6 text-orange mr-3" />
                   <div>
                     <p className="font-body font-semibold text-gray-800 text-sm sm:text-base">In-Kind Donations</p>
                     <p className="text-xs sm:text-sm font-body text-gray-600">Food, clothing, educational materials</p>
                   </div>
                 </div>
-                <div className="flex items-center p-4 bg-gray-50 rounded-lg">
+                <div className="flex items-center p-4 bg-gradient-to-r from-gray-50 to-lime/5 rounded-lg border border-gray-200 hover:shadow-md transition-shadow duration-200">
                   <Users className="h-6 w-6 text-lime mr-3" />
                   <div>
                     <p className="font-body font-semibold text-gray-800 text-sm sm:text-base">Volunteer Time</p>

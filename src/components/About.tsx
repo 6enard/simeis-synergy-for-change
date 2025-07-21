@@ -78,13 +78,24 @@ const About = () => {
         </div>
 
         {/* Impact Statement */}
-        <div className="bg-gradient-to-r from-lime to-orange rounded-3xl p-8 sm:p-12 md:p-16 text-white text-center shadow-2xl">
+        <div className="bg-gradient-to-r from-lime via-orange to-lime rounded-3xl p-8 sm:p-12 md:p-16 text-white text-center shadow-2xl border border-white/20">
           <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-heading mb-6 sm:mb-8 tracking-tight">Creating Lasting Impact</h3>
           <p className="text-lg sm:text-xl md:text-2xl font-body max-w-5xl mx-auto leading-relaxed font-light px-2">
             Every action we take is driven by our commitment to create sustainable change. 
             We believe in the power of youth to transform communities and build a brighter future 
             for generations to come. Together, we can make a difference that lasts.
           </p>
+          <div className="mt-8 flex justify-center">
+            <button
+              onClick={() => {
+                const element = document.getElementById('projects');
+                if (element) element.scrollIntoView({ behavior: 'smooth' });
+              }}
+              className="bg-white/20 backdrop-blur-sm border-2 border-white/30 text-white hover:bg-white hover:text-gray-800 px-8 py-3 rounded-2xl font-body font-semibold transition-all duration-300 transform hover:scale-105"
+            >
+              See Our Projects
+            </button>
+          </div>
         </div>
       </div>
     </section>

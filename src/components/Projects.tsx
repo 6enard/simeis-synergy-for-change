@@ -116,8 +116,13 @@ const Projects = () => {
   ];
 
   const handleProjectClick = (projectId: number) => {
-    // Navigate to project detail page
-    window.location.hash = `project-${projectId}`;
+    const element = document.getElementById('projects');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+    setTimeout(() => {
+      window.location.hash = `project-${projectId}`;
+    }, 300);
   };
 
   return (
