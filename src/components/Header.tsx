@@ -1,106 +1,114 @@
-import React from 'react';
-import { ArrowDown, Users, Heart, Star } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { Menu, X } from 'lucide-react';
 
-const Hero = () => {
+const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
+      setIsMenuOpen(false);
     }
   };
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 sm:pt-20">
-      {/* Background Image with Overlay */}
-      <div className="absolute inset-0 z-0">
-        <img
-          src="https://images.pexels.com/photos/6994982/pexels-photo-6994982.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop"
-          alt="Community helping hands"
-          className="w-full h-full object-cover blur-sm"
-        />
-        <div className="absolute inset-0 bg-black/40"></div>
-      </div>
-
-      {/* Content */}
-      <div className="relative z-10 text-center text-white px-4 sm:px-6 max-w-5xl mx-auto">
-        <div className="mb-8">
-          <div className="flex justify-center mb-6 sm:mb-8">
-            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-4 sm:p-6 border border-white/20 animate-bounce-in">
-              <img 
-                src="/simeis (1).png" 
-                alt="Simeis Synergy Logo" 
-                className="h-16 w-16 sm:h-20 sm:w-20 md:h-24 md:w-24"
-                loading="lazy"
-              />
-            </div>
-          </div>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-heading mb-6 sm:mb-8 leading-tight tracking-tight animate-slide-in-left">
+    <header className={`fixed top-0 w-full z-50 transition-all duration-500 ${
+      isScrolled ? 'bg-cream/95 backdrop-blur-md shadow-xl border-b border-white/20' : 'bg-transparent'
+    }`}>
+      <div className="container mx-auto px-6 py-5 flex items-center justify-between">
+        <div className="flex items-center space-x-2">
+          <img 
+            src="/simeis (1).png" 
+            alt="Simeis Synergy Logo" 
+            className="h-10 w-10 sm:h-12 sm:w-12 md:h-14 md:w-14"
+          />
+          <span className={`text-lg sm:text-xl md:text-2xl font-heading ${isScrolled ? 'text-gray-800' : 'text-white drop-shadow-lg'}`}>
             Simeis Synergy
-            <span className="block text-orange drop-shadow-lg">For Change</span>
-          </h1>
-          <p className="text-lg sm:text-xl md:text-2xl mb-8 sm:mb-12 font-body text-white/90 max-w-4xl mx-auto leading-relaxed font-light px-2">
-            Empowering lives through essential assistance and sustainable support, 
-            creating brighter futures for the less fortunate in our community.
-          </p>
+          </span>
         </div>
 
-        {/* Stats */}
-        <div className="grid grid-cols-3 gap-4 sm:gap-6 md:gap-8 mb-12 sm:mb-16 max-w-4xl mx-auto">
-          <div className="text-center">
-            <div className="flex justify-center mb-3">
-              <div className="bg-orange/20 backdrop-blur-sm rounded-full p-2 sm:p-3 border border-orange/30">
-                <Users className="h-5 w-5 sm:h-6 sm:w-6 md:h-8 md:w-8 text-orange" />
-              </div>
-            </div>
-            <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-heading text-orange drop-shadow-lg">100+</div>
-            <div className="text-xs sm:text-sm md:text-base font-body text-white/90 font-medium">Families Helped</div>
-          </div>
-          <div className="text-center">
-            <div className="flex justify-center mb-3">
-              <div className="bg-lime/20 backdrop-blur-sm rounded-full p-2 sm:p-3 border border-lime/30">
-                <Heart className="h-5 w-5 sm:h-6 sm:w-6 md:h-8 md:w-8 text-lime" />
-              </div>
-            </div>
-            <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-heading text-lime drop-shadow-lg">150+</div>
-            <div className="text-xs sm:text-sm md:text-base font-body text-white/90 font-medium">Households</div>
-          </div>
-          <div className="text-center">
-            <div className="flex justify-center mb-3">
-              <div className="bg-yellow-400/20 backdrop-blur-sm rounded-full p-2 sm:p-3 border border-yellow-400/30">
-                <Star className="h-5 w-5 sm:h-6 sm:w-6 md:h-8 md:w-8 text-yellow-400" />
-              </div>
-            </div>
-            <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-heading text-yellow-400 drop-shadow-lg">1000+</div>
-            <div className="text-xs sm:text-sm md:text-base font-body text-white/90 font-medium">Kids</div>
-          </div>
-        </div>
+        {/* Desktop Navigation */}
+        <nav className="hidden lg:flex space-x-6 xl:space-x-10">
+          {[
+            { name: 'Home', id: 'home' },
+            { name: 'About', id: 'about' },
+            { name: 'Leadership', id: 'leadership' },
+            { name: 'Projects', id: 'projects' },
+            { name: 'Donate', id: 'donate' },
+            { name: 'Contact', id: 'contact' }
+          ].map((item) => (
+            <button
+              key={item.id}
+              onClick={() => scrollToSection(item.id)}
+              className={`font-body font-medium transition-all duration-300 hover:text-orange relative group ${
+                isScrolled ? 'text-gray-700' : 'text-white/90'
+              }`}
+            >
+              {item.name}
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-orange transition-all duration-300 group-hover:w-full"></span>
+            </button>
+          ))}
+        </nav>
 
-        {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center mb-12 sm:mb-20 px-4">
-          <button
-            onClick={() => scrollToSection('donate')}
-            className="bg-orange hover:bg-orange/90 text-white px-8 sm:px-10 py-3 sm:py-4 rounded-2xl font-body font-semibold text-base sm:text-lg transition-all duration-300 transform hover:scale-105 shadow-2xl backdrop-blur-sm border border-orange/20"
-          >
-            Make a Donation
-          </button>
-          <button
-            onClick={() => scrollToSection('about')}
-            className="bg-white/10 backdrop-blur-md border-2 border-white/30 text-white hover:bg-white hover:text-gray-800 px-8 sm:px-10 py-3 sm:py-4 rounded-2xl font-body font-semibold text-base sm:text-lg transition-all duration-300 transform hover:scale-105 shadow-xl"
-          >
-            Learn More
-          </button>
-        </div>
-
-        {/* Scroll Indicator */}
         <button
-          onClick={() => scrollToSection('about')}
-          className="animate-bounce bg-white/10 backdrop-blur-sm rounded-full p-2 sm:p-3 hover:bg-white/20 transition-all duration-300"
+          onClick={() => scrollToSection('donate')}
+          className="hidden lg:block bg-orange text-white px-6 xl:px-8 py-2 xl:py-3 rounded-2xl hover:bg-orange/90 transition-all duration-300 font-body font-semibold transform hover:scale-105 shadow-lg text-sm xl:text-base"
         >
-          <ArrowDown className="h-6 w-6 sm:h-8 sm:w-8 text-white/70 hover:text-white transition-colors duration-200" />
+          Donate Now
+        </button>
+
+        {/* Mobile Menu Button */}
+        <button
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          className={`lg:hidden p-2 rounded-lg transition-all duration-300 ${isScrolled ? 'text-gray-800 hover:bg-gray-100' : 'text-white hover:bg-white/10'}`}
+        >
+          {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
         </button>
       </div>
-    </section>
+
+      {/* Mobile Navigation */}
+      {isMenuOpen && (
+        <div className="lg:hidden bg-cream/95 backdrop-blur-md shadow-xl border-t border-white/20">
+          <nav className="flex flex-col py-6">
+            {[
+              { name: 'Home', id: 'home' },
+              { name: 'About', id: 'about' },
+              { name: 'Leadership', id: 'leadership' },
+              { name: 'Projects', id: 'projects' },
+              { name: 'Donate', id: 'donate' },
+              { name: 'Contact', id: 'contact' }
+            ].map((item) => (
+              <button
+                key={item.id}
+                onClick={() => scrollToSection(item.id)}
+                className="text-left px-6 py-4 font-body text-gray-700 hover:bg-white/50 hover:text-orange transition-all duration-300 font-medium"
+              >
+                {item.name}
+              </button>
+            ))}
+            <div className="px-6 pt-4">
+              <button
+                onClick={() => scrollToSection('donate')}
+                className="w-full bg-orange text-white px-6 py-3 rounded-2xl hover:bg-orange/90 transition-all duration-300 font-body font-semibold"
+              >
+                Donate Now
+              </button>
+            </div>
+          </nav>
+        </div>
+      )}
+    </header>
   );
 };
 
-export default Hero;
+export default Header;

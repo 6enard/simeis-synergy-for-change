@@ -41,11 +41,11 @@ const Donate = () => {
     <section id="donate" className="py-20 bg-gradient-to-br from-lime/10 to-orange/10">
       <div className="container mx-auto px-4 sm:px-6">
         {/* Section Header */}
-        <div className="text-center mb-16 animate-fade-in-up">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading text-gray-800 mb-6 animate-slide-in-up">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading text-gray-800 mb-6">
             Make a <span className="text-lime">Difference</span> Today
           </h2>
-          <p className="text-lg sm:text-xl font-body text-gray-600 max-w-3xl mx-auto px-2 animate-fade-in-up animate-stagger-1">
+          <p className="text-lg sm:text-xl font-body text-gray-600 max-w-3xl mx-auto px-2">
             Your generous contribution helps us continue our mission of empowering lives 
             and creating sustainable positive change in communities across Kenya.
           </p>

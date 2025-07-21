@@ -71,11 +71,11 @@ const Leadership = () => {
     <section id="leadership" className="py-20 bg-gradient-to-br from-cream to-white">
       <div className="container mx-auto px-4 sm:px-6">
         {/* Section Header */}
-        <div className="text-center mb-16 animate-fade-in-up">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading text-gray-800 mb-6 sm:mb-8 tracking-tight animate-slide-in-up">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading text-gray-800 mb-6 sm:mb-8 tracking-tight">
             Meet Our <span className="text-orange">Leadership</span>
           </h2>
-          <p className="text-lg sm:text-xl font-body text-gray-600 max-w-4xl mx-auto font-light leading-relaxed px-2 animate-fade-in-up animate-stagger-1">
+          <p className="text-lg sm:text-xl font-body text-gray-600 max-w-4xl mx-auto font-light leading-relaxed px-2">
             Passionate individuals dedicated to creating lasting change and empowering communities 
             through compassionate leadership and unwavering commitment to our mission.
           </p>
@@ -86,7 +86,7 @@ const Leadership = () => {
           {leaders.map((leader, index) => (
             <div 
               key={leader.id}
-              className="bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 overflow-hidden animate-fade-in-scale"
+              className="bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 overflow-hidden"
               style={{ animationDelay: `${index * 100}ms` }}
             >
               {/* Leader Photo */}
@@ -95,7 +95,6 @@ const Leadership = () => {
                   src={leader.image}
                   alt={leader.name}
                   className="w-full h-64 sm:h-72 object-cover"
-                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
                 <div className="absolute bottom-4 left-4 right-4">

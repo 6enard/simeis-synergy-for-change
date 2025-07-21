@@ -6,11 +6,11 @@ const About = () => {
     <section id="about" className="py-20 bg-cream">
       <div className="container mx-auto px-4 sm:px-6">
         {/* Section Header */}
-        <div className="text-center mb-16 animate-fade-in-up">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading text-gray-800 mb-6 sm:mb-8 tracking-tight animate-slide-in-up">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading text-gray-800 mb-6 sm:mb-8 tracking-tight">
             About Our <span className="text-lime">Mission</span>
           </h2>
-          <p className="text-lg sm:text-xl font-body text-gray-600 max-w-4xl mx-auto font-light leading-relaxed px-2 animate-fade-in-up animate-stagger-1">
+          <p className="text-lg sm:text-xl font-body text-gray-600 max-w-4xl mx-auto font-light leading-relaxed px-2">
             We are a youth-driven charity organization dedicated to uplifting the less fortunate 
             and fostering sustainable growth in our communities.
           </p>
@@ -19,7 +19,7 @@ const About = () => {
         {/* Mission, Vision, Values Grid */}
         <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10 mb-16 sm:mb-20">
           {/* Mission */}
-          <div className="bg-white rounded-3xl p-6 sm:p-8 lg:p-10 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 sm:hover:-translate-y-3 border border-gray-100 md:col-span-2 lg:col-span-1 animate-slide-in-left animate-stagger-1">
+          <div className="bg-white rounded-3xl p-6 sm:p-8 lg:p-10 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 md:col-span-2 lg:col-span-1">
             <div className="bg-gradient-to-br from-lime/20 to-lime/30 rounded-2xl p-3 sm:p-4 w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-6 sm:mb-8 flex items-center justify-center">
               <Target className="h-6 w-6 sm:h-8 sm:w-8 text-lime" />
             </div>
@@ -32,7 +32,7 @@ const About = () => {
           </div>
 
           {/* Vision */}
-          <div className="bg-white rounded-3xl p-6 sm:p-8 lg:p-10 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 sm:hover:-translate-y-3 border border-gray-100 md:col-span-2 lg:col-span-1 animate-slide-in-up animate-stagger-2">
+          <div className="bg-white rounded-3xl p-6 sm:p-8 lg:p-10 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 md:col-span-2 lg:col-span-1">
             <div className="bg-gradient-to-br from-orange/20 to-orange/30 rounded-2xl p-3 sm:p-4 w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-6 sm:mb-8 flex items-center justify-center">
               <Eye className="h-6 w-6 sm:h-8 sm:w-8 text-orange" />
             </div>
@@ -46,7 +46,7 @@ const About = () => {
           </div>
 
           {/* Values */}
-          <div className="bg-white rounded-3xl p-6 sm:p-8 lg:p-10 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 sm:hover:-translate-y-3 border border-gray-100 md:col-span-2 lg:col-span-1 animate-slide-in-right animate-stagger-3">
+          <div className="bg-white rounded-3xl p-6 sm:p-8 lg:p-10 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 md:col-span-2 lg:col-span-1">
             <div className="bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl p-3 sm:p-4 w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-6 sm:mb-8 flex items-center justify-center">
               <Compass className="h-6 w-6 sm:h-8 sm:w-8 text-gray-600" />
             </div>

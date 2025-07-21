@@ -22,31 +22,30 @@ const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 text-center text-white px-4 sm:px-6 max-w-5xl mx-auto animate-fade-in-up">
-        <div className="mb-8">
+      <div className="relative z-10 text-center text-white px-4 sm:px-6 max-w-5xl mx-auto">
+        <div className="mb-8 animate-fade-in">
           <div className="flex justify-center mb-6 sm:mb-8">
-            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-4 sm:p-6 border border-white/20 animate-bounce-in animate-stagger-1">
+            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-4 sm:p-6 border border-white/20">
               <img 
                 src="/simeis (1).png" 
                 alt="Simeis Synergy Logo" 
                 className="h-16 w-16 sm:h-20 sm:w-20 md:h-24 md:w-24"
-                loading="lazy"
               />
             </div>
           </div>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-heading mb-6 sm:mb-8 leading-tight tracking-tight animate-slide-in-left animate-stagger-2">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-heading mb-6 sm:mb-8 leading-tight tracking-tight">
             Simeis Synergy
-            <span className="block text-orange drop-shadow-lg animate-slide-in-right animate-stagger-3">For Change</span>
+            <span className="block text-orange drop-shadow-lg">For Change</span>
           </h1>
-          <p className="text-lg sm:text-xl md:text-2xl mb-8 sm:mb-12 font-body text-white/90 max-w-4xl mx-auto leading-relaxed font-light px-2 animate-fade-in-up animate-stagger-4">
+          <p className="text-lg sm:text-xl md:text-2xl mb-8 sm:mb-12 font-body text-white/90 max-w-4xl mx-auto leading-relaxed font-light px-2">
             Empowering lives through essential assistance and sustainable support, 
             creating brighter futures for the less fortunate in our community.
           </p>
         </div>
 
         {/* Stats */}
-        <div className="grid grid-cols-3 gap-4 sm:gap-6 md:gap-8 mb-12 sm:mb-16 max-w-4xl mx-auto animate-fade-in-up animate-stagger-5">
-          <div className="text-center animate-slide-in-up animate-stagger-1">
+        <div className="grid grid-cols-3 gap-4 sm:gap-6 md:gap-8 mb-12 sm:mb-16 max-w-4xl mx-auto">
+          <div className="text-center">
             <div className="flex justify-center mb-3">
               <div className="bg-orange/20 backdrop-blur-sm rounded-full p-2 sm:p-3 border border-orange/30">
                 <Users className="h-5 w-5 sm:h-6 sm:w-6 md:h-8 md:w-8 text-orange" />
@@ -55,7 +54,7 @@ const Hero = () => {
             <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-heading text-orange drop-shadow-lg">100+</div>
             <div className="text-xs sm:text-sm md:text-base font-body text-white/90 font-medium">Families Helped</div>
           </div>
-          <div className="text-center animate-slide-in-up animate-stagger-2">
+          <div className="text-center">
             <div className="flex justify-center mb-3">
               <div className="bg-lime/20 backdrop-blur-sm rounded-full p-2 sm:p-3 border border-lime/30">
                 <Heart className="h-5 w-5 sm:h-6 sm:w-6 md:h-8 md:w-8 text-lime" />
@@ -64,7 +63,7 @@ const Hero = () => {
             <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-heading text-lime drop-shadow-lg">150+</div>
             <div className="text-xs sm:text-sm md:text-base font-body text-white/90 font-medium">Households</div>
           </div>
-          <div className="text-center animate-slide-in-up animate-stagger-3">
+          <div className="text-center">
             <div className="flex justify-center mb-3">
               <div className="bg-yellow-400/20 backdrop-blur-sm rounded-full p-2 sm:p-3 border border-yellow-400/30">
                 <Star className="h-5 w-5 sm:h-6 sm:w-6 md:h-8 md:w-8 text-yellow-400" />
@@ -76,16 +75,16 @@ const Hero = () => {
         </div>
 
         {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center mb-12 sm:mb-20 px-4 animate-fade-in-up animate-stagger-6">
+        <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center mb-12 sm:mb-20 px-4">
           <button
             onClick={() => scrollToSection('donate')}
-            className="bg-orange hover:bg-orange/90 text-white px-8 sm:px-10 py-3 sm:py-4 rounded-2xl font-body font-semibold text-base sm:text-lg transition-all duration-300 transform hover:scale-105 shadow-2xl backdrop-blur-sm border border-orange/20 animate-slide-in-left animate-stagger-1"
+            className="bg-orange hover:bg-orange/90 text-white px-8 sm:px-10 py-3 sm:py-4 rounded-2xl font-body font-semibold text-base sm:text-lg transition-all duration-300 transform hover:scale-105 shadow-2xl backdrop-blur-sm border border-orange/20"
           >
             Make a Donation
           </button>
           <button
             onClick={() => scrollToSection('about')}
-            className="bg-white/10 backdrop-blur-md border-2 border-white/30 text-white hover:bg-white hover:text-gray-800 px-8 sm:px-10 py-3 sm:py-4 rounded-2xl font-body font-semibold text-base sm:text-lg transition-all duration-300 transform hover:scale-105 shadow-xl animate-slide-in-right animate-stagger-2"
+            className="bg-white/10 backdrop-blur-md border-2 border-white/30 text-white hover:bg-white hover:text-gray-800 px-8 sm:px-10 py-3 sm:py-4 rounded-2xl font-body font-semibold text-base sm:text-lg transition-all duration-300 transform hover:scale-105 shadow-xl"
           >
             Learn More
           </button>
