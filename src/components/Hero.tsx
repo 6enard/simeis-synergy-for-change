@@ -29,7 +29,7 @@ const Hero = () => {
               <img 
                 src="/simeis (1).png" 
                 alt="Simeis Synergy Logo" 
-                className="h-12 w-12 object-contain"
+                className="h-16 w-16"
               />
             </div>
           </div>

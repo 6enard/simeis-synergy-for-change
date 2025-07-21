@@ -19,7 +19,7 @@ const Footer = () => {
               <img 
                 src="/simeis (1).png" 
                 alt="Simeis Synergy Logo" 
-                className="h-8 w-8 object-contain"
+                className="h-10 w-10"
               />
               <span className="text-2xl font-heading">Simeis Synergy For Change</span>
             </div>
