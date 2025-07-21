@@ -51,7 +51,7 @@ const Hero = () => {
                 <Users className="h-5 w-5 sm:h-6 sm:w-6 md:h-8 md:w-8 text-orange" />
               </div>
             </div>
-            <div className="text-2xl sm:text-3xl md:text-4xl font-heading text-orange drop-shadow-lg">150+</div>
+            <div className="text-2xl sm:text-3xl md:text-4xl font-heading text-orange drop-shadow-lg">100</div>
             <div className="text-xs sm:text-sm font-body text-white/80 font-medium">Families Helped</div>
           </div>
           <div className="text-center">
@@ -60,8 +60,8 @@ const Hero = () => {
                 <Heart className="h-5 w-5 sm:h-6 sm:w-6 md:h-8 md:w-8 text-lime" />
               </div>
             </div>
-            <div className="text-2xl sm:text-3xl md:text-4xl font-heading text-lime drop-shadow-lg">5</div>
-            <div className="text-xs sm:text-sm font-body text-white/80 font-medium">Active Projects</div>
+            <div className="text-2xl sm:text-3xl md:text-4xl font-heading text-lime drop-shadow-lg">150</div>
+            <div className="text-xs sm:text-sm font-body text-white/80 font-medium">Households</div>
           </div>
           <div className="text-center">
             <div className="flex justify-center mb-3">
@@ -69,8 +69,8 @@ const Hero = () => {
                 <Star className="h-5 w-5 sm:h-6 sm:w-6 md:h-8 md:w-8 text-yellow-400" />
               </div>
             </div>
-            <div className="text-2xl sm:text-3xl md:text-4xl font-heading text-yellow-400 drop-shadow-lg">Youth</div>
-            <div className="text-xs sm:text-sm font-body text-white/80 font-medium">Driven</div>
+            <div className="text-2xl sm:text-3xl md:text-4xl font-heading text-yellow-400 drop-shadow-lg">1000</div>
+            <div className="text-xs sm:text-sm font-body text-white/80 font-medium">Kids</div>
           </div>
         </div>
 
