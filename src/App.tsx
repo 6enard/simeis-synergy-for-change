@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
+import Leadership from './components/Leadership';
 import Projects from './components/Projects';
 import ProjectDetail from './components/ProjectDetail';
 import Donate from './components/Donate';
@@ -45,6 +46,7 @@ function App() {
       <main>
         <Hero />
         <About />
+        <Leadership />
         <Projects />
         <Donate />
         <Contact />

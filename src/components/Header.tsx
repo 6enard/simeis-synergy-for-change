@@ -42,6 +42,7 @@ const Header = () => {
           {[
             { name: 'Home', id: 'home' },
             { name: 'About', id: 'about' },
+            { name: 'Leadership', id: 'leadership' },
             { name: 'Projects', id: 'projects' },
             { name: 'Donate', id: 'donate' },
             { name: 'Contact', id: 'contact' }
@@ -82,6 +83,7 @@ const Header = () => {
             {[
               { name: 'Home', id: 'home' },
               { name: 'About', id: 'about' },
+              { name: 'Leadership', id: 'leadership' },
               { name: 'Projects', id: 'projects' },
               { name: 'Donate', id: 'donate' },
               { name: 'Contact', id: 'contact' }
