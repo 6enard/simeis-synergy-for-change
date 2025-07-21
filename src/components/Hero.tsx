@@ -18,7 +18,7 @@ const Hero = () => {
           alt="Community helping hands"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-lime/80 to-orange/60"></div>
+        <div className="absolute inset-0 "></div>
       </div>
 
       {/* Content */}
