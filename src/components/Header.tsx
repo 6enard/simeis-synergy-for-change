@@ -30,7 +30,7 @@ const Header = () => {
           <img 
             src="/simeis (1).png" 
             alt="Simeis Synergy Logo" 
-            className="h-10 w-10"
+            className="h-14 w-14"
           />
           <span className={`text-xl font-heading ${isScrolled ? 'text-gray-800' : 'text-white'}`}>
             Simeis Synergy
