@@ -33,7 +33,7 @@ const Leadership = () => {
       id: 4,
       name: "Roselinda Gitau",
       position: "Financial Manager",
-      image: "https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=400",
+      image: "/src/assets/darlene.jpg",
       shortStatement: "In my role as the head of Financial Management at Simei's Synergy for Change, I carry more than just numbers...",
       fullStatement: "In my role as the head of Financial Management at Simei's Synergy for Change (SSC), I carry more than just numbers, I carry the trust of every donor, the dreams of every child we support, and the hope of every community we serve. Finance in a charitable foundation isn't just about balancing books; it's about ensuring that every coin is accounted for, every resource is maximized, and every contribution is treated with the respect it deserves. I joined SSC because I believed in its heartbeat, a genuine desire to uplift and change lives, and my responsibility is to ensure that this mission is not only sustainable, but also transparent and accountable. Through clear reporting, ethical budgeting, and strategic stewardship, I work every day to make sure that the financial backbone of SSC remains strong, honest, and deeply aligned with the purpose it was built on."
     },
