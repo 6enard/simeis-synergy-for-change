@@ -16,7 +16,11 @@ const Footer = () => {
           {/* Brand Section */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-2 mb-6">
-              <Heart className="h-8 w-8 text-orange" />
+              <img 
+                src="/simeis (1).png" 
+                alt="Simeis Synergy Logo" 
+                className="h-8 w-8 object-contain"
+              />
               <span className="text-2xl font-heading">Simeis Synergy For Change</span>
             </div>
             <p className="font-body text-gray-300 mb-6 leading-relaxed max-w-md">

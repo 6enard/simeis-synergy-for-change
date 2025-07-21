@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Heart } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -27,7 +27,11 @@ const Header = () => {
     }`}>
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         <div className="flex items-center space-x-2">
-          <Heart className={`h-8 w-8 ${isScrolled ? 'text-lime' : 'text-white'}`} />
+          <img 
+            src="/simeis (1).png" 
+            alt="Simeis Synergy Logo" 
+            className="h-8 w-8 object-contain"
+          />
           <span className={`text-xl font-heading ${isScrolled ? 'text-gray-800' : 'text-white'}`}>
             Simeis Synergy
           </span>

@@ -26,7 +26,11 @@ const Hero = () => {
         <div className="mb-8 animate-fade-in">
           <div className="flex justify-center mb-6">
             <div className="bg-white/20 backdrop-blur-sm rounded-full p-4">
-              <Heart className="h-12 w-12 text-orange" />
+              <img 
+                src="/simeis (1).png" 
+                alt="Simeis Synergy Logo" 
+                className="h-12 w-12 object-contain"
+              />
             </div>
           </div>
           <h1 className="text-5xl md:text-7xl font-heading mb-6 leading-tight">
