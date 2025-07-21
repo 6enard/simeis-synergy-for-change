@@ -9,7 +9,7 @@ const Leadership = () => {
       id: 1,
       name: "Trevor Abashora",
       position: "CEO and Founder",
-      image: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=400",
+      image: "/src/assets/DSC_0273_page-0001 (1).jpg",
       shortStatement: "I founded Simei's Synergy for Change not as an organization, but as a response to the silent cries I saw in children without homes...",
       fullStatement: "I founded Simei's Synergy for Change (SSC) not as an organization, but as a response, a response to the silent cries I saw in children without homes, families left in crisis, and communities weighed down by struggle yet forgotten by the world. On December 4th, 2023, I chose to stop watching from the sidelines and instead become part of the solution. SSC was born from a place of compassion, not convenience, a movement rooted in love, dignity, and action. From feeding the hungry on city streets to standing with children in forgotten homes and supporting less fortunate families, we have walked where others turn away. As the Founder and CEO, I do not lead from above, but alongside, ensuring that every decision, every outreach, and every effort carries the weight of purpose and the warmth of humanity. SSC is a call to everyone who believes that small acts can create great waves; it's for the forgotten, the unseen, and also for those who've always wanted to help, but didn't know how. Here, we don't just give hope, we become it."
     },
@@ -17,7 +17,7 @@ const Leadership = () => {
       id: 2,
       name: "Dave Njuguna",
       position: "Vice Chair",
-      image: "https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=400",
+      image: "/src/assets/Dave.jpg",
       shortStatement: "I founded Simei's Synergy for Change not as an organization, but as a response to the silent cries I saw in children without homes...",
       fullStatement: "I founded Simei's Synergy for Change (SSC) not as an organization, but as a response, a response to the silent cries I saw in children without homes, families left in crisis, and communities weighed down by struggle yet forgotten by the world. On December 4th, 2023, I chose to stop watching from the sidelines and instead become part of the solution. SSC was born from a place of compassion, not convenience, a movement rooted in love, dignity, and action. From feeding the hungry on city streets to standing with children in forgotten homes and supporting less fortunate families, we have walked where others turn away. As the Founder and CEO, I do not lead from above, but alongside, ensuring that every decision, every outreach, and every effort carries the weight of purpose and the warmth of humanity. SSC is a call to everyone who believes that small acts can create great waves; it's for the forgotten, the unseen, and also for those who've always wanted to help, but didn't know how. Here, we don't just give hope, we become it."
     },
@@ -25,7 +25,7 @@ const Leadership = () => {
       id: 3,
       name: "Darlene Kiptoo",
       position: "Vice Chair",
-      image: "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=400",
+      image: "/src/assets/darlene.jpg",
       shortStatement: "I founded Simei's Synergy for Change not as an organization, but as a response to the silent cries I saw in children without homes...",
       fullStatement: "I founded Simei's Synergy for Change (SSC) not as an organization, but as a response, a response to the silent cries I saw in children without homes, families left in crisis, and communities weighed down by struggle yet forgotten by the world. On December 4th, 2023, I chose to stop watching from the sidelines and instead become part of the solution. SSC was born from a place of compassion, not convenience, a movement rooted in love, dignity, and action. From feeding the hungry on city streets to standing with children in forgotten homes and supporting less fortunate families, we have walked where others turn away. As the Founder and CEO, I do not lead from above, but alongside, ensuring that every decision, every outreach, and every effort carries the weight of purpose and the warmth of humanity. SSC is a call to everyone who believes that small acts can create great waves; it's for the forgotten, the unseen, and also for those who've always wanted to help, but didn't know how. Here, we don't just give hope, we become it."
     },
@@ -41,7 +41,7 @@ const Leadership = () => {
       id: 5,
       name: "Jessica Obare",
       position: "Compliance Division",
-      image: "https://images.pexels.com/photos/1181424/pexels-photo-1181424.jpeg?auto=compress&cs=tinysrgb&w=400",
+      image: "/src/assets/Jessica.jpg",
       shortStatement: "At Simei's Synergy for Change, our Compliance Division isn't just about rules, it's about protecting the heart of everything we do...",
       fullStatement: "At Simei's Synergy for Change, our Compliance Division isn't just about rules, it's about protecting the heart of everything we do. We've been entrusted with ensuring that every part of our work, from how we handle finances to how we run our programs, stays true to the laws, values, and ethics that define us. Our foundation is built on transparency, accountability, and integrity, and it's our job to make sure those values aren't just words on paper, but real in every decision, every partnership, and every action. We work behind the scenes to build trust, not just with donors and partners, but also with the communities we serve and the team we work alongside. That means setting up strong internal systems, regularly reviewing our processes, and making sure we're doing things right, not just fast. For us, compliance isn't about ticking boxes, it's about protecting the mission, ensuring long term impact, and doing right by the people who believe in us. Whether we're overseeing a local outreach or managing global partnerships, we're always asking: Are we honoring the trust placed in us? Are we using every resource responsibly? Our work is a quiet promise, that behind every smile we help create, there's a structure of honesty, care, and responsibility holding it up. That's what drives us, every single day."
     },
@@ -49,7 +49,7 @@ const Leadership = () => {
       id: 6,
       name: "Briton Waweru",
       position: "Compliance Division",
-      image: "https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg?auto=compress&cs=tinysrgb&w=400",
+      image: "/src/assets/briton.jpg",
       shortStatement: "At Simei's Synergy for Change, our Compliance Division isn't just about rules, it's about protecting the heart of everything we do...",
       fullStatement: "At Simei's Synergy for Change, our Compliance Division isn't just about rules, it's about protecting the heart of everything we do. We've been entrusted with ensuring that every part of our work, from how we handle finances to how we run our programs, stays true to the laws, values, and ethics that define us. Our foundation is built on transparency, accountability, and integrity, and it's our job to make sure those values aren't just words on paper, but real in every decision, every partnership, and every action. We work behind the scenes to build trust, not just with donors and partners, but also with the communities we serve and the team we work alongside. That means setting up strong internal systems, regularly reviewing our processes, and making sure we're doing things right, not just fast. For us, compliance isn't about ticking boxes, it's about protecting the mission, ensuring long term impact, and doing right by the people who believe in us. Whether we're overseeing a local outreach or managing global partnerships, we're always asking: Are we honoring the trust placed in us? Are we using every resource responsibly? Our work is a quiet promise, that behind every smile we help create, there's a structure of honesty, care, and responsibility holding it up. That's what drives us, every single day."
     },
