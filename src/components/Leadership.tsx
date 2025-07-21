@@ -94,7 +94,9 @@ const Leadership = () => {
                 <img
                   src={leader.image}
                   alt={leader.name}
-                  className="w-full h-64 sm:h-72 object-cover hover:scale-105 transition-transform duration-500"
+                  className={`w-full h-64 sm:h-72 hover:scale-105 transition-transform duration-500 ${
+                    leader.id === 2 ? 'object-cover object-top' : 'object-cover'
+                  }`}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
                 <div className="absolute bottom-4 left-4 right-4">
