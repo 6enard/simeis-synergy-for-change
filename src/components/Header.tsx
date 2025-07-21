@@ -30,15 +30,15 @@ const Header = () => {
           <img 
             src="/simeis (1).png" 
             alt="Simeis Synergy Logo" 
-            className="h-14 w-14"
+            className="h-10 w-10 sm:h-12 sm:w-12 md:h-14 md:w-14"
           />
-          <span className={`text-2xl font-heading ${isScrolled ? 'text-gray-800' : 'text-white drop-shadow-lg'}`}>
+          <span className={`text-lg sm:text-xl md:text-2xl font-heading ${isScrolled ? 'text-gray-800' : 'text-white drop-shadow-lg'}`}>
             Simeis Synergy
           </span>
         </div>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex space-x-10">
+        <nav className="hidden lg:flex space-x-6 xl:space-x-10">
           {[
             { name: 'Home', id: 'home' },
             { name: 'About', id: 'about' },
@@ -61,7 +61,7 @@ const Header = () => {
 
         <button
           onClick={() => scrollToSection('donate')}
-          className="hidden md:block bg-orange text-white px-8 py-3 rounded-2xl hover:bg-orange/90 transition-all duration-300 font-body font-semibold transform hover:scale-105 shadow-lg"
+          className="hidden lg:block bg-orange text-white px-6 xl:px-8 py-2 xl:py-3 rounded-2xl hover:bg-orange/90 transition-all duration-300 font-body font-semibold transform hover:scale-105 shadow-lg text-sm xl:text-base"
         >
           Donate Now
         </button>
@@ -69,7 +69,7 @@ const Header = () => {
         {/* Mobile Menu Button */}
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className={`md:hidden p-2 rounded-lg transition-all duration-300 ${isScrolled ? 'text-gray-800 hover:bg-gray-100' : 'text-white hover:bg-white/10'}`}
+          className={`lg:hidden p-2 rounded-lg transition-all duration-300 ${isScrolled ? 'text-gray-800 hover:bg-gray-100' : 'text-white hover:bg-white/10'}`}
         >
           {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
         </button>
@@ -77,7 +77,7 @@ const Header = () => {
 
       {/* Mobile Navigation */}
       {isMenuOpen && (
-        <div className="md:hidden bg-cream/95 backdrop-blur-md shadow-xl border-t border-white/20">
+        <div className="lg:hidden bg-cream/95 backdrop-blur-md shadow-xl border-t border-white/20">
           <nav className="flex flex-col py-6">
             {[
               { name: 'Home', id: 'home' },
@@ -94,6 +94,14 @@ const Header = () => {
                 {item.name}
               </button>
             ))}
+            <div className="px-6 pt-4">
+              <button
+                onClick={() => scrollToSection('donate')}
+                className="w-full bg-orange text-white px-6 py-3 rounded-2xl hover:bg-orange/90 transition-all duration-300 font-body font-semibold"
+              >
+                Donate Now
+              </button>
+            </div>
           </nav>
         </div>
       )}
