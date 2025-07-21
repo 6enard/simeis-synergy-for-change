@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ArrowLeft, Calendar, MapPin, Users, Heart, Home, Utensils, X, ChevronLeft, ChevronRight, Target, Eye } from 'lucide-react';
+import { Calendar, MapPin, Users, Heart, Home, Utensils, X, ChevronLeft, ChevronRight, Target, Eye } from 'lucide-react';
 
 interface ProjectDetailProps {
   projectId: number;
@@ -257,11 +257,11 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ projectId, onClose }) => 
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
               <button
                 onClick={onClose}
-                className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm rounded-full p-2 hover:bg-white transition-colors duration-200 shadow-lg"
+                className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm rounded-full p-2 hover:bg-white transition-colors duration-200 shadow-lg z-10"
               >
-                <ArrowLeft className="h-5 w-5 sm:h-6 sm:w-6 text-gray-800" />
+                <X className="h-5 w-5 sm:h-6 sm:w-6 text-gray-800" />
               </button>
-              <div className="absolute top-4 right-4">
+              <div className="absolute top-4 left-4">
                 <span className={`px-3 sm:px-4 py-1 sm:py-2 rounded-full text-xs sm:text-sm font-semibold backdrop-blur-sm shadow-lg ${
                   project.status === 'Completed' 
                     ? 'bg-lime/90 text-white' 
