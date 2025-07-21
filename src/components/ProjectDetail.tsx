@@ -253,13 +253,14 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ projectId, onClose }) => 
                 src={project.gallery[0]}
                 alt={project.title}
                 className="w-full h-48 sm:h-64 md:h-80 object-cover"
+                loading="lazy"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
               <button
                 onClick={onClose}
-                className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm rounded-full p-2 hover:bg-white transition-colors duration-200 shadow-lg z-10"
+                className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm rounded-full p-3 hover:bg-white hover:scale-110 transition-all duration-200 shadow-lg z-10 group"
               >
-                <X className="h-5 w-5 sm:h-6 sm:w-6 text-gray-800" />
+                <X className="h-5 w-5 sm:h-6 sm:w-6 text-gray-800 group-hover:text-red-500 transition-colors duration-200" />
               </button>
               <div className="absolute top-4 left-4">
                 <span className={`px-3 sm:px-4 py-1 sm:py-2 rounded-full text-xs sm:text-sm font-semibold backdrop-blur-sm shadow-lg ${
@@ -329,13 +330,15 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ projectId, onClose }) => 
                   {project.gallery.map((image, index) => (
                     <div
                       key={index}
-                      className="relative aspect-square rounded-lg sm:rounded-xl overflow-hidden cursor-pointer group shadow-lg hover:shadow-xl transition-all duration-300"
+                      className="relative aspect-square rounded-lg sm:rounded-xl overflow-hidden cursor-pointer group shadow-lg hover:shadow-xl transition-all duration-300 animate-fade-in-scale"
+                      style={{ animationDelay: `${index * 50}ms` }}
                       onClick={() => openGallery(index)}
                     >
                       <img
                         src={image}
                         alt={`${project.title} - Photo ${index + 1}`}
                         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                        loading="lazy"
                       />
                       <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center">
                         <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/90 rounded-full p-2">

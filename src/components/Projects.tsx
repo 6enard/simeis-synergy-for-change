@@ -129,11 +129,11 @@ const Projects = () => {
     <section id="projects" className="py-12 sm:py-16 md:py-20 bg-white">
       <div className="container mx-auto px-4 sm:px-6">
         {/* Section Header */}
-        <div className="text-center mb-12 sm:mb-16">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-heading text-gray-800 mb-4 sm:mb-6 md:mb-8 tracking-tight">
+        <div className="text-center mb-12 sm:mb-16 animate-fade-in-up">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-heading text-gray-800 mb-4 sm:mb-6 md:mb-8 tracking-tight animate-slide-in-up">
             Our <span className="text-orange">Impact</span> Stories
           </h2>
-          <p className="text-base sm:text-lg md:text-xl font-body text-gray-600 max-w-4xl mx-auto font-light leading-relaxed px-2">
+          <p className="text-base sm:text-lg md:text-xl font-body text-gray-600 max-w-4xl mx-auto font-light leading-relaxed px-2 animate-fade-in-up animate-stagger-1">
             Discover the meaningful projects we've undertaken to create positive change 
             in our communities and transform lives across Kenya.
           </p>
@@ -144,7 +144,7 @@ const Projects = () => {
           {projects.map((project, index) => (
             <div 
               key={project.id}
-              className="bg-white rounded-2xl sm:rounded-3xl shadow-lg sm:shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 sm:hover:-translate-y-3 border border-gray-100 cursor-pointer group"
+              className="bg-white rounded-2xl sm:rounded-3xl shadow-lg sm:shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 sm:hover:-translate-y-3 border border-gray-100 cursor-pointer group animate-fade-in-scale"
               style={{ animationDelay: `${index * 100}ms` }}
               onClick={() => handleProjectClick(project.id)}
             >
@@ -153,6 +153,7 @@ const Projects = () => {
                   src={project.image}
                   alt={project.title}
                   className="w-full h-32 sm:h-40 md:h-48 lg:h-56 object-cover group-hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
                 />
                 <div className="absolute top-2 sm:top-4 right-2 sm:right-4">
                   <span className={`px-2 sm:px-3 md:px-4 py-1 sm:py-2 rounded-full text-xs sm:text-sm font-semibold backdrop-blur-sm ${

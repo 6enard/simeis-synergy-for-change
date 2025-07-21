@@ -28,11 +28,11 @@ const Contact = () => {
     <section id="contact" className="py-20 bg-white">
       <div className="container mx-auto px-4 sm:px-6">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading text-gray-800 mb-6">
+        <div className="text-center mb-16 animate-fade-in-up">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading text-gray-800 mb-6 animate-slide-in-up">
             Get In <span className="text-orange">Touch</span>
           </h2>
-          <p className="text-lg sm:text-xl font-body text-gray-600 max-w-3xl mx-auto px-2">
+          <p className="text-lg sm:text-xl font-body text-gray-600 max-w-3xl mx-auto px-2 animate-fade-in-up animate-stagger-1">
             Ready to join our mission or have questions about our work? We'd love to hear from you. 
             Reach out and let's make a difference together.
           </p>
