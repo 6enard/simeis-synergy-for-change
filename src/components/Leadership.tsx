@@ -9,7 +9,7 @@ const Leadership = () => {
       id: 1,
       name: "Trevor Abashora",
       position: "CEO and Founder",
-      image: "/src/assets/DSC_0273_page-0001 (1).jpg",
+      image: "/src/assets/Abashora.jpg",
       shortStatement: "I founded Simei's Synergy for Change not as an organization, but as a response to the silent cries I saw in children without homes...",
       fullStatement: "I founded Simei's Synergy for Change (SSC) not as an organization, but as a response, a response to the silent cries I saw in children without homes, families left in crisis, and communities weighed down by struggle yet forgotten by the world. On December 4th, 2023, I chose to stop watching from the sidelines and instead become part of the solution. SSC was born from a place of compassion, not convenience, a movement rooted in love, dignity, and action. From feeding the hungry on city streets to standing with children in forgotten homes and supporting less fortunate families, we have walked where others turn away. As the Founder and CEO, I do not lead from above, but alongside, ensuring that every decision, every outreach, and every effort carries the weight of purpose and the warmth of humanity. SSC is a call to everyone who believes that small acts can create great waves; it's for the forgotten, the unseen, and also for those who've always wanted to help, but didn't know how. Here, we don't just give hope, we become it."
     },
