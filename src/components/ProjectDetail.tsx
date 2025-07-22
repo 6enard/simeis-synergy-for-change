@@ -360,11 +360,20 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ projectId, onClose }) => 
                       className="relative aspect-square rounded-lg sm:rounded-xl overflow-hidden cursor-pointer group shadow-lg hover:shadow-xl transition-all duration-300"
                       onClick={() => openGallery(index)}
                     >
-                      <img
-                        src={image}
-                        alt={`${project.title} - Photo ${index + 1}`}
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                      />
+                      {media.endsWith('.mp4') ? (
+                        <video
+                          src={media}
+                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                          muted
+                          playsInline
+                        />
+                      ) : (
+                        <img
+                          src={media}
+                          alt={`${project.title} - Photo ${index + 1}`}
+                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                        />
+                      )}
                       <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center">
                         <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/90 rounded-full p-2">
                           <Eye className="h-5 w-5 text-gray-800" />
@@ -428,11 +437,22 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ projectId, onClose }) => 
           </button>
 
           <div className="max-w-5xl max-h-full flex flex-col items-center">
-            <img
-              src={project.gallery[currentImageIndex]}
-              alt={`${project.title} - Photo ${currentImageIndex + 1}`}
-              className="max-w-full max-h-[80vh] object-contain rounded-lg shadow-2xl"
-            />
+            {project.gallery[currentImageIndex].endsWith('.mp4') ? (
+              <video
+                src={project.gallery[currentImageIndex]}
+                className="max-w-full max-h-[80vh] object-contain rounded-lg shadow-2xl"
+                controls
+                autoPlay
+                muted
+                playsInline
+              />
+            ) : (
+              <img
+                src={project.gallery[currentImageIndex]}
+                alt={`${project.title} - Photo ${currentImageIndex + 1}`}
+                className="max-w-full max-h-[80vh] object-contain rounded-lg shadow-2xl"
+              />
+            )}
             <div className="text-center mt-6 text-white">
               <div className="bg-black/50 backdrop-blur-sm rounded-full px-4 py-2">
                 <span className="text-sm font-body">
