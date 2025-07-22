@@ -360,16 +360,16 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ projectId, onClose }) => 
                       className="relative aspect-square rounded-lg sm:rounded-xl overflow-hidden cursor-pointer group shadow-lg hover:shadow-xl transition-all duration-300"
                       onClick={() => openGallery(index)}
                     >
-                      {media.endsWith('.mp4') ? (
+                      {image.endsWith('.mp4') ? (
                         <video
-                          src={media}
+                          src={image}
                           className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                           muted
                           playsInline
                         />
                       ) : (
                         <img
-                          src={media}
+                          src={image}
                           alt={`${project.title} - Photo ${index + 1}`}
                           className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                         />
