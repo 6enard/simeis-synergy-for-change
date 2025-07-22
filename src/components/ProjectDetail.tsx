@@ -370,9 +370,9 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ projectId, onClose }) => 
                             muted
                             playsInline
                             preload="none"
-                            onLoadedData={(e) => {
+                            onLoadedMetadata={(e) => {
                               const video = e.target as HTMLVideoElement;
-                              video.currentTime = 0.1; // Seek to 0.1 seconds to get a frame
+                              video.currentTime = 0.5; // Seek to 0.5 seconds to get a better frame
                             }}
                             onSeeked={(e) => {
                               const video = e.target as HTMLVideoElement;
@@ -383,8 +383,12 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ projectId, onClose }) => 
                                 canvas.height = video.videoHeight;
                                 ctx.drawImage(video, 0, 0);
                                 const thumbnail = canvas.toDataURL('image/jpeg', 0.8);
-                                video.poster = thumbnail;
-                                video.currentTime = 0; // Reset to beginning
+                                // Create an image element to replace the video for thumbnail display
+                                const img = document.createElement('img');
+                                img.src = thumbnail;
+                                img.className = video.className;
+                                img.alt = `${project.title} - Video thumbnail`;
+                                video.parentNode?.replaceChild(img, video);
                               }
                             }}
                           />
