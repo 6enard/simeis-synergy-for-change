@@ -24,7 +24,7 @@ const Leadership = () => {
     {
       id: 3,
       name: "Darlene Kiptoo",
-      position: "Vice Chair",
+      position: "Vice Chairlady",
       image: "/darlene.jpg",
       shortStatement: "At Simei's Synergy for Change, being Vice Chairs is not about titles, it's about service...",
       fullStatement: "At Simei's Synergy for Change, being Vice Chairs is not about titles, it's about service. It's about standing in the gap when it matters most, showing up with heart, and making sure no one feels forgotten. Every time we step into a home, a street corner, a household, a village, or a room full of children, we are reminded why this foundation exists: to restore dignity, to remind people they are seen, and to be present in moments others overlook. We've seen firsthand what it means to offer hope, not as a handout, but as a hand to hold. And that's what SSC is: a living, breathing community built on real people doing real work that touches real lives. We are proud to walk alongside Trevor, our team, and every volunteer and supporter who believes, like we do, that kindness still has the power to change the world. Our promise as Vice Chairs is simple: to lead with compassion, to listen more than we speak, and to always carry the mission of SSC with humility and purpose. We may not have all the answers, but together, with faith, action, and love, we are creating them, one step at a time."
