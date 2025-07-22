@@ -28,7 +28,18 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ projectId, onClose }) => 
         "/mukuru2.jpg",
         "/mukuru3.jpg",
         "/mukuru4.jpg",
-        "/mukuru5.jpg"
+        "/mukuru5.jpg",
+        "/mukuru6.jpg",
+        "/mukuru7.jpg",
+        "/mukuru8.jpg",
+        "/mukuru9.jpg",
+        "/mukuru10.jpg",
+        "/mukuru11.jpg",
+        "/mukuru12.jpg",
+        "/mukuru13.jpg",
+        "/mukuru14.jpg",
+        "/mukuru15.jpg",
+        "/mukuru16.jpg"
       ]
     },
     {
@@ -48,7 +59,25 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ projectId, onClose }) => 
         "/streetvid1.mp4",
         "/streetvid4.mp4",
         "/streetvid8.mp4",
-        "/streetvid13.mp4"
+        "/streetvid13.mp4",
+        "/streetvid14.mp4",
+        "/streetvid15.mp4",
+        "/streetvid17.mp4",
+        "/streetvid20.mp4",
+        "/streetvid2.mp4",
+        "/streetvid3.mp4",
+        "/streetvid5.mp4",
+        "/streetvid6.mp4",
+        "/streetvid7.mp4",
+        "/streetvid9.mp4",
+        "/streetvid10.mp4",
+        "/streetvid11.mp4",
+        "/streetvid12.mp4",
+        "/streetvid16.mp4",
+        "/streetvid18.mp4",
+        "/streetvid19.mp4",
+        "/streetvid21.mp4",
+        "/streetvid22.mp4"
       ]
     },
     {
