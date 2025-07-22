@@ -38,7 +38,8 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ projectId, onClose }) => 
         "/mukuru12.jpg",
         "/mukuru13.jpg",
         "/mukuru14.jpg",
-        "/mukuru15.jpg"
+        "/mukuru15.jpg",
+        "/mukuru16.jpg"
       ]
     },
     {
