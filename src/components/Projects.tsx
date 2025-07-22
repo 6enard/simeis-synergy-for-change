@@ -10,7 +10,7 @@ const Projects = () => {
       description: "We kicked off the year with a heartfelt visit to Mukuru Promotion Centre, where we spent time sharing meals, essentials, and encouragement with children and families living in one of Nairobi's most underserved communities.",
       impact: "Community support",
       icon: Heart,
-      image: "https://images.pexels.com/photos/6995251/pexels-photo-6995251.jpeg?auto=compress&cs=tinysrgb&w=800",
+      image: "/all.jpg",
       status: "Completed",
       location: "Mukuru, Nairobi"
     },
