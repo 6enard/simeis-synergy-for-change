@@ -88,7 +88,7 @@ const Projects = () => {
       impact: "Youth mentorship",
       icon: Users,
       image: "https://images.pexels.com/photos/6995007/pexels-photo-6995007.jpeg?auto=compress&cs=tinysrgb&w=800",
-      status: "Upcoming",
+      status: "Completed",
       location: "Getathuru"
     },
     {
@@ -99,7 +99,7 @@ const Projects = () => {
       impact: "Sustained support",
       icon: Heart,
       image: "https://images.pexels.com/photos/6995251/pexels-photo-6995251.jpeg?auto=compress&cs=tinysrgb&w=800",
-      status: "Upcoming",
+      status: "Completed",
       location: "Mukuru, Nairobi"
     },
     {
