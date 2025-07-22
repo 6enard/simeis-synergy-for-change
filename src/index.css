@@ -120,6 +120,36 @@ img {
 img {
   image-rendering: -webkit-optimize-contrast;
   image-rendering: crisp-edges;
+  /* Mobile optimization */
+  max-width: 100%;
+  height: auto;
+}
+
+/* Mobile-specific optimizations */
+@media (max-width: 768px) {
+  img {
+    image-rendering: auto;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+  }
+  
+  video {
+    max-width: 100vw;
+    height: auto;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+  }
+  
+  /* Reduce animation complexity on mobile */
+  .group:hover img,
+  .group:hover video {
+    transform: none;
+  }
+  
+  /* Optimize gallery grid for mobile */
+  .grid {
+    gap: 0.5rem;
+  }
 }
 
 /* Video optimization */

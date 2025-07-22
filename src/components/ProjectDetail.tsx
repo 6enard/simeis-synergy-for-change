@@ -28,18 +28,7 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ projectId, onClose }) => 
         "/mukuru2.jpg",
         "/mukuru3.jpg",
         "/mukuru4.jpg",
-        "/mukuru5.jpg",
-        "/mukuru6.jpg",
-        "/mukuru7.jpg",
-        "/mukuru8.jpg",
-        "/mukuru9.jpg",
-        "/mukuru10.jpg",
-        "/mukuru11.jpg",
-        "/mukuru12.jpg",
-        "/mukuru13.jpg",
-        "/mukuru14.jpg",
-        "/mukuru15.jpg",
-        "/mukuru16.jpg"
+        "/mukuru5.jpg"
       ]
     },
     {
@@ -59,25 +48,7 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ projectId, onClose }) => 
         "/streetvid1.mp4",
         "/streetvid4.mp4",
         "/streetvid8.mp4",
-        "/streetvid13.mp4",
-        "/streetvid14.mp4",
-        "/streetvid15.mp4",
-        "/streetvid17.mp4",
-        "/streetvid20.mp4",
-        "/streetvid2.mp4",
-        "/streetvid3.mp4",
-        "/streetvid5.mp4",
-        "/streetvid6.mp4",
-        "/streetvid7.mp4",
-        "/streetvid9.mp4",
-        "/streetvid10.mp4",
-        "/streetvid11.mp4",
-        "/streetvid12.mp4",
-        "/streetvid16.mp4",
-        "/streetvid18.mp4",
-        "/streetvid19.mp4",
-        "/streetvid21.mp4",
-        "/streetvid22.mp4"
+        "/streetvid13.mp4"
       ]
     },
     {
@@ -364,28 +335,47 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ projectId, onClose }) => 
                     >
                       {image.endsWith('.mp4') ? (
                         <video
+                      <div className="relative w-full h-full bg-gray-200 flex items-center justify-center">
+                        <video
                           src={image}
                           className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                           muted
                           playsInline
-                          preload="metadata"
-                          loading="lazy"
+                          preload="none"
+                          poster=""
+                          onLoadStart={(e) => {
+                            const video = e.target as HTMLVideoElement;
+                            video.currentTime = 0.1;
+                          }}
                         />
-                      ) : (
+                        <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
+                          <div className="bg-white/90 rounded-full p-3">
+                            <svg className="w-6 h-6 text-gray-800" fill="currentColor" viewBox="0 0 24 24">
+                              <path d="M8 5v14l11-7z"/>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
                         <img
                           src={image}
-                          alt={`${project.title} - Photo ${index + 1}`}
+                        src={`${image}${image.includes('pexels.com') ? '?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop' : ''}`}
                           className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                           loading="lazy"
-                          decoding="async"
+                        loading="eager"
                         />
+                        onError={(e) => {
+                          const img = e.target as HTMLImageElement;
+                          img.src = image; // Fallback to original if optimized fails
+                        }}
                       )}
+                      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center">
+                    {!image.endsWith('.mp4') && (
                       <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center">
                         <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/90 rounded-full p-2">
                           <Eye className="h-5 w-5 text-gray-800" />
                         </div>
                       </div>
-                    </div>
+                    )}
                   ))}
                 </div>
               </div>
@@ -444,22 +434,36 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ projectId, onClose }) => 
 
           <div className="max-w-5xl max-h-full flex flex-col items-center">
             {project.gallery[currentImageIndex].endsWith('.mp4') ? (
-              <video
-                src={project.gallery[currentImageIndex]}
-                className="max-w-full max-h-[80vh] object-contain rounded-lg shadow-2xl"
-                controls
-                autoPlay
-                preload="metadata"
-                muted
-                playsInline
-              />
+              <div className="relative max-w-full max-h-[80vh]">
+                <video
+                  src={project.gallery[currentImageIndex]}
+                  className="max-w-full max-h-[80vh] object-contain rounded-lg shadow-2xl"
+                  controls
+                  autoPlay
+                  preload="metadata"
+                  muted
+                  playsInline
+                  onLoadStart={(e) => {
+                    const video = e.target as HTMLVideoElement;
+                    // Reduce quality for mobile
+                    if (window.innerWidth < 768) {
+                      video.style.maxWidth = '100vw';
+                      video.style.maxHeight = '60vh';
+                    }
+                  }}
+                />
+              </div>
             ) : (
               <img
-                src={project.gallery[currentImageIndex]}
+                src={`${project.gallery[currentImageIndex]}${project.gallery[currentImageIndex].includes('pexels.com') ? '?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop' : ''}`}
                 alt={`${project.title} - Photo ${currentImageIndex + 1}`}
                 className="max-w-full max-h-[80vh] object-contain rounded-lg shadow-2xl"
                 loading="eager"
                 decoding="async"
+                onError={(e) => {
+                  const img = e.target as HTMLImageElement;
+                  img.src = project.gallery[currentImageIndex]; // Fallback to original
+                }}
               />
             )}
             <div className="text-center mt-6 text-white">

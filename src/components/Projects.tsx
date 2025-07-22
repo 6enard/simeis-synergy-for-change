@@ -150,11 +150,15 @@ const Projects = () => {
             >
               <div className="relative">
                 <img
-                  src={project.image}
+                  src={`${project.image}${project.image.includes('pexels.com') ? '?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop' : ''}`}
                   alt={project.title}
                   className="w-full h-32 sm:h-40 md:h-48 lg:h-56 object-cover group-hover:scale-105 transition-transform duration-500"
-                  loading="lazy"
+                  loading="eager"
                   decoding="async"
+                  onError={(e) => {
+                    const img = e.target as HTMLImageElement;
+                    img.src = project.image; // Fallback to original if optimized fails
+                  }}
                 />
                 <div className="absolute top-2 sm:top-4 right-2 sm:right-4">
                   <span className={`px-2 sm:px-3 md:px-4 py-1 sm:py-2 rounded-full text-xs sm:text-sm font-semibold backdrop-blur-sm ${
