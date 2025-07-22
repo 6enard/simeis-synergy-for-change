@@ -55,11 +55,7 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ projectId, onClose }) => 
       volunteers: "20 volunteers",
       status: "Completed",
       gallery: [
-        "https://images.pexels.com/photos/6995007/pexels-photo-6995007.jpeg?auto=compress&cs=tinysrgb&w=800",
-        "https://images.pexels.com/photos/6994982/pexels-photo-6994982.jpeg?auto=compress&cs=tinysrgb&w=800",
-        "https://images.pexels.com/photos/6995251/pexels-photo-6995251.jpeg?auto=compress&cs=tinysrgb&w=800",
-        "https://images.pexels.com/photos/8088495/pexels-photo-8088495.jpeg?auto=compress&cs=tinysrgb&w=800",
-        "https://images.pexels.com/photos/8088486/pexels-photo-8088486.jpeg?auto=compress&cs=tinysrgb&w=800",
+        "/street1.jpg",
         "/streetvid1.mp4",
         "/streetvid4.mp4",
         "/streetvid8.mp4",
@@ -67,7 +63,21 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ projectId, onClose }) => 
         "/streetvid14.mp4",
         "/streetvid15.mp4",
         "/streetvid17.mp4",
-        "/streetvid20.mp4"
+        "/streetvid20.mp4",
+        "/streetvid2.mp4",
+        "/streetvid3.mp4",
+        "/streetvid5.mp4",
+        "/streetvid6.mp4",
+        "/streetvid7.mp4",
+        "/streetvid9.mp4",
+        "/streetvid10.mp4",
+        "/streetvid11.mp4",
+        "/streetvid12.mp4",
+        "/streetvid16.mp4",
+        "/streetvid18.mp4",
+        "/streetvid19.mp4",
+        "/streetvid21.mp4",
+        "/streetvid22.mp4"
       ]
     },
     {
