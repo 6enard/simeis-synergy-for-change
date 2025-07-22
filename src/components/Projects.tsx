@@ -21,7 +21,7 @@ const Projects = () => {
       description: "In our ongoing effort to connect with and restore dignity to the homeless community, we carried out a city outreach program, distributing food, hygiene products, and offering conversations filled with hope in the heart of Nairobi.",
       impact: "Homeless support",
       icon: Users,
-      image: "https://images.pexels.com/photos/6995007/pexels-photo-6995007.jpeg?auto=compress&cs=tinysrgb&w=800",
+      image: "/street1.jpg",
       status: "Completed",
       location: "Nairobi CBD"
     },
