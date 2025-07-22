@@ -1,5 +1,6 @@
 import React from 'react';
 import { Calendar, Users, Heart, Home, Utensils, MapPin, ArrowRight } from 'lucide-react';
+import LazyImage from './LazyImage';
 
 const Projects = () => {
   const projects = [
@@ -149,10 +150,12 @@ const Projects = () => {
               onClick={() => handleProjectClick(project.id)}
             >
               <div className="relative">
-                <img
+                <LazyImage
                   src={project.image}
                   alt={project.title}
                   className="w-full h-32 sm:h-40 md:h-48 lg:h-56 object-cover group-hover:scale-105 transition-transform duration-500"
+                  width={400}
+                  quality={75}
                 />
                 <div className="absolute top-2 sm:top-4 right-2 sm:right-4">
                   <span className={`px-2 sm:px-3 md:px-4 py-1 sm:py-2 rounded-full text-xs sm:text-sm font-semibold backdrop-blur-sm ${

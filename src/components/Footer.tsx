@@ -23,6 +23,8 @@ const Footer = () => {
                 src="/simeis (1).png" 
                 alt="Simeis Synergy Logo" 
                 className="h-10 w-10 sm:h-12 sm:w-12 animate-float"
+                loading="lazy"
+                decoding="async"
               />
               <span className="text-lg sm:text-xl lg:text-2xl font-heading animate-typewriter">Simeis Synergy For Change</span>
             </button>

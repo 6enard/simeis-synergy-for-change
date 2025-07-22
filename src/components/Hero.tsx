@@ -17,6 +17,8 @@ const Hero = () => {
           src="/all.jpg"
           alt="Community helping hands"
           className="w-full h-full object-cover blur-sm"
+          loading="eager"
+          decoding="async"
         />
         <div className="absolute inset-0 bg-black/40"></div>
       </div>
@@ -30,6 +32,8 @@ const Hero = () => {
                 src="/simeis (1).png" 
                 alt="Simeis Synergy Logo" 
                 className="h-16 w-16 sm:h-20 sm:w-20 md:h-24 md:w-24"
+                loading="eager"
+                decoding="async"
               />
             </div>
           </div>

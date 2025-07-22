@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Users, ChevronDown, ChevronUp, Quote, Star } from 'lucide-react';
+import LazyImage from './LazyImage';
 
 export default function Leadership() {
   const [expandedLeader, setExpandedLeader] = useState<number | null>(null);
@@ -91,12 +92,14 @@ export default function Leadership() {
             >
               {/* Leader Photo */}
               <div className="relative">
-                <img
+                <LazyImage
                   src={leader.image}
                   alt={leader.name}
                   className={`w-full h-64 sm:h-72 hover:scale-105 transition-transform duration-500 ${
                     leader.id === 2 ? 'object-cover object-top' : 'object-cover'
                   }`}
+                  width={400}
+                  quality={80}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
                 <div className="absolute bottom-4 left-4 right-4">

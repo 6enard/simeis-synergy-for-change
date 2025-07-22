@@ -34,6 +34,8 @@ const Header = () => {
             src="/simeis (1).png" 
             alt="Simeis Synergy Logo" 
             className="h-10 w-10 sm:h-12 sm:w-12 md:h-14 md:w-14"
+            loading="eager"
+            decoding="async"
           />
           <span className={`text-lg sm:text-xl md:text-2xl font-heading ${isScrolled ? 'text-gray-800' : 'text-white drop-shadow-lg'}`}>
             Simeis Synergy

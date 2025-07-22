@@ -116,6 +116,18 @@ img {
   height: auto;
 }
 
+/* Optimize image rendering */
+img {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+
+/* Video optimization */
+video {
+  max-width: 100%;
+  height: auto;
+}
+
 /* Prevent horizontal scroll on mobile */
 body {
   overflow-x: hidden;
