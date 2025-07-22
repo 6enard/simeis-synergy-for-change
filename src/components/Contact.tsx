@@ -31,7 +31,6 @@ const Contact = () => {
         'service_ml4e6cp',
         'template_dmvcjgg',
         templateParams,
-        'YOUR_PUBLIC_KEY' // You'll need to replace this with your actual public key
         'HKkUc0AdwP8gN7cSu'
       );
 
