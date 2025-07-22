@@ -55,7 +55,7 @@ const Leadership = () => {
     },
     {
       id: 7,
-      name: "Aisha Kavosi",
+      name: "Asha Kavosi",
       position: "Creative and Outreach",
       image: "/asha.jpg",
       shortStatement: "Behind every caption, every comment, and every campaign is a deep love for communication, connection, and community...",
