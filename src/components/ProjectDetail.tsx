@@ -369,21 +369,10 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ projectId, onClose }) => 
                             className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                             muted
                             playsInline
-                           preload="auto"
-                           poster=""
+                            preload="metadata"
                             onLoadedData={(e) => {
                               const video = e.target as HTMLVideoElement;
-                             // For mobile devices, we need to handle this differently
-                             if (video.readyState >= 2) {
-                               video.currentTime = 0.5;
-                             }
-                           }}
-                           onCanPlay={(e) => {
-                             const video = e.target as HTMLVideoElement;
-                             // Additional attempt for mobile
-                             if (video.currentTime === 0) {
-                               video.currentTime = 0.5;
-                             }
+                              video.currentTime = 1; // Seek to 1 second for thumbnail
                             }}
                           />
                           <div className="absolute inset-0 bg-black/30 flex items-center justify-center pointer-events-none">
