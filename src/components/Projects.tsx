@@ -54,7 +54,7 @@ const Projects = () => {
       description: "Our team visited Serah's Vision Children's Home to share joy and compassion with the children. We brought gifts, food, and spent quality time engaging with them through games and storytelling.",
       impact: "Child development",
       icon: Heart,
-      image: "/no5.jpg",,
+      image: "/no5.jpg",
       status: "Completed",
       location: "Nairobi"
     },
