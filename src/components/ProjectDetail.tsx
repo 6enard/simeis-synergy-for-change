@@ -449,6 +449,7 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ projectId, onClose }) => 
                 autoPlay
                 preload="metadata"
                 loading="eager"
+                showThumbnail={false}
               />
             ) : (
               <LazyImage
@@ -458,6 +459,7 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ projectId, onClose }) => 
                 width={1200}
                 quality={90}
                 loading="eager"
+                showThumbnail={false}
               />
             )}
             <div className="text-center mt-6 text-white">
