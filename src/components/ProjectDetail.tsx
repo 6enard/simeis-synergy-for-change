@@ -59,7 +59,15 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ projectId, onClose }) => 
         "https://images.pexels.com/photos/6994982/pexels-photo-6994982.jpeg?auto=compress&cs=tinysrgb&w=800",
         "https://images.pexels.com/photos/6995251/pexels-photo-6995251.jpeg?auto=compress&cs=tinysrgb&w=800",
         "https://images.pexels.com/photos/8088495/pexels-photo-8088495.jpeg?auto=compress&cs=tinysrgb&w=800",
-        "https://images.pexels.com/photos/8088486/pexels-photo-8088486.jpeg?auto=compress&cs=tinysrgb&w=800"
+        "https://images.pexels.com/photos/8088486/pexels-photo-8088486.jpeg?auto=compress&cs=tinysrgb&w=800",
+        "/streetvid1.mp4",
+        "/streetvid4.mp4",
+        "/streetvid8.mp4",
+        "/streetvid13.mp4",
+        "/streetvid14.mp4",
+        "/streetvid15.mp4",
+        "/streetvid17.mp4",
+        "/streetvid20.mp4"
       ]
     },
     {
