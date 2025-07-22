@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import { ArrowLeft, Calendar, MapPin, Users, Heart, Home, Utensils, X, ChevronLeft, ChevronRight, Target, Eye } from 'lucide-react';
-import LazyImage from './LazyImage';
-import LazyVideo from './LazyVideo';
 
 interface ProjectDetailProps {
   projectId: number;
@@ -365,19 +363,21 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ projectId, onClose }) => 
                       onClick={() => openGallery(index)}
                     >
                       {image.endsWith('.mp4') ? (
-                        <LazyVideo
+                        <video
                           src={image}
                           className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                          showThumbnail={true}
+                          muted
+                          playsInline
                           preload="metadata"
+                          loading="lazy"
                         />
                       ) : (
-                        <LazyImage
+                        <img
                           src={image}
                           alt={`${project.title} - Photo ${index + 1}`}
                           className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                          width={300}
-                          quality={75}
+                          loading="lazy"
+                          decoding="async"
                         />
                       )}
                       <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center">
@@ -444,24 +444,22 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ projectId, onClose }) => 
 
           <div className="max-w-5xl max-h-full flex flex-col items-center">
             {project.gallery[currentImageIndex].endsWith('.mp4') ? (
-              <LazyVideo
+              <video
                 src={project.gallery[currentImageIndex]}
                 className="max-w-full max-h-[80vh] object-contain rounded-lg shadow-2xl"
                 controls
                 autoPlay
                 preload="metadata"
-                loading="eager"
-                showThumbnail={false}
+                muted
+                playsInline
               />
             ) : (
-              <LazyImage
+              <img
                 src={project.gallery[currentImageIndex]}
                 alt={`${project.title} - Photo ${currentImageIndex + 1}`}
                 className="max-w-full max-h-[80vh] object-contain rounded-lg shadow-2xl"
-                width={1200}
-                quality={90}
                 loading="eager"
-                showThumbnail={false}
+                decoding="async"
               />
             )}
             <div className="text-center mt-6 text-white">
