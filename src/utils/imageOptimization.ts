@@ -35,13 +35,49 @@ export const preloadVideo = (src: string): Promise<void> => {
 
 // Generate thumbnail URL for videos
 export const getVideoThumbnail = (videoSrc: string): string => {
-  // For local videos, we'll use a placeholder or first frame
-  // In a real implementation, you might generate actual thumbnails
-  if (videoSrc.includes('streetvid')) {
-    return '/street1.jpg'; // Use street photo as thumbnail for street videos
-  }
-  // Default thumbnail for other videos
-  return 'https://images.pexels.com/photos/6995007/pexels-photo-6995007.jpeg?auto=compress&cs=tinysrgb&w=400&q=60';
+  // Return the video source itself - we'll extract the first frame
+  return videoSrc;
+};
+
+// Extract first frame from video as thumbnail
+export const extractVideoThumbnail = (videoSrc: string): Promise<string> => {
+  return new Promise((resolve, reject) => {
+    const video = document.createElement('video');
+    const canvas = document.createElement('canvas');
+    const ctx = canvas.getContext('2d');
+    
+    video.crossOrigin = 'anonymous';
+    video.preload = 'metadata';
+    video.muted = true;
+    
+    video.onloadedmetadata = () => {
+      // Set canvas dimensions to match video
+      canvas.width = video.videoWidth;
+      canvas.height = video.videoHeight;
+      
+      // Seek to first frame
+      video.currentTime = 0.1;
+    };
+    
+    video.onseeked = () => {
+      if (ctx) {
+        // Draw the current frame to canvas
+        ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+        
+        // Convert canvas to data URL
+        const thumbnailUrl = canvas.toDataURL('image/jpeg', 0.7);
+        resolve(thumbnailUrl);
+      } else {
+        reject(new Error('Canvas context not available'));
+      }
+    };
+    
+    video.onerror = () => {
+      reject(new Error('Failed to load video'));
+    };
+    
+    video.src = videoSrc;
+  });
 };
 
 // Generate low-quality placeholder for images

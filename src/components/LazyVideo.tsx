@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { createLazyLoadObserver, getVideoThumbnail } from '../utils/imageOptimization';
+import { createLazyLoadObserver, extractVideoThumbnail } from '../utils/imageOptimization';
 import { Play } from 'lucide-react';
 
 interface LazyVideoProps {
@@ -28,6 +28,7 @@ const LazyVideo: React.FC<LazyVideoProps> = ({
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(loading === 'eager');
   const [error, setError] = useState(false);
+  const [thumbnail, setThumbnail] = useState<string | null>(null);
   const [thumbnailLoaded, setThumbnailLoaded] = useState(false);
   const [showVideo, setShowVideo] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -51,7 +52,21 @@ const LazyVideo: React.FC<LazyVideoProps> = ({
     }
   }, [loading]);
 
-  const thumbnailSrc = showThumbnail ? getVideoThumbnail(src) : null;
+  // Extract thumbnail from video
+  useEffect(() => {
+    if (showThumbnail && isInView && !thumbnail) {
+      extractVideoThumbnail(src)
+        .then((thumbnailUrl) => {
+          setThumbnail(thumbnailUrl);
+          setThumbnailLoaded(true);
+        })
+        .catch(() => {
+          // Fallback to a default image if thumbnail extraction fails
+          setThumbnail('/street1.jpg');
+          setThumbnailLoaded(true);
+        });
+    }
+  }, [src, showThumbnail, isInView, thumbnail]);
 
   const handlePlayClick = () => {
     setShowVideo(true);
@@ -60,15 +75,14 @@ const LazyVideo: React.FC<LazyVideoProps> = ({
   return (
     <div ref={videoRef} className={`relative overflow-hidden ${className}`}>
       {/* Video Thumbnail */}
-      {showThumbnail && thumbnailSrc && !showVideo && (
+      {showThumbnail && thumbnail && !showVideo && (
         <div className="relative w-full h-full">
           <img
-            src={thumbnailSrc}
+            src={thumbnail}
             alt="Video thumbnail"
             className={`w-full h-full object-cover transition-opacity duration-300 ${
               thumbnailLoaded ? 'opacity-100' : 'opacity-0'
             }`}
-            onLoad={() => setThumbnailLoaded(true)}
           />
           {thumbnailLoaded && (
             <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
@@ -111,7 +125,7 @@ const LazyVideo: React.FC<LazyVideoProps> = ({
           playsInline={playsInline}
           controls={controls}
           autoPlay={autoPlay}
-          preload={preload}
+          preload="metadata"
           onLoadedMetadata={() => setIsLoaded(true)}
           onError={() => setError(true)}
         />

@@ -368,6 +368,8 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ projectId, onClose }) => 
                         <LazyVideo
                           src={image}
                           className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                          showThumbnail={true}
+                          preload="metadata"
                         />
                       ) : (
                         <LazyImage
