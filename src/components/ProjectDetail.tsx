@@ -370,10 +370,18 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ projectId, onClose }) => 
                             muted
                             playsInline
                             preload="none"
-                            poster=""
-                            onLoadStart={(e) => {
+                            onLoadedMetadata={(e) => {
                               const video = e.target as HTMLVideoElement;
-                              video.currentTime = 0.1;
+                              // Create canvas to capture first frame
+                              const canvas = document.createElement('canvas');
+                              const ctx = canvas.getContext('2d');
+                              if (ctx) {
+                                canvas.width = video.videoWidth;
+                                canvas.height = video.videoHeight;
+                                ctx.drawImage(video, 0, 0);
+                                const thumbnail = canvas.toDataURL('image/jpeg', 0.8);
+                                video.poster = thumbnail;
+                              }
                             }}
                           />
                           <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
@@ -484,13 +492,23 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ projectId, onClose }) => 
             ) : (
               <img
                 src={`${project.gallery[currentImageIndex]}${project.gallery[currentImageIndex].includes('pexels.com') ? '?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop' : ''}`}
-                alt={`${project.title} - Photo ${currentImageIndex + 1}`}
+                onLoadedMetadata={(e) => {
                 className="max-w-full max-h-[80vh] object-contain rounded-lg shadow-2xl"
-                loading="eager"
-                decoding="async"
-                onError={(e) => {
-                  const img = e.target as HTMLImageElement;
+                  // Create canvas to capture first frame for poster
+                  const canvas = document.createElement('canvas');
+                  const ctx = canvas.getContext('2d');
+                  if (ctx) {
+                    canvas.width = video.videoWidth;
+                    canvas.height = video.videoHeight;
+                    ctx.drawImage(video, 0, 0);
+                    const thumbnail = canvas.toDataURL('image/jpeg', 0.8);
+                    video.poster = thumbnail;
                   img.src = project.gallery[currentImageIndex]; // Fallback to original
+                  // Reduce quality for mobile
+                  if (window.innerWidth < 768) {
+                    video.style.maxWidth = '100vw';
+                    video.style.maxHeight = '60vh';
+                  }
                 }}
               />
             )}
