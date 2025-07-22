@@ -43,7 +43,7 @@ const Projects = () => {
       description: "Responding to the devastating floods that displaced numerous families, we provided emergency aid including food, clothing, and temporary shelter materials to help them rebuild their lives with dignity.",
       impact: "Disaster relief",
       icon: Users,
-      image: "https://images.pexels.com/photos/6994982/pexels-photo-6994982.jpeg?auto=compress&cs=tinysrgb&w=800",
+      image: "/no4.jpg",
       status: "Completed",
       location: "Various locations"
     },
@@ -54,7 +54,7 @@ const Projects = () => {
       description: "Our team visited Serah's Vision Children's Home to share joy and compassion with the children. We brought gifts, food, and spent quality time engaging with them through games and storytelling.",
       impact: "Child development",
       icon: Heart,
-      image: "https://images.pexels.com/photos/8088486/pexels-photo-8088486.jpeg?auto=compress&cs=tinysrgb&w=800",
+      image: "/no5.jpg",,
       status: "Completed",
       location: "Nairobi"
     },
@@ -65,7 +65,7 @@ const Projects = () => {
       description: "During this critical period, we coordinated a food relief program in Tana River County, ensuring that dozens of families facing hunger and hardship received consistent meals and emotional support.",
       impact: "Food security",
       icon: Utensils,
-      image: "https://images.pexels.com/photos/6995242/pexels-photo-6995242.jpeg?auto=compress&cs=tinysrgb&w=800",
+      image: "/no6.jpg",
       status: "Completed",
       location: "Tana River County"
     },
