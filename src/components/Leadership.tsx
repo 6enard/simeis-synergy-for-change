@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Users, ChevronDown, ChevronUp, Quote, Star } from 'lucide-react';
 
-const Leadership = () => {
+export default function Leadership() {
   const [expandedLeader, setExpandedLeader] = useState<number | null>(null);
 
   const leaders = [
@@ -171,6 +171,3 @@ const Leadership = () => {
       </div>
     </section>
   );
-};
-
-export default Leadership;
