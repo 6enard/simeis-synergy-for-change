@@ -370,17 +370,21 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ projectId, onClose }) => 
                             muted
                             playsInline
                             preload="none"
-                            onLoadedMetadata={(e) => {
+                            onLoadedData={(e) => {
                               const video = e.target as HTMLVideoElement;
-                              // Create canvas to capture first frame
+                              video.currentTime = 0.1; // Seek to 0.1 seconds to get a frame
+                            }}
+                            onSeeked={(e) => {
+                              const video = e.target as HTMLVideoElement;
                               const canvas = document.createElement('canvas');
                               const ctx = canvas.getContext('2d');
-                              if (ctx) {
+                              if (ctx && video.videoWidth > 0 && video.videoHeight > 0) {
                                 canvas.width = video.videoWidth;
                                 canvas.height = video.videoHeight;
                                 ctx.drawImage(video, 0, 0);
                                 const thumbnail = canvas.toDataURL('image/jpeg', 0.8);
                                 video.poster = thumbnail;
+                                video.currentTime = 0; // Reset to beginning
                               }
                             }}
                           />
