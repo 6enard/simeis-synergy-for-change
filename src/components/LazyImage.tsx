@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { createOptimizedImageUrl, createLazyLoadObserver } from '../utils/imageOptimization';
+import { createOptimizedImageUrl, createLazyLoadObserver, getLowQualityPlaceholder } from '../utils/imageOptimization';
 
 interface LazyImageProps {
   src: string;
@@ -10,6 +10,7 @@ interface LazyImageProps {
   loading?: 'lazy' | 'eager';
   decoding?: 'async' | 'sync' | 'auto';
   placeholder?: string;
+  showThumbnail?: boolean;
 }
 
 const LazyImage: React.FC<LazyImageProps> = ({
@@ -20,11 +21,13 @@ const LazyImage: React.FC<LazyImageProps> = ({
   quality = 80,
   loading = 'lazy',
   decoding = 'async',
-  placeholder
+  placeholder,
+  showThumbnail = false
 }) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(loading === 'eager');
   const [error, setError] = useState(false);
+  const [thumbnailLoaded, setThumbnailLoaded] = useState(false);
   const imgRef = useRef<HTMLImageElement>(null);
 
   useEffect(() => {
@@ -47,11 +50,24 @@ const LazyImage: React.FC<LazyImageProps> = ({
   }, [loading]);
 
   const optimizedSrc = createOptimizedImageUrl(src, width, quality);
+  const thumbnailSrc = showThumbnail ? getLowQualityPlaceholder(src) : null;
 
   return (
     <div ref={imgRef} className={`relative overflow-hidden ${className}`}>
-      {/* Placeholder */}
-      {!isLoaded && (
+      {/* Thumbnail */}
+      {showThumbnail && thumbnailSrc && !isLoaded && (
+        <img
+          src={thumbnailSrc}
+          alt=""
+          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ${
+            thumbnailLoaded ? 'opacity-100' : 'opacity-0'
+          }`}
+          onLoad={() => setThumbnailLoaded(true)}
+        />
+      )}
+
+      {/* Loading Placeholder */}
+      {!isLoaded && (!showThumbnail || !thumbnailLoaded) && (
         <div className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center">
           {placeholder ? (
             <img src={placeholder} alt="" className="w-full h-full object-cover opacity-50" />
