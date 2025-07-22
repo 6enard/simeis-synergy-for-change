@@ -363,38 +363,21 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ projectId, onClose }) => 
                       onClick={() => openGallery(index)}
                     >
                       {image.endsWith('.mp4') ? (
-                        <div className="relative w-full h-full bg-gray-200 flex items-center justify-center">
+                        <div className="relative w-full h-full">
                           <video
                             src={image}
                             className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                             muted
                             playsInline
-                            preload="none"
-                            onLoadedMetadata={(e) => {
+                            preload="metadata"
+                            onLoadedData={(e) => {
                               const video = e.target as HTMLVideoElement;
-                              video.currentTime = 0.5; // Seek to 0.5 seconds to get a better frame
-                            }}
-                            onSeeked={(e) => {
-                              const video = e.target as HTMLVideoElement;
-                              const canvas = document.createElement('canvas');
-                              const ctx = canvas.getContext('2d');
-                              if (ctx && video.videoWidth > 0 && video.videoHeight > 0) {
-                                canvas.width = video.videoWidth;
-                                canvas.height = video.videoHeight;
-                                ctx.drawImage(video, 0, 0);
-                                const thumbnail = canvas.toDataURL('image/jpeg', 0.8);
-                                // Create an image element to replace the video for thumbnail display
-                                const img = document.createElement('img');
-                                img.src = thumbnail;
-                                img.className = video.className;
-                                img.alt = `${project.title} - Video thumbnail`;
-                                video.parentNode?.replaceChild(img, video);
-                              }
+                              video.currentTime = 1; // Seek to 1 second for thumbnail
                             }}
                           />
-                          <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
-                            <div className="bg-white/90 rounded-full p-3">
-                              <svg className="w-6 h-6 text-gray-800" fill="currentColor" viewBox="0 0 24 24">
+                          <div className="absolute inset-0 bg-black/30 flex items-center justify-center pointer-events-none">
+                            <div className="bg-white/90 backdrop-blur-sm rounded-full p-2 sm:p-3 shadow-lg">
+                              <svg className="w-4 h-4 sm:w-6 sm:h-6 text-gray-800" fill="currentColor" viewBox="0 0 24 24">
                                 <path d="M8 5v14l11-7z"/>
                               </svg>
                             </div>
