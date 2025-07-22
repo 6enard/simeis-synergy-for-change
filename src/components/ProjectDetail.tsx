@@ -25,11 +25,11 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ projectId, onClose }) => 
       status: "Completed",
       gallery: [
         "/all.jpg",
-        "/mukuru2",
-        "/mukuru3",
-        "/mukuru4",
-        "/mukuru5",
-        "/mukuru5"
+        "/mukuru2.jpg",
+        "/mukuru3.jpg",
+        "/mukuru4.jpg",
+        "/mukuru5.jpg",
+        "/mukuru5.jpg"
       ]
     },
     {
