@@ -93,11 +93,12 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ projectId, onClose }) => 
       volunteers: "12 volunteers",
       status: "Completed",
       gallery: [
-        "https://images.pexels.com/photos/8088495/pexels-photo-8088495.jpeg?auto=compress&cs=tinysrgb&w=800",
-        "https://images.pexels.com/photos/8088486/pexels-photo-8088486.jpeg?auto=compress&cs=tinysrgb&w=800",
-        "https://images.pexels.com/photos/6995251/pexels-photo-6995251.jpeg?auto=compress&cs=tinysrgb&w=800",
-        "https://images.pexels.com/photos/6994982/pexels-photo-6994982.jpeg?auto=compress&cs=tinysrgb&w=800",
-        "https://images.pexels.com/photos/6995007/pexels-photo-6995007.jpeg?auto=compress&cs=tinysrgb&w=800"
+        "/anita1.jpg",
+        "/anita2.jpg",
+        "/anita3.jpg",
+        "/anita4.jpg",
+        "/anita5.jpg",
+        "/anita6.jpg"
       ]
     },
     {
@@ -161,10 +162,16 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ projectId, onClose }) => 
       volunteers: "16 volunteers",
       status: "Completed",
       gallery: [
-        "https://images.pexels.com/photos/8088495/pexels-photo-8088495.jpeg?auto=compress&cs=tinysrgb&w=800",
-        "https://images.pexels.com/photos/8088486/pexels-photo-8088486.jpeg?auto=compress&cs=tinysrgb&w=800",
-        "https://images.pexels.com/photos/6995251/pexels-photo-6995251.jpeg?auto=compress&cs=tinysrgb&w=800",
-        "https://images.pexels.com/photos/6994982/pexels-photo-6994982.jpeg?auto=compress&cs=tinysrgb&w=800"
+        "/flo1.jpg",
+        "/flo2.jpg",
+        "/flo3.jpg",
+        "/flo4.jpg",
+        "/flo5.jpg",
+        "/flo6.jpg",
+        "/flo7.jpg",
+        "/flo8.jpg",
+        "/flo9.jpg",
+        "/flo10.jpg",
       ]
     },
     {
@@ -180,10 +187,17 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ projectId, onClose }) => 
       volunteers: "14 volunteers",
       status: "Upcoming",
       gallery: [
-        "https://images.pexels.com/photos/6995007/pexels-photo-6995007.jpeg?auto=compress&cs=tinysrgb&w=800",
-        "https://images.pexels.com/photos/8088495/pexels-photo-8088495.jpeg?auto=compress&cs=tinysrgb&w=800",
-        "https://images.pexels.com/photos/6994982/pexels-photo-6994982.jpeg?auto=compress&cs=tinysrgb&w=800",
-        "https://images.pexels.com/photos/6995251/pexels-photo-6995251.jpeg?auto=compress&cs=tinysrgb&w=800"
+        "/geta1.jpg",
+        "/geta2.jpg",
+        "/geta3.jpg",
+        "/geta4.jpg",
+        "/geta5.jpg",
+        "/geta6.jpg",
+        "/geta7.jpg",
+        "/geta8.jpg",
+        "/geta9.jpg",
+        "/geta10.jpg"
+        
       ]
     },
     {
@@ -197,13 +211,14 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ projectId, onClose }) => 
       icon: Heart,
       beneficiaries: "60+ families",
       volunteers: "18 volunteers",
-      status: "Upcoming",
+      status: "Completed",
       gallery: [
-        "https://images.pexels.com/photos/6995251/pexels-photo-6995251.jpeg?auto=compress&cs=tinysrgb&w=800",
-        "https://images.pexels.com/photos/8088495/pexels-photo-8088495.jpeg?auto=compress&cs=tinysrgb&w=800",
-        "https://images.pexels.com/photos/6994982/pexels-photo-6994982.jpeg?auto=compress&cs=tinysrgb&w=800",
-        "https://images.pexels.com/photos/6995007/pexels-photo-6995007.jpeg?auto=compress&cs=tinysrgb&w=800",
-        "https://images.pexels.com/photos/8088486/pexels-photo-8088486.jpeg?auto=compress&cs=tinysrgb&w=800"
+        "/mkr4.jpg",
+        "/mkr2.jpg",
+        "/mkr3.jpg",
+        "/mkr1.jpg",
+        "/mkr5.jpg",
+        "/mkr6.jpg",
       ]
     },
     {

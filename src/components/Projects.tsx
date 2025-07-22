@@ -27,12 +27,12 @@ const Projects = () => {
     },
     {
       id: 3,
-      title: "Anita Home, North Kajiado",
+      title: "Anita Home, Pad Drive",
       date: "March 23, 2024",
       description: "We journeyed to North Kajiado to support Anita Home, a shelter caring for abandoned and vulnerable children. Through this visit, we shared supplies, played with the children, and helped remind them they are not forgotten.",
       impact: "Child welfare",
       icon: Home,
-      image: "https://images.pexels.com/photos/8088495/pexels-photo-8088495.jpeg?auto=compress&cs=tinysrgb&w=800",
+      image: "/anita1.jpg",
       status: "Completed",
       location: "North Kajiado"
     },
@@ -76,7 +76,7 @@ const Projects = () => {
       description: "In the spirit of giving and gratitude, we reached out to the wonderful children of Flomina Home, offering food, clothes, and school supplies. The smiles we received in return were priceless.",
       impact: "Educational support",
       icon: Home,
-      image: "https://images.pexels.com/photos/8088495/pexels-photo-8088495.jpeg?auto=compress&cs=tinysrgb&w=800",
+      image: "/flo1.jpg",
       status: "Completed",
       location: "Nairobi"
     },
@@ -87,7 +87,7 @@ const Projects = () => {
       description: "We partnered with FOS to support vulnerable boys at Getathuru Reception Centre. This initiative focused on emotional healing, mentorship, and reintegration support for rescued children.",
       impact: "Youth mentorship",
       icon: Users,
-      image: "https://images.pexels.com/photos/6995007/pexels-photo-6995007.jpeg?auto=compress&cs=tinysrgb&w=800",
+      image: "/geta2.jpg",
       status: "Completed",
       location: "Getathuru"
     },
@@ -98,7 +98,7 @@ const Projects = () => {
       description: "Revisiting where it all began, we returned to Mukuru Promotion Centre to continue building on our relationship and support. It was a powerful reminder of how much consistent love and presence matter.",
       impact: "Sustained support",
       icon: Heart,
-      image: "https://images.pexels.com/photos/6995251/pexels-photo-6995251.jpeg?auto=compress&cs=tinysrgb&w=800",
+      image: "/mkr6.jpg",
       status: "Completed",
       location: "Mukuru, Nairobi"
     },
