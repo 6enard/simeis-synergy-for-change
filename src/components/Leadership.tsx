@@ -48,7 +48,7 @@ const Leadership = () => {
     {
       id: 6,
       name: "Briton Waweru",
-      position: "Compliance Division",
+      position: "Secretariat",
       image: "/briton.jpg",
       shortStatement: "At Simei's Synergy for Change, our Compliance Division isn't just about rules, it's about protecting the heart of everything we do...",
       fullStatement: "At Simei's Synergy for Change, our Compliance Division isn't just about rules, it's about protecting the heart of everything we do. We've been entrusted with ensuring that every part of our work, from how we handle finances to how we run our programs, stays true to the laws, values, and ethics that define us. Our foundation is built on transparency, accountability, and integrity, and it's our job to make sure those values aren't just words on paper, but real in every decision, every partnership, and every action. We work behind the scenes to build trust, not just with donors and partners, but also with the communities we serve and the team we work alongside. That means setting up strong internal systems, regularly reviewing our processes, and making sure we're doing things right, not just fast. For us, compliance isn't about ticking boxes, it's about protecting the mission, ensuring long term impact, and doing right by the people who believe in us. Whether we're overseeing a local outreach or managing global partnerships, we're always asking: Are we honoring the trust placed in us? Are we using every resource responsibly? Our work is a quiet promise, that behind every smile we help create, there's a structure of honesty, care, and responsibility holding it up. That's what drives us, every single day."
