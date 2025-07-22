@@ -109,7 +109,7 @@ const Projects = () => {
       description: "On this day, we helped a determined girl who lacked the funds for her final exam. Thanks to timely support, she sat for her exam, passed, and graduated — a true story of hope restored and a future reclaimed.",
       impact: "Educational empowerment",
       icon: Heart,
-      image: "https://images.pexels.com/photos/8088486/pexels-photo-8088486.jpeg?auto=compress&cs=tinysrgb&w=800",
+      image: "student1.jpg",
       status: "Completed",
       location: "Nairobi"
     }
