@@ -334,48 +334,47 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ projectId, onClose }) => 
                       onClick={() => openGallery(index)}
                     >
                       {image.endsWith('.mp4') ? (
-                        <video
-                      <div className="relative w-full h-full bg-gray-200 flex items-center justify-center">
-                        <video
-                          src={image}
-                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                          muted
-                          playsInline
-                          preload="none"
-                          poster=""
-                          onLoadStart={(e) => {
-                            const video = e.target as HTMLVideoElement;
-                            video.currentTime = 0.1;
-                          }}
-                        />
-                        <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
-                          <div className="bg-white/90 rounded-full p-3">
-                            <svg className="w-6 h-6 text-gray-800" fill="currentColor" viewBox="0 0 24 24">
-                              <path d="M8 5v14l11-7z"/>
-                            </svg>
+                        <div className="relative w-full h-full bg-gray-200 flex items-center justify-center">
+                          <video
+                            src={image}
+                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                            muted
+                            playsInline
+                            preload="none"
+                            poster=""
+                            onLoadStart={(e) => {
+                              const video = e.target as HTMLVideoElement;
+                              video.currentTime = 0.1;
+                            }}
+                          />
+                          <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
+                            <div className="bg-white/90 rounded-full p-3">
+                              <svg className="w-6 h-6 text-gray-800" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M8 5v14l11-7z"/>
+                              </svg>
+                            </div>
                           </div>
                         </div>
-                      </div>
+                      ) : (
                         <img
-                          src={image}
-                        src={`${image}${image.includes('pexels.com') ? '?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop' : ''}`}
+                          src={`${image}${image.includes('pexels.com') ? '?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop' : ''}`}
+                          alt={`${project.title} - Photo ${index + 1}`}
                           className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                          loading="lazy"
-                        loading="eager"
+                          loading="eager"
+                          onError={(e) => {
+                            const img = e.target as HTMLImageElement;
+                            img.src = image; // Fallback to original if optimized fails
+                          }}
                         />
-                        onError={(e) => {
-                          const img = e.target as HTMLImageElement;
-                          img.src = image; // Fallback to original if optimized fails
-                        }}
                       )}
-                      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center">
-                    {!image.endsWith('.mp4') && (
-                      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center">
-                        <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/90 rounded-full p-2">
-                          <Eye className="h-5 w-5 text-gray-800" />
+                      {!image.endsWith('.mp4') && (
+                        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center">
+                          <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/90 rounded-full p-2">
+                            <Eye className="h-5 w-5 text-gray-800" />
+                          </div>
                         </div>
-                      </div>
-                    )}
+                      )}
+                    </div>
                   ))}
                 </div>
               </div>
