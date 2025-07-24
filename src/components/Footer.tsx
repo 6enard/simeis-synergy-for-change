@@ -105,7 +105,15 @@ const Footer = () => {
 
             {/* M-Pesa Details */}
             <div className="mt-6 p-4 bg-gradient-to-r from-lime/20 to-orange/20 rounded-lg border border-orange/30">
-              <h4 className="font-body font-semibold bg-gradient-to-r from-lime to-orange bg-clip-text text-transparent mb-2 text-sm sm:text-base">Donate via M-Pesa</h4>
+              <div className="flex items-center mb-2">
+                <img 
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/M-PESA_LOGO-01.svg/1280px-M-PESA_LOGO-01.svg.png" 
+                  alt="M-Pesa Logo" 
+                  className="h-5 w-5 mr-2"
+                  loading="lazy"
+                />
+                <h4 className="font-body font-semibold bg-gradient-to-r from-lime to-orange bg-clip-text text-transparent text-sm sm:text-base">Donate via M-Pesa</h4>
+              </div>
               <p className="text-xs sm:text-sm font-body text-gray-300">Paybill: <span className="font-bold">522522</span></p>
               <p className="text-xs sm:text-sm font-body text-gray-300">Account: <span className="font-bold">1111485429</span></p>
             </div>
@@ -116,7 +124,7 @@ const Footer = () => {
         <div className="border-t border-gray-800 mt-8 sm:mt-12 pt-6 sm:pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="font-body text-gray-400 text-xs sm:text-sm mb-4 md:mb-0 text-center md:text-left animate-fade-in-up">
-              © 2024 Simeis Synergy For Change. All rights reserved.
+              © 2023 Simeis Synergy For Change. All rights reserved.
             </div>
             <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-6 text-xs sm:text-sm animate-fade-in-up animate-delay-200">
               <a href="#" className="font-body text-gray-400 hover:text-orange transition-colors duration-200 text-center">

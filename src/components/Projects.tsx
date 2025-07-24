@@ -6,7 +6,7 @@ const Projects = () => {
     {
       id: 1,
       title: "Mukuru Promotion Centre",
-      date: "January 27, 2024",
+      date: "January 27, 2023",
       description: "We kicked off the year with a heartfelt visit to Mukuru Promotion Centre, where we spent time sharing meals, essentials, and encouragement with children and families living in one of Nairobi's most underserved communities.",
       impact: "Community support",
       icon: Heart,
@@ -17,7 +17,7 @@ const Projects = () => {
     {
       id: 2,
       title: "Street Outreach in Nairobi CBD",
-      date: "February 24, 2024",
+      date: "February 24, 2023",
       description: "In our ongoing effort to connect with and restore dignity to the homeless community, we carried out a city outreach program, distributing food, hygiene products, and offering conversations filled with hope in the heart of Nairobi.",
       impact: "Homeless support",
       icon: Users,
@@ -28,7 +28,7 @@ const Projects = () => {
     {
       id: 3,
       title: "Anita Home, Pad Drive",
-      date: "March 23, 2024",
+      date: "March 23, 2023",
       description: "We journeyed to North Kajiado to support Anita Home, a shelter caring for abandoned and vulnerable children. Through this visit, we shared supplies, played with the children, and helped remind them they are not forgotten.",
       impact: "Child welfare",
       icon: Home,
@@ -39,7 +39,7 @@ const Projects = () => {
     {
       id: 4,
       title: "Supporting Flood-Affected Families",
-      date: "April 2024",
+      date: "April 2023",
       description: "Responding to the devastating floods that displaced numerous families, we provided emergency aid including food, clothing, and temporary shelter materials to help them rebuild their lives with dignity.",
       impact: "Disaster relief",
       icon: Users,
@@ -50,7 +50,7 @@ const Projects = () => {
     {
       id: 5,
       title: "Serah's Vision Children's Home",
-      date: "June 29, 2024",
+      date: "June 29, 2023",
       description: "Our team visited Serah's Vision Children's Home to share joy and compassion with the children. We brought gifts, food, and spent quality time engaging with them through games and storytelling.",
       impact: "Child development",
       icon: Heart,
@@ -61,7 +61,7 @@ const Projects = () => {
     {
       id: 6,
       title: "Feeding Families in Tana River",
-      date: "July–August 2024",
+      date: "July–August 2023",
       description: "During this critical period, we coordinated a food relief program in Tana River County, ensuring that dozens of families facing hunger and hardship received consistent meals and emotional support.",
       impact: "Food security",
       icon: Utensils,
@@ -72,7 +72,7 @@ const Projects = () => {
     {
       id: 7,
       title: "Flomina Children's Home",
-      date: "November 23, 2024",
+      date: "November 23, 2023",
       description: "In the spirit of giving and gratitude, we reached out to the wonderful children of Flomina Home, offering food, clothes, and school supplies. The smiles we received in return were priceless.",
       impact: "Educational support",
       icon: Home,
@@ -83,7 +83,7 @@ const Projects = () => {
     {
       id: 8,
       title: "Partnership with FOS at Getathuru Reception Centre",
-      date: "February 22, 2025",
+      date: "February 22, 2023",
       description: "We partnered with FOS to support vulnerable boys at Getathuru Reception Centre. This initiative focused on emotional healing, mentorship, and reintegration support for rescued children.",
       impact: "Youth mentorship",
       icon: Users,
@@ -94,7 +94,7 @@ const Projects = () => {
     {
       id: 9,
       title: "Return Visit to Mukuru Promotion Centre",
-      date: "May 31, 2025",
+      date: "May 31, 2023",
       description: "Revisiting where it all began, we returned to Mukuru Promotion Centre to continue building on our relationship and support. It was a powerful reminder of how much consistent love and presence matter.",
       impact: "Sustained support",
       icon: Heart,
@@ -105,11 +105,11 @@ const Projects = () => {
     {
       id: 10,
       title: "Empowering a Student to Graduate",
-      date: "July 29, 2024",
+      date: "July 29, 2023",
       description: "On this day, we helped a determined girl who lacked the funds for her final exam. Thanks to timely support, she sat for her exam, passed, and graduated — a true story of hope restored and a future reclaimed.",
       impact: "Educational empowerment",
       icon: Heart,
-      image: "student1.jpg",
+      image: "https://www.shutterstock.com/image-vector/girl-graduate-on-background-joyful-260nw-1930511396.jpg",
       status: "Completed",
       location: "Nairobi"
     }
@@ -190,6 +190,7 @@ const Projects = () => {
                 </div>
                 
                 <h3 className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-heading text-gray-800 mb-2 sm:mb-3 md:mb-4 line-clamp-2 animate-typewriter">
+                <h3 className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-heading text-gray-800 mb-2 sm:mb-3 md:mb-4 leading-tight animate-typewriter min-h-[3rem] flex items-center">
                   {project.title}
                 </h3>
                 

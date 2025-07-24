@@ -59,6 +59,12 @@ const Donate = () => {
             {/* M-Pesa Donation */}
             <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 p-6 sm:p-8 mb-6 sm:mb-8 border border-gray-100">
               <div className="flex items-center mb-6">
+                <img 
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/M-PESA_LOGO-01.svg/1280px-M-PESA_LOGO-01.svg.png" 
+                  alt="M-Pesa Logo" 
+                  className="h-8 w-8 sm:h-10 sm:w-10 mr-3 sm:mr-4"
+                  loading="lazy"
+                />
                 <div className="bg-gradient-to-br from-lime/20 to-lime/30 rounded-full p-2 sm:p-3 mr-3 sm:mr-4 border border-lime/20">
                   <Smartphone className="h-6 w-6 sm:h-8 sm:w-8 text-lime" />
                 </div>
@@ -119,7 +125,12 @@ const Donate = () => {
               <h4 className="text-lg sm:text-xl font-heading text-gray-800 mb-4">Other Ways to Help</h4>
               <div className="space-y-4">
                 <div className="flex items-center p-4 bg-gradient-to-r from-gray-50 to-orange/5 rounded-lg border border-gray-200 hover:shadow-md transition-shadow duration-200">
-                  <CreditCard className="h-6 w-6 text-orange mr-3" />
+                  <img 
+                    src="https://upload.wikimedia.org/wikipedia/en/d/de/KCB_Bank_Kenya_Limited_logo.png" 
+                    alt="KCB Bank Logo" 
+                    className="h-6 w-6 mr-3"
+                    loading="lazy"
+                  />
                   <div>
                     <p className="font-body font-semibold text-gray-800 text-sm sm:text-base">Bank Transfer</p>
                     <p className="text-xs sm:text-sm font-body text-gray-600">Contact us for bank details</p>

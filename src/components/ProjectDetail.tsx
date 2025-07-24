@@ -14,7 +14,7 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ projectId, onClose }) => 
     {
       id: 1,
       title: "Mukuru Promotion Centre",
-      date: "January 27, 2024",
+      date: "January 27, 2023",
       location: "Mukuru, Nairobi",
       description: "We kicked off the year with a heartfelt visit to Mukuru Promotion Centre, where we spent time sharing meals, essentials, and encouragement with children and families living in one of Nairobi's most underserved communities.",
       fullDescription: "Our first project of 2024 took us to Mukuru Promotion Centre, one of Nairobi's most underserved communities. This visit was more than just a charitable act; it was about building genuine connections with families who face daily challenges. We shared nutritious meals, distributed essential supplies including hygiene products, clothing, and educational materials. The children's laughter and the gratitude of the families reminded us why this work is so important. We spent quality time playing games, sharing stories, and listening to the community's needs. This visit laid the foundation for our ongoing relationship with the Mukuru community, showing them that they are not forgotten and that there are people who care about their wellbeing.",
@@ -45,7 +45,7 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ projectId, onClose }) => 
     {
       id: 2,
       title: "Street Outreach in Nairobi CBD",
-      date: "February 24, 2024",
+      date: "February 24, 2023",
       location: "Nairobi CBD",
       description: "In our ongoing effort to connect with and restore dignity to the homeless community, we carried out a city outreach program, distributing food, hygiene products, and offering conversations filled with hope in the heart of Nairobi.",
       fullDescription: "Our street outreach program in Nairobi's Central Business District was designed to restore dignity and hope to our homeless brothers and sisters. We walked the streets with backpacks full of hot meals, hygiene kits, blankets, and most importantly, open hearts ready to listen. Each conversation was an opportunity to remind someone that they matter, that they are seen, and that they are not forgotten. We distributed over 100 meal packages and hygiene kits, but the real impact came from the human connections we made. Many of the people we met shared their stories, their struggles, and their dreams. This outreach reinforced our belief that everyone deserves compassion and respect, regardless of their circumstances. The experience taught us that sometimes the most powerful gift we can give is simply our presence and genuine care.",
@@ -61,7 +61,7 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ projectId, onClose }) => 
     {
       id: 3,
       title: "Anita Home, North Kajiado",
-      date: "March 23, 2024",
+      date: "March 23, 2023",
       location: "North Kajiado",
       description: "We journeyed to North Kajiado to support Anita Home, a shelter caring for abandoned and vulnerable children. Through this visit, we shared supplies, played with the children, and helped remind them they are not forgotten.",
       fullDescription: "Our journey to Anita Home in North Kajiado was both heartbreaking and inspiring. This shelter provides a safe haven for abandoned and vulnerable children who have faced unimaginable challenges. We arrived with supplies including food, clothing, educational materials, and toys, but we left with so much more - touched by the resilience and joy of these incredible children. We spent the day playing games, helping with homework, sharing meals, and simply being present. The children taught us about strength, hope, and the power of community. We also worked with the caregivers to understand their ongoing needs and how we can provide sustained support. This visit reinforced our commitment to child welfare and protection, showing us that every child deserves love, care, and the opportunity to dream of a better future.",
@@ -82,7 +82,7 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ projectId, onClose }) => 
     {
       id: 4,
       title: "Supporting Flood-Affected Families",
-      date: "April 2024",
+      date: "April 2023",
       location: "Various locations",
       description: "Responding to the devastating floods that displaced numerous families, we provided emergency aid including food, clothing, and temporary shelter materials to help them rebuild their lives with dignity.",
       fullDescription: "When devastating floods struck Kenya in April 2024, displacing thousands of families, we knew we had to act quickly. Our emergency response team mobilized within hours to provide critical aid to those who had lost everything. We distributed emergency food packages, clean water, clothing, blankets, and temporary shelter materials to families who found themselves homeless overnight. Beyond the physical aid, we provided emotional support and helped connect families with longer-term assistance programs. This crisis response taught us the importance of being prepared for emergencies and having systems in place to respond rapidly when disaster strikes. The resilience and gratitude of the affected families inspired us to strengthen our disaster preparedness and response capabilities for future emergencies.",
@@ -98,7 +98,7 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ projectId, onClose }) => 
     {
       id: 5,
       title: "Serah's Vision Children's Home",
-      date: "June 29, 2024",
+      date: "June 29, 2023",
       location: "Nairobi",
       description: "Our team visited Serah's Vision Children's Home to share joy and compassion with the children. We brought gifts, food, and spent quality time engaging with them through games and storytelling.",
       fullDescription: "Our visit to Serah's Vision Children's Home was filled with laughter, joy, and meaningful connections. We arrived with bags full of gifts, nutritious food, and hearts ready to share love with these amazing children. The day was spent playing games, telling stories, helping with homework, and simply enjoying each other's company. We organized fun activities including art sessions, music time, and outdoor games that brought smiles to every child's face. The children shared their dreams and aspirations with us, reminding us of the importance of nurturing hope and ambition in young hearts. We also worked with the home's staff to understand their ongoing needs and how we can provide continued support. This visit reinforced our belief that every child deserves love, attention, and the opportunity to feel special and valued.",
@@ -114,7 +114,7 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ projectId, onClose }) => 
     {
       id: 6,
       title: "Feeding Families in Tana River",
-      date: "July–August 2024",
+      date: "July–August 2023",
       location: "Tana River County",
       description: "During this critical period, we coordinated a food relief program in Tana River County, ensuring that dozens of families facing hunger and hardship received consistent meals and emotional support.",
       fullDescription: "The food crisis in Tana River County during July and August 2024 called for sustained intervention. We established a comprehensive feeding program that went beyond just providing meals - we created a support system for families facing severe hardship. Our team worked tirelessly to ensure consistent food distribution, reaching remote areas where families had limited access to resources. We provided nutritious meals, clean water, and essential supplies while also offering emotional support and hope to families struggling with food insecurity. The program involved local community leaders to ensure sustainability and cultural sensitivity. We witnessed incredible resilience from the families we served, and their strength motivated us to continue our efforts. This extended program taught us the importance of long-term commitment and the power of consistent support in creating lasting change.",
@@ -130,7 +130,7 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ projectId, onClose }) => 
     {
       id: 7,
       title: "Flomina Children's Home",
-      date: "November 23, 2024",
+      date: "November 23, 2023",
       location: "Nairobi",
       description: "In the spirit of giving and gratitude, we reached out to the wonderful children of Flomina Home, offering food, clothes, and school supplies. The smiles we received in return were priceless.",
       fullDescription: "Our visit to Flomina Children's Home in November was perfectly timed for the season of gratitude and giving. We arrived with bags full of food, new clothes, school supplies, and hearts full of love for these incredible children. The day was spent in celebration - we shared meals together, helped the children try on their new clothes, and organized their school supplies for the upcoming term. We also spent time reading with the younger children and helping the older ones with their homework. The joy and gratitude expressed by the children was overwhelming and reminded us of the simple power of showing up and caring. We organized games and activities that brought laughter and excitement to their day. The staff shared stories of each child's progress and dreams, reinforcing our commitment to supporting their educational and personal development. This visit strengthened our resolve to continue supporting children's homes and ensuring every child feels valued and loved.",
@@ -155,7 +155,7 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ projectId, onClose }) => 
     {
       id: 8,
       title: "Partnership with FOS at Getathuru Reception Centre",
-      date: "February 22, 2025",
+      date: "February 22, 2023",
       location: "Getathuru",
       description: "We partnered with FOS to support vulnerable boys at Getathuru Reception Centre. This initiative focused on emotional healing, mentorship, and reintegration support for rescued children.",
       fullDescription: "Our partnership with Friends of Society (FOS) at Getathuru Reception Centre represents a significant step in our commitment to supporting vulnerable youth. This collaboration focuses on providing comprehensive support to boys who have been rescued from difficult situations and are working toward reintegration into society. Our approach combines emotional healing, mentorship, life skills training, and educational support. We work closely with professional counselors and social workers to ensure each boy receives the individualized attention they need. The program includes group therapy sessions, one-on-one mentoring, vocational training opportunities, and recreational activities that help build confidence and social skills. This partnership has taught us the importance of holistic support systems and the power of collaboration in creating lasting change. We're committed to walking alongside these young men as they rebuild their lives and work toward a brighter future.",
@@ -181,7 +181,7 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ projectId, onClose }) => 
     {
       id: 9,
       title: "Return Visit to Mukuru Promotion Centre",
-      date: "May 31, 2025",
+      date: "May 31, 2023",
       location: "Mukuru, Nairobi",
       description: "Revisiting where it all began, we returned to Mukuru Promotion Centre to continue building on our relationship and support. It was a powerful reminder of how much consistent love and presence matter.",
       fullDescription: "Returning to Mukuru Promotion Centre where our journey began was both nostalgic and inspiring. This follow-up visit demonstrated our commitment to building lasting relationships rather than one-time interventions. We were welcomed back with open arms by families who remembered us from our first visit, and it was incredible to see the progress and positive changes that had occurred. We brought additional supplies, continued our feeding program, and spent quality time catching up with the children and families we had met before. New families had also joined the community, and we were able to extend our support to them as well. This visit reinforced the importance of consistency and follow-through in community work. We learned about new challenges the community was facing and were able to adapt our support accordingly. The relationships we've built here continue to be a source of inspiration and motivation for all our work.",
@@ -202,7 +202,7 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ projectId, onClose }) => 
     {
       id: 10,
       title: "Empowering a Student to Graduate",
-      date: "July 29, 2024",
+      date: "July 29, 2023",
       location: "Nairobi",
       description: "On this day, we helped a determined girl who lacked the funds for her final exam. Thanks to timely support, she sat for her exam, passed, and graduated — a true story of hope restored and a future reclaimed.",
       fullDescription: "This project represents one of our most impactful individual interventions. We met a determined young woman who was on the verge of missing her final examinations due to lack of funds - a situation that would have derailed years of hard work and dedication. Her story touched our hearts: despite facing numerous challenges, she had maintained excellent grades and was just one step away from graduation. We immediately stepped in to cover her examination fees and provided additional support for her final preparations. The day she sat for her exams was filled with nervous excitement, but her determination was evident. When the results came out and she had not only passed but excelled, the joy was indescribable. Her graduation day was a celebration not just for her, but for everyone who believes in the power of education and second chances. This experience reinforced our commitment to educational support and showed us how sometimes a small intervention at the right moment can change the entire trajectory of someone's life. She has since gone on to pursue further education and has become an advocate for supporting other students in similar situations.",
@@ -212,7 +212,7 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ projectId, onClose }) => 
       volunteers: "3 volunteers",
       status: "Completed",
       gallery: [
-        "/student1.jpg",
+        "https://www.shutterstock.com/image-vector/girl-graduate-on-background-joyful-260nw-1930511396.jpg",
         "/student2.jpg",
         "/student3.jpg",
         "/student4.jpg"

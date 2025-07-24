@@ -15,7 +15,7 @@ const HomePage = () => {
     {
       id: 1,
       title: "Mukuru Promotion Centre",
-      date: "January 27, 2024",
+      date: "January 27, 2023",
       description: "We kicked off the year with a heartfelt visit to Mukuru Promotion Centre, where we spent time sharing meals, essentials, and encouragement with children and families.",
       image: "/all.jpg",
       location: "Mukuru, Nairobi"
@@ -23,7 +23,7 @@ const HomePage = () => {
     {
       id: 7,
       title: "Flomina Children's Home",
-      date: "November 23, 2024",
+      date: "November 23, 2023",
       description: "In the spirit of giving and gratitude, we reached out to the wonderful children of Flomina Home, offering food, clothes, and school supplies.",
       image: "/flo1.jpg",
       location: "Nairobi"
@@ -31,9 +31,9 @@ const HomePage = () => {
     {
       id: 10,
       title: "Empowering a Student to Graduate",
-      date: "July 29, 2024",
+      date: "July 29, 2023",
       description: "We helped a determined girl who lacked the funds for her final exam. Thanks to timely support, she sat for her exam, passed, and graduated.",
-      image: "/student1.jpg",
+      image: "https://www.shutterstock.com/image-vector/girl-graduate-on-background-joyful-260nw-1930511396.jpg",
       location: "Nairobi"
     }
   ];

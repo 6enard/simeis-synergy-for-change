@@ -12,9 +12,47 @@ import DonatePage from './pages/DonatePage';
 import ContactPage from './pages/ContactPage';
 import RegisterPage from './pages/RegisterPage';
 import { useState, useEffect } from 'react';
+import LoadingScreen from './components/LoadingScreen';
 
 function App() {
   const [selectedProject, setSelectedProject] = useState<number | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate loading time and wait for critical resources
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
+
+    // Also check if images are loaded
+    const images = document.querySelectorAll('img');
+    let loadedImages = 0;
+    
+    const checkAllImagesLoaded = () => {
+      loadedImages++;
+      if (loadedImages >= Math.min(images.length, 5)) { // Wait for first 5 images
+        clearTimeout(timer);
+        setTimeout(() => setIsLoading(false), 1000);
+      }
+    };
+
+    images.forEach(img => {
+      if (img.complete) {
+        checkAllImagesLoaded();
+      } else {
+        img.addEventListener('load', checkAllImagesLoaded);
+        img.addEventListener('error', checkAllImagesLoaded);
+      }
+    });
+
+    return () => {
+      clearTimeout(timer);
+      images.forEach(img => {
+        img.removeEventListener('load', checkAllImagesLoaded);
+        img.removeEventListener('error', checkAllImagesLoaded);
+      });
+    };
+  }, []);
 
   useEffect(() => {
     const handleHashChange = () => {
@@ -42,6 +80,10 @@ function App() {
     setSelectedProject(null);
     window.location.hash = '';
   };
+
+  if (isLoading) {
+    return <LoadingScreen />;
+  }
 
   return (
     <Router>
