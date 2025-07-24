@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -13,11 +15,16 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-      setIsMenuOpen(false);
+  const handleNavigation = (path: string, sectionId?: string) => {
+    setIsMenuOpen(false);
+    if (location.pathname === '/' && sectionId) {
+      // If we're on homepage and have a section ID, scroll to it
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
     }
   };
 
@@ -26,8 +33,8 @@ const Header = () => {
       isScrolled ? 'bg-cream/95 backdrop-blur-md shadow-xl border-b border-white/20' : 'bg-transparent'
     }`}>
       <div className="container mx-auto px-6 py-5 flex items-center justify-between">
-        <button 
-          onClick={() => scrollToSection('home')}
+        <Link 
+          to="/"
           className="flex items-center space-x-2 hover:scale-105 transition-transform duration-300"
         >
           <img 
@@ -40,37 +47,39 @@ const Header = () => {
           <span className={`text-lg sm:text-xl md:text-2xl font-heading ${isScrolled ? 'text-gray-800' : 'text-white drop-shadow-lg'}`}>
             Simeis Synergy
           </span>
-        </button>
+        </Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex space-x-6 xl:space-x-10">
           {[
-            { name: 'Home', id: 'home' },
-            { name: 'About', id: 'about' },
-            { name: 'Leadership', id: 'leadership' },
-            { name: 'Projects', id: 'projects' },
-            { name: 'Donate', id: 'donate' },
-            { name: 'Contact', id: 'contact' }
+            { name: 'Home', path: '/', sectionId: 'home' },
+            { name: 'About', path: '/about', sectionId: 'about' },
+            { name: 'Leadership', path: '/leadership', sectionId: 'leadership' },
+            { name: 'Projects', path: '/projects', sectionId: 'projects' },
+            { name: 'Donate', path: '/donate', sectionId: 'donate' },
+            { name: 'Contact', path: '/contact', sectionId: 'contact' }
           ].map((item) => (
-            <button
-              key={item.id}
-              onClick={() => scrollToSection(item.id)}
+            <Link
+              key={item.path}
+              to={item.path}
+              onClick={() => handleNavigation(item.path, item.sectionId)}
               className={`font-body font-medium transition-all duration-300 hover:text-orange relative group ${
                 isScrolled ? 'text-gray-700' : 'text-white/90'
+              } ${location.pathname === item.path ? 'text-orange' : ''}`}
               }`}
             >
               {item.name}
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-orange transition-all duration-300 group-hover:w-full"></span>
-            </button>
+            </Link>
           ))}
         </nav>
 
-        <button
-          onClick={() => scrollToSection('donate')}
+        <Link
+          to="/donate"
           className="hidden lg:block bg-orange text-white px-6 xl:px-8 py-2 xl:py-3 rounded-2xl hover:bg-orange/90 transition-all duration-300 font-body font-semibold transform hover:scale-105 shadow-lg text-sm xl:text-base"
         >
           Donate Now
-        </button>
+        </Link>
 
         {/* Mobile Menu Button */}
         <button
@@ -86,28 +95,31 @@ const Header = () => {
         <div className="lg:hidden bg-cream/95 backdrop-blur-md shadow-xl border-t border-white/20">
           <nav className="flex flex-col py-6">
             {[
-              { name: 'Home', id: 'home' },
-              { name: 'About', id: 'about' },
-              { name: 'Leadership', id: 'leadership' },
-              { name: 'Projects', id: 'projects' },
-              { name: 'Donate', id: 'donate' },
-              { name: 'Contact', id: 'contact' }
+              { name: 'Home', path: '/', sectionId: 'home' },
+              { name: 'About', path: '/about', sectionId: 'about' },
+              { name: 'Leadership', path: '/leadership', sectionId: 'leadership' },
+              { name: 'Projects', path: '/projects', sectionId: 'projects' },
+              { name: 'Donate', path: '/donate', sectionId: 'donate' },
+              { name: 'Contact', path: '/contact', sectionId: 'contact' }
             ].map((item) => (
-              <button
-                key={item.id}
-                onClick={() => scrollToSection(item.id)}
-                className="text-left px-6 py-4 font-body text-gray-700 hover:bg-white/50 hover:text-orange transition-all duration-300 font-medium"
+              <Link
+                key={item.path}
+                to={item.path}
+                onClick={() => handleNavigation(item.path, item.sectionId)}
+                className={`text-left px-6 py-4 font-body hover:bg-white/50 hover:text-orange transition-all duration-300 font-medium ${
+                  location.pathname === item.path ? 'text-orange bg-white/30' : 'text-gray-700'
+                }`}
               >
                 {item.name}
-              </button>
+              </Link>
             ))}
             <div className="px-6 pt-4">
-              <button
-                onClick={() => scrollToSection('donate')}
+              <Link
+                to="/donate"
                 className="w-full bg-orange text-white px-6 py-3 rounded-2xl hover:bg-orange/90 transition-all duration-300 font-body font-semibold"
               >
                 Donate Now
-              </button>
+              </Link>
             </div>
           </nav>
         </div>

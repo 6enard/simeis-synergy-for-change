@@ -1,11 +1,19 @@
 import React from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { Heart, Facebook, Twitter, Instagram, MessageCircle, Mail, Phone, MapPin } from 'lucide-react';
 
 const Footer = () => {
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+  const location = useLocation();
+
+  const handleNavigation = (path: string, sectionId?: string) => {
+    if (location.pathname === '/' && sectionId) {
+      // If we're on homepage and have a section ID, scroll to it
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
     }
   };
 
@@ -15,8 +23,8 @@ const Footer = () => {
         <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
           {/* Brand Section */}
           <div className="lg:col-span-2">
-            <button 
-              onClick={() => scrollToSection('home')}
+            <Link 
+              to="/"
               className="flex items-center space-x-2 mb-6 hover:scale-105 transition-transform duration-300"
             >
               <img 
@@ -27,7 +35,7 @@ const Footer = () => {
                 decoding="async"
               />
               <span className="text-lg sm:text-xl lg:text-2xl font-heading animate-typewriter">Simeis Synergy For Change</span>
-            </button>
+            </Link>
             <p className="font-body text-gray-300 mb-6 leading-relaxed max-w-md text-sm sm:text-base animate-fade-in-up animate-delay-200">
               A youth-driven charity organization dedicated to empowering lives through essential assistance 
               and sustainable support, creating brighter futures for the less fortunate in our communities.
@@ -53,20 +61,21 @@ const Footer = () => {
             <h3 className="text-base sm:text-lg font-body font-semibold mb-4 sm:mb-6 animate-typewriter">Quick Links</h3>
             <ul className="space-y-3 animate-fade-in-up animate-delay-500">
               {[
-                { name: 'Home', id: 'home' },
-                { name: 'About Us', id: 'about' },
-               { name: 'Our Leadership', id: 'leadership' },
-                { name: 'Our Projects', id: 'projects' },
-                { name: 'Make a Donation', id: 'donate' },
-                { name: 'Contact Us', id: 'contact' }
+                { name: 'Home', path: '/', sectionId: 'home' },
+                { name: 'About Us', path: '/about', sectionId: 'about' },
+                { name: 'Our Leadership', path: '/leadership', sectionId: 'leadership' },
+                { name: 'Our Projects', path: '/projects', sectionId: 'projects' },
+                { name: 'Make a Donation', path: '/donate', sectionId: 'donate' },
+                { name: 'Contact Us', path: '/contact', sectionId: 'contact' }
               ].map((item) => (
-                <li key={item.id}>
-                  <button
-                    onClick={() => scrollToSection(item.id)}
+                <li key={item.path}>
+                  <Link
+                    to={item.path}
+                    onClick={() => handleNavigation(item.path, item.sectionId)}
                     className="font-body text-gray-300 hover:text-orange transition-colors duration-200 text-sm sm:text-base"
                   >
                     {item.name}
-                  </button>
+                  </Link>
                 </li>
               ))}
             </ul>

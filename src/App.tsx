@@ -1,14 +1,15 @@
 import React from 'react';
-import { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
-import Hero from './components/Hero';
-import About from './components/About';
-import Leadership from './components/Leadership';
-import Projects from './components/Projects';
-import ProjectDetail from './components/ProjectDetail';
-import Donate from './components/Donate';
-import Contact from './components/Contact';
 import Footer from './components/Footer';
+import ProjectDetail from './components/ProjectDetail';
+import HomePage from './pages/HomePage';
+import AboutPage from './pages/AboutPage';
+import LeadershipPage from './pages/LeadershipPage';
+import ProjectsPage from './pages/ProjectsPage';
+import DonatePage from './pages/DonatePage';
+import ContactPage from './pages/ContactPage';
+import { useState, useEffect } from 'react';
 
 function App() {
   const [selectedProject, setSelectedProject] = useState<number | null>(null);
@@ -41,22 +42,26 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen">
-      <Header />
-      <main>
-        <Hero />
-        <About />
-        <Leadership />
-        <Projects />
-        <Donate />
-        <Contact />
-      </main>
-      <Footer />
-      
-      {selectedProject && (
-        <ProjectDetail projectId={selectedProject} onClose={closeProjectDetail} />
-      )}
-    </div>
+    <Router>
+      <div className="min-h-screen">
+        <Header />
+        <main>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/leadership" element={<LeadershipPage />} />
+            <Route path="/projects" element={<ProjectsPage />} />
+            <Route path="/donate" element={<DonatePage />} />
+            <Route path="/contact" element={<ContactPage />} />
+          </Routes>
+        </main>
+        <Footer />
+        
+        {selectedProject && (
+          <ProjectDetail projectId={selectedProject} onClose={closeProjectDetail} />
+        )}
+      </div>
+    </Router>
   );
 }
 
