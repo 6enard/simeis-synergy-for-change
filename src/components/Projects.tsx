@@ -34,7 +34,7 @@ const Projects = () => {
       volunteers: "20 volunteers",
       status: "Completed",
       category: "outreach",
-      image: "/street1.jpg"
+      image: "/1.jpg"
     },
     {
       id: 3,
