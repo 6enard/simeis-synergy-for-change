@@ -235,7 +235,6 @@ const Projects = () => {
                   loading="lazy"
                   decoding="async"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
                 <div className="absolute top-4 right-4">
                   <span className={`px-3 py-1 rounded-full text-xs font-semibold backdrop-blur-sm shadow-lg ${
                     project.status === 'Completed' 
@@ -247,23 +246,23 @@ const Projects = () => {
                     {project.status}
                   </span>
                 </div>
-                <div className="absolute bottom-4 left-4 right-4">
-                  <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-3 sm:p-4">
-                    <div className="flex items-center text-xs sm:text-sm font-body text-gray-600 mb-2">
-                      <Calendar className="h-3 w-3 sm:h-4 sm:w-4 mr-2" />
-                      {project.date}
-                    </div>
-                    <h3 className="text-base sm:text-lg font-heading text-gray-800 mb-2 project-title">{project.title}</h3>
-                    <div className="flex items-center text-xs sm:text-sm font-body text-gray-600">
-                      <MapPin className="h-3 w-3 sm:h-4 sm:w-4 mr-2" />
-                      {project.location}
-                    </div>
-                  </div>
-                </div>
               </div>
 
               {/* Project Content */}
               <div className="p-6 sm:p-8">
+                {/* Project Header Info */}
+                <div className="mb-4">
+                  <div className="flex items-center text-xs sm:text-sm font-body text-gray-600 mb-2">
+                    <Calendar className="h-3 w-3 sm:h-4 sm:w-4 mr-2" />
+                    {project.date}
+                  </div>
+                  <h3 className="text-base sm:text-lg font-heading text-gray-800 mb-2 project-title">{project.title}</h3>
+                  <div className="flex items-center text-xs sm:text-sm font-body text-gray-600">
+                    <MapPin className="h-3 w-3 sm:h-4 sm:w-4 mr-2" />
+                    {project.location}
+                  </div>
+                </div>
+
                 <div className="flex items-center mb-4">
                   <div className="bg-gradient-to-br from-lime/20 to-orange/20 rounded-full p-2 sm:p-3 mr-3 sm:mr-4 border border-lime/20">
                     <project.icon className="h-5 w-5 sm:h-6 sm:w-6 text-lime" />
