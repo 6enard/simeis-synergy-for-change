@@ -66,7 +66,6 @@ const Header = () => {
               className={`font-body font-medium transition-all duration-300 hover:text-orange relative group ${
                 isScrolled ? 'text-gray-700' : 'text-white/90'
               } ${location.pathname === item.path ? 'text-orange' : ''}`}
-              }`}
             >
               {item.name}
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-orange transition-all duration-300 group-hover:w-full"></span>
