@@ -124,7 +124,7 @@ const Projects = () => {
       volunteers: "14 volunteers",
       status: "Upcoming",
       category: "youth",
-      image: "/geta1.jpg"
+      image: "/geta2.jpg"
     },
     {
       id: 9,
