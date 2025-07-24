@@ -56,6 +56,7 @@ const Header = () => {
             { name: 'About', path: '/about', sectionId: 'about' },
             { name: 'Leadership', path: '/leadership', sectionId: 'leadership' },
             { name: 'Projects', path: '/projects', sectionId: 'projects' },
+            { name: 'Join Us', path: '/register', sectionId: 'register' },
             { name: 'Donate', path: '/donate', sectionId: 'donate' },
             { name: 'Contact', path: '/contact', sectionId: 'contact' }
           ].map((item) => (
@@ -98,6 +99,7 @@ const Header = () => {
               { name: 'About', path: '/about', sectionId: 'about' },
               { name: 'Leadership', path: '/leadership', sectionId: 'leadership' },
               { name: 'Projects', path: '/projects', sectionId: 'projects' },
+              { name: 'Join Us', path: '/register', sectionId: 'register' },
               { name: 'Donate', path: '/donate', sectionId: 'donate' },
               { name: 'Contact', path: '/contact', sectionId: 'contact' }
             ].map((item) => (

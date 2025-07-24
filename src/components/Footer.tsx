@@ -65,6 +65,7 @@ const Footer = () => {
                 { name: 'About Us', path: '/about', sectionId: 'about' },
                 { name: 'Our Leadership', path: '/leadership', sectionId: 'leadership' },
                 { name: 'Our Projects', path: '/projects', sectionId: 'projects' },
+                { name: 'Join Us', path: '/register', sectionId: 'register' },
                 { name: 'Make a Donation', path: '/donate', sectionId: 'donate' },
                 { name: 'Contact Us', path: '/contact', sectionId: 'contact' }
               ].map((item) => (

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Users, Heart, Star, Target, Eye, Compass, Calendar, MapPin } from 'lucide-react';
+import { ArrowRight, Users, Heart, Star, Target, Eye, Compass, Calendar, MapPin, UserPlus } from 'lucide-react';
 import Hero from '../components/Hero';
 
 const HomePage = () => {
@@ -300,6 +300,29 @@ const HomePage = () => {
               className="inline-flex items-center bg-gradient-to-r from-orange to-lime text-white px-8 py-3 rounded-2xl font-body font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105"
             >
               Contact Us
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Join Us Section */}
+      <section className="py-16 bg-gradient-to-r from-lime to-orange">
+        <div className="container mx-auto px-4 sm:px-6 text-center">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading text-white mb-6">
+              Ready to Make a <span className="text-cream">Difference?</span>
+            </h2>
+            <p className="text-lg sm:text-xl font-body text-white/90 mb-8 leading-relaxed">
+              Join our community of passionate individuals dedicated to creating positive change. 
+              Become a member and be part of our mission to empower lives across Kenya.
+            </p>
+            <Link
+              to="/register"
+              className="inline-flex items-center bg-white text-gray-800 px-8 py-4 rounded-2xl font-body font-semibold hover:bg-cream transition-all duration-300 transform hover:scale-105 shadow-lg"
+            >
+              <UserPlus className="mr-2 h-6 w-6" />
+              Become a Member
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
           </div>

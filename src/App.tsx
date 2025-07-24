@@ -10,6 +10,7 @@ import LeadershipPage from './pages/LeadershipPage';
 import ProjectsPage from './pages/ProjectsPage';
 import DonatePage from './pages/DonatePage';
 import ContactPage from './pages/ContactPage';
+import RegisterPage from './pages/RegisterPage';
 import { useState, useEffect } from 'react';
 
 function App() {
@@ -55,6 +56,7 @@ function App() {
             <Route path="/projects" element={<ProjectsPage />} />
             <Route path="/donate" element={<DonatePage />} />
             <Route path="/contact" element={<ContactPage />} />
+            <Route path="/register" element={<RegisterPage />} />
           </Routes>
         </main>
         <Footer />
