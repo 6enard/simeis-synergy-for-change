@@ -122,7 +122,7 @@ const Projects = () => {
       icon: Users,
       beneficiaries: "25 boys",
       volunteers: "14 volunteers",
-      status: "Upcoming",
+      status: "Completed",
       category: "youth",
       image: "/geta2.jpg"
     },
