@@ -56,28 +56,6 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ projectId, onClose }) => 
       status: "Completed",
       gallery: [
         "/street1.jpg",
-        "/streetvid1.mp4",
-        "/streetvid4.mp4",
-        "/streetvid8.mp4",
-        "/streetvid13.mp4",
-        "/streetvid14.mp4",
-        "/streetvid15.mp4",
-        "/streetvid17.mp4",
-        "/streetvid20.mp4",
-        "/streetvid2.mp4",
-        "/streetvid3.mp4",
-        "/streetvid5.mp4",
-        "/streetvid6.mp4",
-        "/streetvid7.mp4",
-        "/streetvid9.mp4",
-        "/streetvid10.mp4",
-        "/streetvid11.mp4",
-        "/streetvid12.mp4",
-        "/streetvid16.mp4",
-        "/streetvid18.mp4",
-        "/streetvid19.mp4",
-        "/streetvid21.mp4",
-        "/streetvid22.mp4"
       ]
     },
     {
@@ -366,46 +344,21 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ projectId, onClose }) => 
                       className="relative aspect-square rounded-lg sm:rounded-xl overflow-hidden cursor-pointer group shadow-lg hover:shadow-xl transition-all duration-300"
                       onClick={() => openGallery(index)}
                     >
-                      {image.endsWith('.mp4') ? (
-                        <div className="relative w-full h-full">
-                          <video
-                            src={image}
-                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                            muted
-                            playsInline
-                            preload="metadata"
-                            onLoadedData={(e) => {
-                              const video = e.target as HTMLVideoElement;
-                              video.currentTime = 1; // Seek to 1 second for thumbnail
-                            }}
-                          />
-                          <div className="absolute inset-0 bg-black/30 flex items-center justify-center pointer-events-none">
-                            <div className="bg-white/90 backdrop-blur-sm rounded-full p-2 sm:p-3 shadow-lg">
-                              <svg className="w-4 h-4 sm:w-6 sm:h-6 text-gray-800" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M8 5v14l11-7z"/>
-                              </svg>
-                            </div>
-                          </div>
+                      <img
+                        src={`${image}${image.includes('pexels.com') ? '?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop' : ''}`}
+                        alt={`${project.title} - Photo ${index + 1}`}
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                        loading="eager"
+                        onError={(e) => {
+                          const img = e.target as HTMLImageElement;
+                          img.src = image; // Fallback to original if optimized fails
+                        }}
+                      />
+                      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center">
+                        <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/90 rounded-full p-2">
+                          <Eye className="h-5 w-5 text-gray-800" />
                         </div>
-                      ) : (
-                        <img
-                          src={`${image}${image.includes('pexels.com') ? '?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop' : ''}`}
-                          alt={`${project.title} - Photo ${index + 1}`}
-                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                          loading="eager"
-                          onError={(e) => {
-                            const img = e.target as HTMLImageElement;
-                            img.src = image; // Fallback to original if optimized fails
-                          }}
-                        />
-                      )}
-                      {!image.endsWith('.mp4') && (
-                        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center">
-                          <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/90 rounded-full p-2">
-                            <Eye className="h-5 w-5 text-gray-800" />
-                          </div>
-                        </div>
-                      )}
+                      </div>
                     </div>
                   ))}
                 </div>
@@ -464,37 +417,15 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ projectId, onClose }) => 
           </button>
 
           <div className="max-w-5xl max-h-full flex flex-col items-center">
-            {project.gallery[currentImageIndex].endsWith('.mp4') ? (
-              <div className="relative max-w-full max-h-[80vh]">
-                <video
-                  src={project.gallery[currentImageIndex]}
-                  className="max-w-full max-h-[80vh] object-contain rounded-lg shadow-2xl"
-                  controls
-                  autoPlay
-                  preload="metadata"
-                  muted
-                  playsInline
-                  onLoadStart={(e) => {
-                    const video = e.target as HTMLVideoElement;
-                    // Reduce quality for mobile
-                    if (window.innerWidth < 768) {
-                      video.style.maxWidth = '100vw';
-                      video.style.maxHeight = '60vh';
-                    }
-                  }}
-                />
-              </div>
-            ) : (
-              <img
-                src={`${project.gallery[currentImageIndex]}${project.gallery[currentImageIndex].includes('pexels.com') ? '?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop' : ''}`}
-                alt={`${project.title} - Photo ${currentImageIndex + 1}`}
-                className="max-w-full max-h-[80vh] object-contain rounded-lg shadow-2xl"
-                onError={(e) => {
-                  const img = e.target as HTMLImageElement;
-                  img.src = project.gallery[currentImageIndex]; // Fallback to original
-                }}
-              />
-            )}
+            <img
+              src={`${project.gallery[currentImageIndex]}${project.gallery[currentImageIndex].includes('pexels.com') ? '?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop' : ''}`}
+              alt={`${project.title} - Photo ${currentImageIndex + 1}`}
+              className="max-w-full max-h-[80vh] object-contain rounded-lg shadow-2xl"
+              onError={(e) => {
+                const img = e.target as HTMLImageElement;
+                img.src = project.gallery[currentImageIndex]; // Fallback to original
+              }}
+            />
             <div className="text-center mt-6 text-white">
               <div className="bg-black/50 backdrop-blur-sm rounded-full px-4 py-2">
                 <span className="text-sm font-body">
