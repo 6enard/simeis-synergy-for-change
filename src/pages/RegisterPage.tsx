@@ -68,7 +68,8 @@ const RegisterPage = () => {
           </h1>
           <p className="text-lg sm:text-xl font-body text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Become a member of Simeis Synergy For Change and be part of our mission to create 
-            positive impact in communities across Kenya. Together, we can make a difference.
+            positive impact in communities across Kenya. A one-time membership fee of KSh 100 is required. 
+            Together, we can make a difference.
           </p>
         </div>
 
@@ -78,6 +79,10 @@ const RegisterPage = () => {
             <div className="bg-gradient-to-r from-lime to-orange p-6 sm:p-8 text-white text-center">
               <h2 className="text-2xl sm:text-3xl font-heading mb-2">Member Registration</h2>
               <p className="font-body text-white/90">Fill out the form below to join our community</p>
+              <div className="mt-4 bg-white/20 backdrop-blur-sm rounded-lg p-3">
+                <p className="text-sm font-body font-semibold">Membership Fee: KSh 100</p>
+                <p className="text-xs font-body text-white/90">One-time registration fee</p>
+              </div>
             </div>
 
             <div className="p-6 sm:p-8 md:p-12">
@@ -158,7 +163,7 @@ const RegisterPage = () => {
                 <div>
                   <label htmlFor="mpesaCode" className="block text-sm font-body font-semibold text-gray-700 mb-3">
                     <CreditCard className="h-4 w-4 inline mr-2 text-lime" />
-                    M-Pesa Registration Code *
+                    M-Pesa Payment Code *
                   </label>
                   <input
                     type="text"
@@ -171,7 +176,7 @@ const RegisterPage = () => {
                     placeholder="Enter M-Pesa transaction code"
                   />
                   <p className="text-xs text-gray-500 mt-2 font-body">
-                    Please provide the M-Pesa transaction code for your registration fee payment
+                    Please provide the M-Pesa transaction code for your KSh 100 membership fee payment
                   </p>
                 </div>
 
@@ -229,6 +234,28 @@ const RegisterPage = () => {
 
           {/* Information Section */}
           <div className="mt-12 bg-gradient-to-r from-lime/20 via-orange/20 to-lime/20 rounded-2xl p-6 sm:p-8 border border-orange/20">
+            <div className="mb-8 bg-white rounded-xl p-6 border border-orange/30">
+              <h3 className="text-xl sm:text-2xl font-heading text-gray-800 mb-4 text-center">
+                Membership Fee Payment
+              </h3>
+              <div className="grid sm:grid-cols-2 gap-4 mb-4">
+                <div className="bg-lime/10 rounded-lg p-4 text-center">
+                  <p className="text-sm font-body text-gray-600 mb-1">Paybill Number</p>
+                  <p className="text-2xl font-heading text-gray-800">522522</p>
+                </div>
+                <div className="bg-orange/10 rounded-lg p-4 text-center">
+                  <p className="text-sm font-body text-gray-600 mb-1">Account Number</p>
+                  <p className="text-2xl font-heading text-gray-800">1111485429</p>
+                </div>
+              </div>
+              <div className="text-center">
+                <p className="text-lg font-heading text-gray-800 mb-2">Membership Fee: KSh 100</p>
+                <p className="text-sm font-body text-gray-600">
+                  Pay via M-Pesa using the details above, then enter the transaction code in the form
+                </p>
+              </div>
+            </div>
+            
             <h3 className="text-xl sm:text-2xl font-heading text-gray-800 mb-4 text-center">
               What Happens Next?
             </h3>
