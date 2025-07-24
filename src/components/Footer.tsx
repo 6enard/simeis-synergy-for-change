@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Heart, Facebook, Twitter, Instagram, MessageCircle, Mail, Phone, MapPin } from 'lucide-react';
+import { Heart, Mail, Phone, MapPin } from 'lucide-react';
+import SocialIcons from './SocialIcons';
 
 const Footer = () => {
   const location = useLocation();
@@ -41,18 +42,7 @@ const Footer = () => {
               and sustainable support, creating brighter futures for the less fortunate in our communities.
             </p>
             <div className="flex space-x-4 animate-fade-in-up animate-delay-500">
-              <a href="#" className="bg-gray-800 hover:bg-gray-700 p-2 sm:p-3 rounded-full transition-colors duration-200">
-                <Facebook className="h-4 w-4 sm:h-5 sm:w-5" />
-              </a>
-              <a href="#" className="bg-gray-800 hover:bg-gray-700 p-2 sm:p-3 rounded-full transition-colors duration-200">
-                <Twitter className="h-4 w-4 sm:h-5 sm:w-5" />
-              </a>
-              <a href="#" className="bg-gray-800 hover:bg-gray-700 p-2 sm:p-3 rounded-full transition-colors duration-200">
-                <Instagram className="h-4 w-4 sm:h-5 sm:w-5" />
-              </a>
-              <a href="#" className="bg-gray-800 hover:bg-lime p-2 sm:p-3 rounded-full transition-colors duration-200">
-                <MessageCircle className="h-4 w-4 sm:h-5 sm:w-5" />
-              </a>
+              <SocialIcons iconSize="h-4 w-4 sm:h-5 sm:w-5" />
             </div>
           </div>
 

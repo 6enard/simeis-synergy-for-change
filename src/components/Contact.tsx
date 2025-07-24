@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Send, Facebook, Twitter, Instagram, MessageCircle } from 'lucide-react';
+import { Mail, Phone, MapPin, Send } from 'lucide-react';
 import emailjs from '@emailjs/browser';
+import SocialIcons from './SocialIcons';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -116,20 +117,7 @@ const Contact = () => {
             {/* Social Media */}
             <div>
               <h4 className="text-base sm:text-lg font-body font-semibold text-gray-800 mb-4">Follow Our Journey</h4>
-              <div className="flex space-x-4">
-                <a href="#" className="bg-gray-100 hover:bg-gray-200 text-gray-600 p-2 sm:p-3 rounded-full transition-colors duration-200">
-                  <Facebook className="h-5 w-5 sm:h-6 sm:w-6" />
-                </a>
-                <a href="#" className="bg-gray-100 hover:bg-gray-200 text-gray-600 p-2 sm:p-3 rounded-full transition-colors duration-200">
-                  <Twitter className="h-5 w-5 sm:h-6 sm:w-6" />
-                </a>
-                <a href="#" className="bg-gray-100 hover:bg-gray-200 text-gray-600 p-2 sm:p-3 rounded-full transition-colors duration-200">
-                  <Instagram className="h-5 w-5 sm:h-6 sm:w-6" />
-                </a>
-                <a href="#" className="bg-lime/20 hover:bg-lime/30 text-lime p-2 sm:p-3 rounded-full transition-colors duration-200">
-                  <MessageCircle className="h-5 w-5 sm:h-6 sm:w-6" />
-                </a>
-              </div>
+              <SocialIcons />
             </div>
 
             {/* Volunteer CTA */}
