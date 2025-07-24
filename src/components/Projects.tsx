@@ -33,7 +33,7 @@ const Projects = () => {
       impact: "Child welfare",
       icon: Home,
       image: "/anita1.jpg",
-      status: "Completed",
+      status: "Ongoing",
       location: "North Kajiado"
     },
     {
@@ -44,7 +44,7 @@ const Projects = () => {
       impact: "Disaster relief",
       icon: Users,
       image: "/no4.jpg",
-      status: "Completed",
+      status: "Ongoing",
       location: "Various locations"
     },
     {
@@ -216,7 +216,7 @@ const Projects = () => {
 
         {/* Call to Action */}
         <div className="text-center">
-          <div className="bg-cream rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-12 lg:p-16 shadow-xl animate-fade-in-up animate-delay-1000">
+          <div className="bg-gradient-to-br from-lime/20 via-orange/20 to-lime/20 rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-12 lg:p-16 shadow-xl animate-fade-in-up animate-delay-1000 border border-orange/20">
             <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-heading text-gray-800 mb-4 sm:mb-6 md:mb-8 tracking-tight animate-pulse-slow">
               Want to Be Part of Our Next Project?
             </h3>
@@ -229,7 +229,7 @@ const Projects = () => {
                 const element = document.getElementById('donate');
                 if (element) element.scrollIntoView({ behavior: 'smooth' });
               }}
-              className="bg-gradient-to-r from-lime to-orange text-white px-6 sm:px-8 md:px-12 py-3 sm:py-4 md:py-5 rounded-xl sm:rounded-2xl font-body font-semibold text-sm sm:text-base md:text-lg lg:text-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 animate-shimmer animate-delay-500"
+              className="bg-gradient-to-r from-lime to-orange text-white px-6 sm:px-8 md:px-12 py-3 sm:py-4 md:py-5 rounded-xl sm:rounded-2xl font-body font-semibold text-sm sm:text-base md:text-lg lg:text-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
             >
               Support Our Mission
             </button>

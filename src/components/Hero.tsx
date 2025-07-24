@@ -82,13 +82,13 @@ const Hero = () => {
         <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center mb-12 sm:mb-20 px-4 animate-fade-in-up animate-delay-1000">
           <button
             onClick={() => scrollToSection('donate')}
-            className="bg-orange hover:bg-orange/90 text-white px-8 sm:px-10 py-3 sm:py-4 rounded-2xl font-body font-semibold text-base sm:text-lg transition-all duration-300 transform hover:scale-105 shadow-2xl backdrop-blur-sm border border-orange/20 animate-shimmer"
+            className="bg-gradient-to-r from-lime to-orange hover:from-lime/90 hover:to-orange/90 text-white px-8 sm:px-10 py-3 sm:py-4 rounded-2xl font-body font-semibold text-base sm:text-lg transition-all duration-300 transform hover:scale-105 shadow-2xl backdrop-blur-sm border border-orange/20"
           >
             Make a Donation
           </button>
           <button
             onClick={() => scrollToSection('about')}
-            className="bg-white/10 backdrop-blur-md border-2 border-white/30 text-white hover:bg-white hover:text-gray-800 px-8 sm:px-10 py-3 sm:py-4 rounded-2xl font-body font-semibold text-base sm:text-lg transition-all duration-300 transform hover:scale-105 shadow-xl"
+            className="bg-gradient-to-r from-white/10 to-white/20 backdrop-blur-md border-2 border-white/30 text-white hover:bg-gradient-to-r hover:from-white hover:to-cream hover:text-gray-800 px-8 sm:px-10 py-3 sm:py-4 rounded-2xl font-body font-semibold text-base sm:text-lg transition-all duration-300 transform hover:scale-105 shadow-xl"
           >
             Learn More
           </button>

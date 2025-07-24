@@ -80,8 +80,10 @@ const RegisterPage = () => {
               <h2 className="text-2xl sm:text-3xl font-heading mb-2">Member Registration</h2>
               <p className="font-body text-white/90">Fill out the form below to join our community</p>
               <div className="mt-4 bg-white/20 backdrop-blur-sm rounded-lg p-3">
-                <p className="text-sm font-body font-semibold">Membership Fee: KSh 100</p>
-                <p className="text-xs font-body text-white/90">One-time registration fee</p>
+                <div className="bg-gradient-to-r from-lime/30 to-lime/20 rounded-md p-2 border border-lime/40">
+                  <p className="text-sm font-body font-semibold text-gray-800">Membership Fee: KSh 100</p>
+                  <p className="text-xs font-body text-gray-700">One-time registration fee</p>
+                </div>
               </div>
             </div>
 

@@ -69,7 +69,7 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ projectId, onClose }) => 
       icon: Home,
       beneficiaries: "30 children",
       volunteers: "12 volunteers",
-      status: "Completed",
+      status: "Ongoing",
       gallery: [
         "/anita1.jpg",
         "/anita2.jpg",
@@ -90,7 +90,7 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ projectId, onClose }) => 
       icon: Users,
       beneficiaries: "200+ families",
       volunteers: "25 volunteers",
-      status: "Completed",
+      status: "Ongoing",
       gallery: [
         "/no4.jpg",
       ]

@@ -104,8 +104,8 @@ const Footer = () => {
             </div>
 
             {/* M-Pesa Details */}
-            <div className="mt-6 p-4 bg-gray-800 rounded-lg animate-shimmer animate-delay-1000">
-              <h4 className="font-body font-semibold text-orange mb-2 text-sm sm:text-base animate-pulse-slow">Donate via M-Pesa</h4>
+            <div className="mt-6 p-4 bg-gradient-to-r from-lime/20 to-orange/20 rounded-lg border border-orange/30">
+              <h4 className="font-body font-semibold bg-gradient-to-r from-lime to-orange bg-clip-text text-transparent mb-2 text-sm sm:text-base">Donate via M-Pesa</h4>
               <p className="text-xs sm:text-sm font-body text-gray-300">Paybill: <span className="font-bold">522522</span></p>
               <p className="text-xs sm:text-sm font-body text-gray-300">Account: <span className="font-bold">1111485429</span></p>
             </div>
