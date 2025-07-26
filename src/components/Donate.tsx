@@ -59,12 +59,20 @@ const Donate = () => {
             {/* M-Pesa Donation */}
             <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 p-6 sm:p-8 mb-6 sm:mb-8 border border-gray-100">
               <div className="flex items-center mb-6">
-                <img 
-                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/M-PESA_LOGO-01.svg/1280px-M-PESA_LOGO-01.svg.png" 
-                  alt="M-Pesa Logo" 
-                  className="h-8 w-8 sm:h-10 sm:w-10 mr-3 sm:mr-4"
-                  loading="lazy"
-                />
+                <div className="flex items-center space-x-3 mr-4">
+                  <img 
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/M-PESA_LOGO-01.svg/1280px-M-PESA_LOGO-01.svg.png" 
+                    alt="M-Pesa Logo" 
+                    className="h-8 w-auto sm:h-10"
+                    loading="lazy"
+                  />
+                  <img 
+                    src="https://upload.wikimedia.org/wikipedia/en/d/de/KCB_Bank_Kenya_Limited_logo.png" 
+                    alt="KCB Bank Logo" 
+                    className="h-6 w-auto sm:h-8"
+                    loading="lazy"
+                  />
+                </div>
                 <div className="bg-gradient-to-br from-lime/20 to-lime/30 rounded-full p-2 sm:p-3 mr-3 sm:mr-4 border border-lime/20">
                   <Smartphone className="h-6 w-6 sm:h-8 sm:w-8 text-lime" />
                 </div>

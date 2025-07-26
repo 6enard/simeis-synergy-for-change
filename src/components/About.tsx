@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Heart, Users, Leaf, Target, Eye, Compass } from 'lucide-react';
 
 const About = () => {
@@ -86,15 +87,12 @@ const About = () => {
             for generations to come. Together, we can make a difference that lasts.
           </p>
           <div className="mt-8 flex justify-center">
-            <button
-              onClick={() => {
-                const element = document.getElementById('projects');
-                if (element) element.scrollIntoView({ behavior: 'smooth' });
-              }}
-              className="bg-white/20 backdrop-blur-sm border-2 border-white/30 text-white hover:bg-white hover:text-gray-800 px-8 py-3 rounded-2xl font-body font-semibold transition-all duration-300 transform hover:scale-105 animate-shimmer animate-delay-500"
+            <Link
+              to="/projects"
+              className="bg-white/20 backdrop-blur-sm border-2 border-white/30 text-white hover:bg-white hover:text-gray-800 px-8 py-3 rounded-2xl font-body font-semibold transition-all duration-300 transform hover:scale-105 animate-shimmer animate-delay-500 inline-block"
             >
               See Our Projects
-            </button>
+            </Link>
           </div>
         </div>
       </div>

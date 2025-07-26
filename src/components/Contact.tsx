@@ -80,7 +80,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="text-base sm:text-lg font-body font-semibold text-gray-800">Email Us</h4>
-                    <p className="font-body text-gray-600 text-sm sm:text-base">simeisynergyforchange@gmail.com</p>
+                    <p className="font-body text-gray-600 text-sm sm:text-base">simeissynergyforchange@gmail.com</p>
                     <p className="text-xs sm:text-sm font-body text-gray-500">We respond within 24 hours</p>
                   </div>
                 </div>

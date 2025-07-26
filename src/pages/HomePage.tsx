@@ -235,6 +235,20 @@ const HomePage = () => {
 
           <div className="bg-white rounded-2xl shadow-lg p-8 max-w-2xl mx-auto mb-12">
             <div className="text-center mb-6">
+              <div className="flex justify-center items-center space-x-4 mb-4">
+                <img 
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/M-PESA_LOGO-01.svg/1280px-M-PESA_LOGO-01.svg.png" 
+                  alt="M-Pesa Logo" 
+                  className="h-8 w-auto sm:h-10"
+                  loading="lazy"
+                />
+                <img 
+                  src="https://upload.wikimedia.org/wikipedia/en/d/de/KCB_Bank_Kenya_Limited_logo.png" 
+                  alt="KCB Bank Logo" 
+                  className="h-8 w-auto sm:h-10"
+                  loading="lazy"
+                />
+              </div>
               <h3 className="text-2xl font-heading text-gray-800 mb-4">Quick M-Pesa Donation</h3>
               <div className="grid grid-cols-2 gap-6">
                 <div className="bg-lime/10 rounded-lg p-4">
@@ -279,7 +293,7 @@ const HomePage = () => {
                 <Heart className="h-6 w-6 text-lime" />
               </div>
               <h4 className="text-lg font-body font-semibold text-gray-800 mb-2">Email Us</h4>
-              <p className="font-body text-gray-600 text-sm">simeisynergyforchange@gmail.com</p>
+              <p className="font-body text-gray-600 text-sm">simeissynergyforchange@gmail.com</p>
             </div>
 
             <div className="bg-gradient-to-r from-orange/10 to-lime/10 rounded-xl p-6 text-center">

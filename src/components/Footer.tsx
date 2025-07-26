@@ -78,7 +78,7 @@ const Footer = () => {
             <div className="space-y-3 animate-fade-in-up animate-delay-1000">
               <div className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-orange" />
-                <span className="font-body text-gray-300 text-sm sm:text-base">simesynergyforchange@gmail.com</span>
+                <span className="font-body text-gray-300 text-sm sm:text-base">simeissynergyforchange@gmail.com</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-orange" />
@@ -96,12 +96,20 @@ const Footer = () => {
             {/* M-Pesa Details */}
             <div className="mt-6 p-4 bg-gradient-to-r from-lime/20 to-orange/20 rounded-lg border border-orange/30">
               <div className="flex items-center mb-2">
-                <img 
-                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/M-PESA_LOGO-01.svg/1280px-M-PESA_LOGO-01.svg.png" 
-                  alt="M-Pesa Logo" 
-                  className="h-5 w-5 mr-2"
-                  loading="lazy"
-                />
+                <div className="flex items-center space-x-2 mr-3">
+                  <img 
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/M-PESA_LOGO-01.svg/1280px-M-PESA_LOGO-01.svg.png" 
+                    alt="M-Pesa Logo" 
+                    className="h-4 w-auto"
+                    loading="lazy"
+                  />
+                  <img 
+                    src="https://upload.wikimedia.org/wikipedia/en/d/de/KCB_Bank_Kenya_Limited_logo.png" 
+                    alt="KCB Bank Logo" 
+                    className="h-3 w-auto"
+                    loading="lazy"
+                  />
+                </div>
                 <h4 className="font-body font-semibold bg-gradient-to-r from-lime to-orange bg-clip-text text-transparent text-sm sm:text-base">Donate via M-Pesa</h4>
               </div>
               <p className="text-xs sm:text-sm font-body text-gray-300">Paybill: <span className="font-bold">522522</span></p>

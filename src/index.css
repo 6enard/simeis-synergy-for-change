@@ -75,6 +75,37 @@
   .text-responsive-3xl {
     @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl;
   }
+  
+  /* Enhanced responsive spacing */
+  .spacing-responsive-sm {
+    @apply p-2 sm:p-4 md:p-6;
+  }
+  
+  .spacing-responsive-md {
+    @apply p-4 sm:p-6 md:p-8;
+  }
+  
+  .spacing-responsive-lg {
+    @apply p-6 sm:p-8 md:p-12;
+  }
+  
+  /* Responsive margins */
+  .margin-responsive-sm {
+    @apply m-2 sm:m-4 md:m-6;
+  }
+  
+  .margin-responsive-md {
+    @apply m-4 sm:m-6 md:m-8;
+  }
+  
+  /* Responsive gaps */
+  .gap-responsive {
+    @apply gap-2 sm:gap-4 md:gap-6;
+  }
+  
+  .gap-responsive-lg {
+    @apply gap-4 sm:gap-6 md:gap-8;
+  }
 }
 
 /* Custom scrollbar */
@@ -143,18 +174,85 @@ img {
   .grid {
     gap: 0.5rem;
   }
+  
+  /* Improve button spacing on mobile */
+  .space-x-2 > * + * {
+    margin-left: 0.25rem;
+  }
+  
+  /* Better touch targets */
+  button, a {
+    min-height: 44px;
+    min-width: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Responsive text scaling */
+  .text-responsive {
+    font-size: clamp(0.875rem, 2.5vw, 1rem);
+  }
+  
+  /* Flexible containers */
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }
 
 /* Prevent horizontal scroll on mobile */
 body {
   overflow-x: hidden;
+  font-size: 16px; /* Prevent zoom on iOS */
 }
 
-/* Better touch targets for mobile */
-@media (max-width: 768px) {
-  button, a {
-    min-height: 44px;
-    min-width: 44px;
+/* Enhanced responsive utilities */
+@media (min-width: 320px) and (max-width: 767px) {
+  /* Mobile styles */
+  .mobile-stack {
+    flex-direction: column;
+  }
+  
+  .mobile-full {
+    width: 100%;
+  }
+  
+  .mobile-center {
+    text-align: center;
+  }
+  
+  /* Adjust grid layouts for mobile */
+  .grid-cols-2 {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .grid-cols-3 {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* Tablet styles */
+  .tablet-grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .tablet-stack {
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* Desktop styles */
+  .desktop-grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .desktop-grid-4 {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 

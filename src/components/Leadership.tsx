@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Users, ChevronDown, ChevronUp, Quote, Star } from 'lucide-react';
 
 export default function Leadership() {
@@ -158,15 +159,12 @@ export default function Leadership() {
               every decision reflects our values of compassion, transparency, and sustainable impact.
             </p>
             <div className="mt-8 flex justify-center">
-              <button
-                onClick={() => {
-                  const element = document.getElementById('contact');
-                  if (element) element.scrollIntoView({ behavior: 'smooth' });
-                }}
-                className="bg-white/20 backdrop-blur-sm border-2 border-white/30 text-white hover:bg-white hover:text-gray-800 px-8 py-3 rounded-2xl font-body font-semibold transition-all duration-300 transform hover:scale-105 animate-shimmer animate-delay-500"
+              <Link
+                to="/contact"
+                className="bg-white/20 backdrop-blur-sm border-2 border-white/30 text-white hover:bg-white hover:text-gray-800 px-8 py-3 rounded-2xl font-body font-semibold transition-all duration-300 transform hover:scale-105 animate-shimmer animate-delay-500 inline-block"
               >
                 Connect With Us
-              </button>
+              </Link>
             </div>
           </div>
         </div>

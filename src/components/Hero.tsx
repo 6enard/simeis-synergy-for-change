@@ -48,7 +48,7 @@ const Hero = () => {
         </div>
 
         {/* Stats */}
-        <div className="grid grid-cols-3 gap-4 sm:gap-6 md:gap-8 mb-12 sm:mb-16 max-w-4xl mx-auto animate-fade-in-up animate-delay-700">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 md:gap-8 mb-12 sm:mb-16 max-w-4xl mx-auto animate-fade-in-up animate-delay-700">
           <div className="text-center animate-pulse-slow">
             <div className="flex justify-center mb-3">
               <div className="bg-orange/20 backdrop-blur-sm rounded-full p-2 sm:p-3 border border-orange/30">

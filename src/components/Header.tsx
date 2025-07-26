@@ -50,7 +50,7 @@ const Header = () => {
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden lg:flex space-x-6 xl:space-x-10">
+        <nav className="hidden lg:flex space-x-4 xl:space-x-6 2xl:space-x-10">
           {[
             { name: 'Home', path: '/', sectionId: 'home' },
             { name: 'About', path: '/about', sectionId: 'about' },
@@ -64,7 +64,7 @@ const Header = () => {
               key={item.path}
               to={item.path}
               onClick={() => handleNavigation(item.path, item.sectionId)}
-              className={`font-body font-medium transition-all duration-300 hover:text-orange relative group ${
+              className={`font-body font-medium transition-all duration-300 hover:text-orange relative group text-sm xl:text-base ${
                 isScrolled ? 'text-gray-700' : 'text-white/90'
               } ${location.pathname === item.path ? 'text-orange' : ''}`}
             >
@@ -76,7 +76,7 @@ const Header = () => {
 
         <Link
           to="/donate"
-          className="hidden lg:block bg-orange text-white px-6 xl:px-8 py-2 xl:py-3 rounded-2xl hover:bg-orange/90 transition-all duration-300 font-body font-semibold transform hover:scale-105 shadow-lg text-sm xl:text-base"
+          className="hidden lg:block bg-orange text-white px-4 xl:px-6 2xl:px-8 py-2 xl:py-3 rounded-2xl hover:bg-orange/90 transition-all duration-300 font-body font-semibold transform hover:scale-105 shadow-lg text-sm xl:text-base whitespace-nowrap"
         >
           Donate Now
         </Link>

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Calendar, MapPin, Users, Heart, Home, Utensils, Target, Eye, ChevronDown, ChevronUp } from 'lucide-react';
 
 const Projects = () => {
@@ -283,22 +284,33 @@ const Projects = () => {
                     {project.volunteers}
                   </div>
                   
-                  <button
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      toggleExpanded(project.id);
-                    }}
-                    className="flex items-center bg-gradient-to-r from-lime/10 to-orange/10 hover:from-lime/20 hover:to-orange/20 text-gray-700 px-3 sm:px-4 py-2 rounded-xl font-body font-semibold transition-all duration-300 transform hover:scale-105 border border-gray-200 hover:border-orange/30 text-xs sm:text-sm"
-                  >
-                    <span className="mr-2">
-                      {expandedProject === project.id ? 'Less' : 'More'}
-                    </span>
-                    {expandedProject === project.id ? (
-                      <ChevronUp className="h-4 w-4" />
-                    ) : (
-                      <ChevronDown className="h-4 w-4" />
-                    )}
-                  </button>
+                  <div className="flex items-center space-x-2">
+                    <button
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        toggleExpanded(project.id);
+                      }}
+                      className="flex items-center bg-gradient-to-r from-lime/10 to-orange/10 hover:from-lime/20 hover:to-orange/20 text-gray-700 px-3 sm:px-4 py-2 rounded-xl font-body font-semibold transition-all duration-300 transform hover:scale-105 border border-gray-200 hover:border-orange/30 text-xs sm:text-sm"
+                    >
+                      <span className="mr-2">
+                        {expandedProject === project.id ? 'Less' : 'More'}
+                      </span>
+                      {expandedProject === project.id ? (
+                        <ChevronUp className="h-4 w-4" />
+                      ) : (
+                        <ChevronDown className="h-4 w-4" />
+                      )}
+                    </button>
+                    
+                    <Link
+                      to={`/projects#project-${project.id}`}
+                      onClick={(e) => e.stopPropagation()}
+                      className="flex items-center bg-gradient-to-r from-orange/10 to-lime/10 hover:from-orange/20 hover:to-lime/20 text-gray-700 px-3 sm:px-4 py-2 rounded-xl font-body font-semibold transition-all duration-300 transform hover:scale-105 border border-gray-200 hover:border-lime/30 text-xs sm:text-sm"
+                    >
+                      <span className="mr-2">Details</span>
+                      <Eye className="h-4 w-4" />
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>
