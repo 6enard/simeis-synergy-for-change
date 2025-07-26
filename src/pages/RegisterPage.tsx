@@ -240,6 +240,20 @@ const RegisterPage = () => {
               <h3 className="text-xl sm:text-2xl font-heading text-gray-800 mb-4 text-center">
                 Membership Fee Payment
               </h3>
+              <div className="flex justify-center items-center space-x-4 mb-4">
+                <img 
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/M-PESA_LOGO-01.svg/1280px-M-PESA_LOGO-01.svg.png" 
+                  alt="M-Pesa Logo" 
+                  className="h-8 w-auto sm:h-10"
+                  loading="lazy"
+                />
+                <img 
+                  src="https://upload.wikimedia.org/wikipedia/en/d/de/KCB_Bank_Kenya_Limited_logo.png" 
+                  alt="KCB Bank Logo" 
+                  className="h-6 w-auto sm:h-8"
+                  loading="lazy"
+                />
+              </div>
               <div className="grid sm:grid-cols-2 gap-4 mb-4">
                 <div className="bg-lime/10 rounded-lg p-4 text-center">
                   <p className="text-sm font-body text-gray-600 mb-1">Paybill Number</p>
