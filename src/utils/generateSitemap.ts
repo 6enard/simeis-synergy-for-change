@@ -6,7 +6,7 @@ export interface SitemapUrl {
   priority?: number;
 }
 
-export const siteUrl = 'https://simeis-synergy-for-change.netlify.app';
+export const siteUrl = 'https://www.simeisynergyforchange.co.ke';
 
 export const staticPages: SitemapUrl[] = [
   {
