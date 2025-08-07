@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://simeis-synergy-for-change.netlify.app/sitemap.xml
+
+# Disallow admin or sensitive areas (if any in the future)
+# Disallow: /admin/
