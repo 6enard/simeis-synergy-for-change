@@ -226,7 +226,6 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ projectId, onClose }) => 
       gallery: [
         "/ssc/IMG-20250926-WA0063.jpg",
         "/ssc/IMG-20250926-WA0018.jpg",
-        "/ssc/IMG-20250926-WA0019.jpg",
         "/ssc/IMG-20250926-WA0020.jpg",
         "/ssc/IMG-20250926-WA0021.jpg",
         "/ssc/IMG-20250926-WA0022.jpg",
