@@ -224,7 +224,7 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ projectId, onClose }) => 
       status: "Completed",
       category: "children",
       gallery: [
-        "/ssc/IMG-20250926-WA00063.jpg",
+        "/ssc/IMG-20250926-WA0063.jpg",
         "/ssc/IMG-20250926-WA0005.jpg",
         "/ssc/IMG-20250926-WA0006.jpg",
         "/ssc/IMG-20250926-WA0007.jpg",
