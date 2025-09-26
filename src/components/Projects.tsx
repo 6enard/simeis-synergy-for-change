@@ -144,6 +144,21 @@ const Projects = () => {
     },
     {
       id: 10,
+      title: "Visit to Anita Children's Home",
+      date: "September 13, 2025",
+      location: "Kajiado",
+      description: "Our team visited Anita Children's Home in Kajiado to spend quality time with the children, bringing joy, essential supplies, and showing them they are loved and cared for.",
+      fullDescription: "On Saturday, September 13th, 2025, our dedicated team made the journey to Anita Children's Home in Kajiado for a meaningful visit with the children. This visit was focused on building relationships, sharing love, and providing both emotional and material support to the children who call this place home. We brought essential supplies including food, clothing, educational materials, and recreational items to brighten their day. The visit included interactive activities, games, storytelling sessions, and quality time spent getting to know each child individually. Our team was deeply moved by the resilience and joy of these children, despite the challenges they face. We also worked closely with the caregivers to understand the ongoing needs of the home and how we can provide continued support. This visit reinforced our commitment to child welfare and our belief that every child deserves love, attention, and the opportunity to dream of a brighter future.",
+      impact: "Child welfare",
+      icon: Home,
+      beneficiaries: "35 children",
+      volunteers: "12 volunteers",
+      status: "Completed",
+      category: "children",
+      image: "/anita1.jpg"
+    },
+    {
+      id: 11,
       title: "Empowering a Student to Graduate",
       date: "July 29, 2024",
       location: "Nairobi",
