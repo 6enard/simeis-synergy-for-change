@@ -155,7 +155,7 @@ const Projects = () => {
       volunteers: "12 volunteers",
       status: "Completed",
       category: "children",
-      image: "/ssc/IMG-20250926-WA0063"
+      image: "/ssc/IMG-20250926-WA0063.jpg"
     },
     {
       id: 11,
