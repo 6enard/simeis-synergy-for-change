@@ -68,7 +68,7 @@ const RegisterPage = () => {
           </h1>
           <p className="text-lg sm:text-xl font-body text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Become a member of Simeis Synergy For Change and be part of our mission to create 
-            positive impact in communities across Kenya. A one-time membership fee of KSh 100 is required. 
+            positive impact in communities across Kenya. A one-time membership fee of KSh 500 is required. 
             Together, we can make a difference.
           </p>
         </div>
