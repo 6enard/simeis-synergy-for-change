@@ -78,7 +78,7 @@ const Footer = () => {
             <div className="space-y-3 animate-fade-in-up animate-delay-1000">
               <div className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-orange" />
-                <span className="font-body text-gray-300 text-sm sm:text-base">simeissynergyforchange@gmail.com</span>
+                <span className="font-body text-gray-300 text-sm sm:text-base">simeisynergyforchange@gmail.com</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-orange" />
