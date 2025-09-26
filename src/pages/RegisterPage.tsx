@@ -81,7 +81,7 @@ const RegisterPage = () => {
               <p className="font-body text-white/90">Fill out the form below to join our community</p>
               <div className="mt-4 bg-white/20 backdrop-blur-sm rounded-lg p-3">
                 <div className="bg-gradient-to-r from-lime/30 to-lime/20 rounded-md p-2 border border-lime/40">
-                  <p className="text-sm font-body font-semibold text-gray-800">Membership Fee: KSh 100</p>
+                  <p className="text-sm font-body font-semibold text-gray-800">Membership Fee: KSh 500</p>
                   <p className="text-xs font-body text-gray-700">One-time registration fee</p>
                 </div>
               </div>
@@ -178,7 +178,7 @@ const RegisterPage = () => {
                     placeholder="Enter M-Pesa transaction code"
                   />
                   <p className="text-xs text-gray-500 mt-2 font-body">
-                    Please provide the M-Pesa transaction code for your KSh 100 membership fee payment
+                    Please provide the M-Pesa transaction code for your KSh 500 membership fee payment
                   </p>
                 </div>
 
@@ -265,7 +265,7 @@ const RegisterPage = () => {
                 </div>
               </div>
               <div className="text-center">
-                <p className="text-lg font-heading text-gray-800 mb-2">Membership Fee: KSh 100</p>
+                <p className="text-lg font-heading text-gray-800 mb-2">Membership Fee: KSh 500</p>
                 <p className="text-sm font-body text-gray-600">
                   Pay via M-Pesa using the details above, then enter the transaction code in the form
                 </p>

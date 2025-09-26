@@ -335,7 +335,7 @@ const HomePage = () => {
             <p className="text-lg sm:text-xl font-body text-white/90 mb-8 leading-relaxed">
               Join our community of passionate individuals dedicated to creating positive change. 
               Become a member and be part of our mission to empower lives across Kenya. 
-              One-time membership fee of KSh 100 required.
+              One-time membership fee of KSh 500 required.
             </p>
             <Link
               to="/register"
