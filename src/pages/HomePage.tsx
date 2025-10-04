@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Users, Heart, Star, Target, Eye, Compass, Calendar, MapPin, UserPlus } from 'lucide-react';
 import Hero from '../components/Hero';
+import EventCountdown from '../components/EventCountdown';
 
 const HomePage = () => {
   const scrollToSection = (sectionId: string) => {
@@ -62,7 +63,10 @@ const HomePage = () => {
   return (
     <div>
       <Hero />
-      
+
+      {/* Event Countdown Section */}
+      <EventCountdown />
+
       {/* About Preview Section */}
       <section id="about" className="py-16 bg-cream">
         <div className="container mx-auto px-4 sm:px-6">
