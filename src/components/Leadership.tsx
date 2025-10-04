@@ -32,11 +32,11 @@ export default function Leadership() {
     },
     {
       id: 4,
-      name: "",
-      position: "Financial Manager",
-      image: "",
-      shortStatement: "In my role as the head of Financial Management at Simei's Synergy for Change, I carry more than just numbers...",
-      fullStatement: "In my role as the head of Financial Management at Simei's Synergy for Change (SSC), I carry more than just numbers, I carry the trust of every donor, the dreams of every child we support, and the hope of every community we serve. Finance in a charitable foundation isn't just about balancing books; it's about ensuring that every coin is accounted for, every resource is maximized, and every contribution is treated with the respect it deserves. I joined SSC because I believed in its heartbeat, a genuine desire to uplift and change lives, and my responsibility is to ensure that this mission is not only sustainable, but also transparent and accountable. Through clear reporting, ethical budgeting, and strategic stewardship, I work every day to make sure that the financial backbone of SSC remains strong, honest, and deeply aligned with the purpose it was built on."
+      name: "Lisa",
+      position: "Director of Finance",
+      image: "/lisa.jpg",
+      shortStatement: "In my role as Director of Finance at Simei's Synergy for Change, I carry a responsibility that goes far beyond numbers...",
+      fullStatement: "In my role as Director of Finance at Simei's Synergy for Change (SSC), I carry a responsibility that goes far beyond numbers. Each figure represents trust—the trust of every donor who believes in our mission, the aspirations of the children we serve, and the collective hope of the communities that look to us for change. Finance in a charitable foundation is not simply about balancing accounts; it is about safeguarding dreams, honoring generosity, and ensuring that every resource entrusted to us is used with care, integrity, and purpose.\n\nI chose to be part of SSC because I was moved by its heartbeat—a genuine, unwavering desire to uplift lives and open doors of opportunity through education. To me, this work is more than administration; it is stewardship of hope. It is the assurance that what is given in faith is transformed into impact, that what is sown in kindness yields a harvest of possibility.\n\nThrough transparency, ethical management, and thoughtful planning, I strive to strengthen the financial foundation of SSC so that our mission is not only sustainable, but enduring. My greatest honor is to know that behind every report, every budget, and every decision lies a story of a child gaining access to education, a family seeing a brighter future, and a community rising together.\n\nFinance at SSC is therefore not just about accountability—it is about keeping alive the promise of change. And with every step, I remain committed to ensuring that the vision of SSC continues to flourish with honesty, clarity, and profound impact."
     },
     {
       id: 5,
@@ -61,6 +61,14 @@ export default function Leadership() {
       image: "/asha.jpg",
       shortStatement: "Behind every caption, every comment, and every campaign is a deep love for communication, connection, and community...",
       fullStatement: "Behind every caption, every comment, and every campaign is a deep love for communication, connection, and community. And I'm proud of the heart I pour into every post. I don't just push content—I tell stories."
+    },
+    {
+      id: 8,
+      name: "Jackton Nyakwara",
+      position: "Director of ICT & Editorials",
+      image: "/Jackton.jpg",
+      shortStatement: "Creativity is the bridge between vision and impact...",
+      fullStatement: "Creativity is the bridge between vision and impact.\n\nAs the Director of ICT & Editorials at Simei's Synergy for Change (SSC), I bring this belief to life by using technology and design to serve communities. My role goes beyond creating posters and managing digital platforms it's about ensuring our message reaches people clearly, inspires action, and strengthens connections. Through creative communication, I help SSC share stories of hope, mobilize support, and keep our members and partners engaged in driving meaningful change."
     }
   ];
 
