@@ -104,7 +104,7 @@ export default function Leadership() {
                   src={leader.image}
                   alt={leader.name}
                   className={`w-full h-64 sm:h-72 hover:scale-105 transition-transform duration-500 ${
-                    leader.id === 2 ? 'object-cover object-top' : leader.id === 4 ? 'object-contain bg-gray-50' : 'object-cover'
+                    leader.id === 5 ? 'object-cover object-top' : leader.id === 4 ? 'object-contain bg-gray-50' : 'object-cover'
                   }`}
                   loading="lazy"
                   decoding="async"
