@@ -41,22 +41,22 @@ const HomePage = () => {
 
   const leaders = [
     {
-      name: "Trevor Abashora",
-      position: "CEO and Founder",
+      name: "Abashora Trevor",
+      position: "Chairperson & Founder",
       image: "/Abashora.jpg",
       quote: "I founded Simei's Synergy for Change not as an organization, but as a response to the silent cries I saw in children without homes..."
     },
     {
-      name: "Dave Njuguna",
-      position: "Vice Chairman",
-      image: "/dave2.jpg",
-      quote: "It is my privilege and calling as the SSC Vice Chairman to be part of a movement that remains the beacon of hope and change..."
+      name: "Darlene Kiptoo",
+      position: "Vice President",
+      image: "/darlene.jpg",
+      quote: "At Simei's Synergy for Change, being Vice President is not about titles, it's about service..."
     },
     {
-      name: "Darlene Kiptoo",
-      position: "Vice Chairlady",
-      image: "/darlene.jpg",
-      quote: "At Simei's Synergy for Change, being Vice Chairs is not about titles, it's about service..."
+      name: "Briton Waweru",
+      position: "Secretary General",
+      image: "/briton.jpg",
+      quote: "At Simei's Synergy for Change, the Secretary General is the quiet engine that keeps everything moving..."
     }
   ];
 
@@ -150,11 +150,11 @@ const HomePage = () => {
                   <h3 className="text-xl font-heading text-gray-800 mb-2">{leader.name}</h3>
                   <p className="text-orange font-body font-semibold mb-4">{leader.position}</p>
                   <p className="font-body text-gray-600 text-sm leading-relaxed">
-                    {leader.name === 'Trevor Abashora' 
-                      ? "I founded Simei's Synergy for Change (SSC) not as an organization, but as a response, a response to the silent cries I saw in children without homes, families left in crisis, and communities weighed down by struggle yet forgotten by the world. On December 4th, 2023, I chose to stop watching from the sidelines and instead become part of the solution. SSC was born from a place of compassion, not convenience, a movement rooted in love, dignity, and action. From feeding the hungry on city streets to standing with children in forgotten homes and supporting less fortunate families, we have walked where others turn away. As the Founder and CEO, I do not lead from above, but alongside, ensuring that every decision, every outreach, and every effort carries the weight of purpose and the warmth of humanity. SSC is a call to everyone who believes that small acts can create great waves; it's for the forgotten, the unseen, and also for those who've always wanted to help, but didn't know how. Here, we don't just give hope, we become it."
-                      : leader.name === 'Dave Njuguna'
-                      ? "It is my privilege and calling as the SSC Vice Chairman to be part of a movement that remains the beacon of hope and change. With the strong, visionary leadership of our Chairlady and Founder, SSC has transcended what was merely an organization to what has now become a family united in purpose, bound by compassion, motivated by service. Since our first outreach on January 27, 2024, at Mukuru Promotion Center, SSC has impacted over 150 families and made a difference in the lives of over 1,000 kids in Kenya. From the hustle of central Nairobi streets to homes in North Kajiado, from supporting communities devastated by floods, our objective has always remained the same: To be present, serve, and sow seeds of eternal transformation. Out of the countless stories we bear, one remains indelible. On 29 July, 2024, we had the privilege of enabling a girl to cross the financial divide and take her final exams. It was not merely an individual triumph but it was a reminder of what is possible when action intersects with compassion. Each visit, every hug, every meal shared are what shape the person we are. SSC is not merely touching lives, We are changing futures, one mission at a time. Come walk with us on this journey. In your volunteer service, collaboration, or support, your work becomes part of the growing tide of hope that reaches farther yet shines all the brighter. Together, we are igniting change. Together, we are SSC."
-                      : "At Simei's Synergy for Change, being Vice Chairs is not about titles, it's about service. It's about standing in the gap when it matters most, showing up with heart, and making sure no one feels forgotten. Every time we step into a home, a street corner, a household, a village, or a room full of children, we are reminded why this foundation exists: to restore dignity, to remind people they are seen, and to be present in moments others overlook. We've seen firsthand what it means to offer hope, not as a handout, but as a hand to hold. And that's what SSC is: a living, breathing community built on real people doing real work that touches real lives. We are proud to walk alongside Trevor, our team, and every volunteer and supporter who believes, like we do, that kindness still has the power to change the world. Our promise as Vice Chairs is simple: to lead with compassion, to listen more than we speak, and to always carry the mission of SSC with humility and purpose. We may not have all the answers, but together, with faith, action, and love, we are creating them, one step at a time."
+                    {leader.name === 'Abashora Trevor'
+                      ? "I founded Simei's Synergy for Change (SSC) not as an organization, but as a response, a response to the silent cries I saw in children without homes, families left in crisis, and communities weighed down by struggle yet forgotten by the world. On December 4th, 2023, I chose to stop watching from the sidelines and instead become part of the solution. SSC was born from a place of compassion, not convenience, a movement rooted in love, dignity, and action. From feeding the hungry on city streets to standing with children in forgotten homes and supporting less fortunate families, we have walked where others turn away. As the Founder and Chairperson, I do not lead from above, but alongside, ensuring that every decision, every outreach, and every effort carries the weight of purpose and the warmth of humanity. SSC is a call to everyone who believes that small acts can create great waves; it's for the forgotten, the unseen, and also for those who've always wanted to help, but didn't know how. Here, we don't just give hope, we become it."
+                      : leader.name === 'Darlene Kiptoo'
+                      ? "At Simei's Synergy for Change, being Vice President is not about titles, it's about service. It's about standing in the gap when it matters most, showing up with heart, and making sure no one feels forgotten. Every time we step into a home, a street corner, a household, a village, or a room full of children, we are reminded why this foundation exists: to restore dignity, to remind people they are seen, and to be present in moments others overlook. We've seen firsthand what it means to offer hope, not as a handout, but as a hand to hold. And that's what SSC is: a living, breathing community built on real people doing real work that touches real lives. We are proud to walk alongside Trevor, our team, and every volunteer and supporter who believes, like we do, that kindness still has the power to change the world. Our promise as Vice President is simple: to lead with compassion, to listen more than we speak, and to always carry the mission of SSC with humility and purpose. We may not have all the answers, but together, with faith, action, and love, we are creating them, one step at a time."
+                      : "At Simei's Synergy for Change, the Secretary General is the quiet engine that keeps everything moving. I may not always be on the front lines, but every schedule we coordinate, every meeting we organize, every document we prepare—it's all done with one goal in mind: to keep the heart of this foundation beating strong and steady. My work is about making sure things don't fall through the cracks, that communication flows, records are kept with care, and every decision made by leadership is supported by a strong foundation of organization and order. But beyond the structure, what drives me is the why: the children smiling in homes we visit, the families we support, the hope we help build—even in the smallest details. As the Secretary General, I serve with pride, not just with pens and plans, but with passion. Because here at SSC, every role matters. And I am honored to play mine, holding it all together so others can shine, and so change can truly take root where it's needed most."
                     }
                   </p>
                 </div>
